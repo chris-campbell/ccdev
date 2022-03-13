@@ -55,11 +55,12 @@ const FooterNav = styled.ul`
 const UpArrow = styled(ArrowUpward)`
   position: absolute;
   right: 1rem;
-  bottom: 7.5rem;
+  bottom: 6.5rem;
   padding: 0.4rem 0.2rem;
   font-size: 2rem;
   background: ${(p) => p.theme.colors.white_300};
   color: ${(p) => p.theme.colors.blue_300};
+  border-radius: 1rem;
   @media (max-width: 630px) {
     display: none;
   }
@@ -77,8 +78,8 @@ const Footer = () => {
       <FooterWrapper>
         <Image
           src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
-          width={70}
-          height={70}
+          width={50}
+          height={50}
           alt="Chris Campbell Dev Mobile Logo"
         />
         <FooterSocial>

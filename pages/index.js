@@ -1,11 +1,6 @@
 import Head from "next/head";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Hero from "../components/hero/Hero";
-import UX from "../components/ux/Ux";
-import WebDevelopmentServices from "../components/webdevelopmentservices/WebDevelopmentServices";
-import AdvanceSeo from "../components/advanceseo/AdvanceSeo";
-import FullTime from "../components/fulltime/FullTime";
+
+import HomeContainer from "../components/home/HomeContainer";
 
 export default function Home() {
   return (
@@ -16,11 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero />
-      <UX />
-      <WebDevelopmentServices />
-      <AdvanceSeo />
-      <FullTime />
+      <HomeContainer />
     </div>
   );
 }

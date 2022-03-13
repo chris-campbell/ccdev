@@ -45,11 +45,6 @@ const DesktopNav = () => {
 
   return (
     <S.NavbarContainer id="navbar">
-      <Head>
-        <title>CC Dev - Work</title>
-        <meta name="description" content="Professional" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <S.NavbarWrapper>
         <Link href="/">
           <a>

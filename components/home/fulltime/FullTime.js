@@ -11,7 +11,7 @@ const FullTimeWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1600px;
-  padding: calc(250px - 150px) 150px;
+  padding: calc(250px - 100px) 150px;
   min-height: 50vh;
   @media (max-width: 680px) {
     padding: calc(250px - 150px) 50px;
@@ -44,7 +44,7 @@ const WorkAvailiblity = styled.div`
     flex-direction: column;
   }
   button {
-    background: ${(p) => p.theme.colors.blue_300};
+    background: ${(p) => p.theme.colors.blue_100};
     font-family: ${(p) => p.theme.font.paragraph};
     color: ${(p) => p.theme.colors.white_300};
     padding: 1rem 1.5rem;

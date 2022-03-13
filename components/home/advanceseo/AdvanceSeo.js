@@ -41,10 +41,9 @@ const AdvanceSeo = () => {
       <AdvanceSeoWrapper>
         <h3>Advance SEO</h3>
         <p>
-          Have your designs materialized, using powerful wireframing tools,
-          we’ll together determine the best way to mesh both your design ideas
-          and performance, while always keeping the customer’s experience at the
-          forefront.
+          Get your product, services, or content in front of more eyes, generate
+          more leads and increase your conversion rate by using search
+          engine-friendly SEO.
         </p>
       </AdvanceSeoWrapper>
     </AdvanceSeoContainer>
