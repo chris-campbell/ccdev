@@ -27,13 +27,16 @@ export const ProjectsBox = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+  @media (max-width: 879px) {
+    flex-direction: column;
+  }
 `;
 
 export const ProjectsListItems = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 2;
   padding-left: 0;
   width: -webkit-fill-available;
   li {
@@ -42,6 +45,7 @@ export const ProjectsListItems = styled.ul`
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
     color: #72707061;
+    flex-grow: 1;
     &:hover {
       font-weight: 600;
       color: ${(p) => p.theme.colors.white_300};
@@ -52,7 +56,7 @@ export const ProjectsListItems = styled.ul`
 `;
 
 export const ProjectsDescription = styled.div`
-  flex-grow: 2;
+  flex: 4;
   font-size: clamp(1rem, 5vw, 1.2rem);
   font-family: ${(p) => p.theme.font.paragraph};
   color: ${(p) => p.theme.colors.white_300};
@@ -60,4 +64,32 @@ export const ProjectsDescription = styled.div`
   letter-spacing: 0.1rem;
 `;
 
-export const ProjectsArea = styled.div``;
+export const ProjectIcons = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: ${(p) => p.theme.colors.blue_100};
+  font-size: 1.5rem;
+  justify-content: space-between;
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+export const ExternalLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+  color: ${(p) => p.theme.colors.white_300};
+`;
+
+export const Hobbies = styled.p`
+  font-family: ${(p) => p.theme.font.paragraph};
+  color: ${(p) => p.theme.colors.white_300};
+  margin-top: 4rem;
+  span {
+    margin-left: 1rem;
+    color: ${(p) => p.theme.colors.grey_200};
+  }
+`;

@@ -8,8 +8,6 @@ const DesktopNav = () => {
   const logoUrl = "https://hoppr-portfolio.s3.us-east-2.amazonaws.com/logo.svg";
   const logoAlt = "Chris Campbell Dev Logo";
 
-  const width = useDimensions().width;
-
   const fadeUpANav = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -60,7 +58,9 @@ const DesktopNav = () => {
               </Link>
             </S.NavLink>
             <S.NavLink variants={fadeUpBNav} initial="hidden" animate="visible">
-              Blog_
+              <Link href="/blog">
+                <a>Blog_</a>
+              </Link>
             </S.NavLink>
             <S.NavLink variants={fadeUpCNav} initial="hidden" animate="visible">
               <Link href="/work">

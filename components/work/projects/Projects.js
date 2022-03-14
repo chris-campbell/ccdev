@@ -1,31 +1,48 @@
+import { useState } from "react";
 import { Javascript } from "@mui/icons-material";
+import { projects } from "../utils/projects";
+import { FiExternalLink } from "react-icons/fi";
+import { SiGithub } from "react-icons/si";
 import * as S from "./styles/styles";
 
 export const Projects = () => {
+  const [projectIndex, setProjectIndex] = useState(0);
+  const listProjectNames = () => {
+    return projects.map((project, i) => (
+      <li index-data={i} onClick={(e) => changeProjectIndex(e)}>
+        {project.name}
+      </li>
+    ));
+  };
+
+  const changeProjectIndex = (e) => {
+    e.preventDefault();
+
+    setProjectIndex(e.target.getAttribute("index-data"));
+  };
+
   return (
     <S.ProjectsContainer>
       <S.ProjectsWrapper>
         <h2>Projects</h2>
-
         <S.ProjectsBox className="projects-bx">
-          <S.ProjectsListItems>
-            <li>Hello Dixie Co.</li>
-            <li>Laymanns</li>
-            <li>Movie Searcher</li>
-            <li>Sudoku</li>
-          </S.ProjectsListItems>
+          <S.ProjectsListItems>{listProjectNames()}</S.ProjectsListItems>
           <S.ProjectsDescription className="projects-description">
-            Breathe new life into your existing platform. Whether it needs a
-            face-lift or just to have its performance-optimized, improving your
-            site’s aesthetics will drastically change how quickly customers open
-            their wallets.
-            <div>
-              <Javascript />
-              <Javascript />
-              <Javascript />
-            </div>
+            {projects[projectIndex].description}
+
+            <S.ProjectIcons>
+              <S.Icons>{projects[projectIndex].icons}</S.Icons>
+              <S.ExternalLinks>
+                <SiGithub />
+                <FiExternalLink />
+              </S.ExternalLinks>
+            </S.ProjectIcons>
           </S.ProjectsDescription>
         </S.ProjectsBox>
+
+        <S.Hobbies>
+          Hobbies <span>Drawing & Wine Brewing</span>
+        </S.Hobbies>
       </S.ProjectsWrapper>
     </S.ProjectsContainer>
   );
