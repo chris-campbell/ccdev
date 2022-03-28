@@ -8,8 +8,8 @@ import * as S from "./styles/styles";
 export const Projects = () => {
   const [projectIndex, setProjectIndex] = useState(0);
   const listProjectNames = () => {
-    return projects.map((project, i) => (
-      <li index-data={i} onClick={(e) => changeProjectIndex(e)}>
+    return projects.map((project, key) => (
+      <li key={key} index-data={key} onClick={(e) => changeProjectIndex(e)}>
         {project.name}
       </li>
     ));
@@ -29,9 +29,12 @@ export const Projects = () => {
           <S.ProjectsListItems>{listProjectNames()}</S.ProjectsListItems>
           <S.ProjectsDescription className="projects-description">
             {projects[projectIndex].description}
-
             <S.ProjectIcons>
-              <S.Icons>{projects[projectIndex].icons}</S.Icons>
+              <S.Icons>
+                {projects[projectIndex].icons.map((icon, i) => (
+                  <span key={i}>{icon}</span>
+                ))}
+              </S.Icons>
               <S.ExternalLinks>
                 <SiGithub />
                 <FiExternalLink />

@@ -6,6 +6,7 @@ const nextConfig = {
     domains: [
       "hoppr-portfolio.s3.us-east-2.amazonaws.com",
       "images.unsplash.com",
+      "media.graphcms.com",
     ],
   },
 };

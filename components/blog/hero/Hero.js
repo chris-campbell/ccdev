@@ -1,44 +1,40 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 import * as S from "./styles/styles";
 
-export default function Hero() {
+export default function Hero({ article }) {
+  console.log(article);
+
+  const { title, excerpt, coverImage, slug } = article;
+
+  const avatar = article.authors[0].avatar.url;
+  const name = article.authors[0].name;
+
   return (
     <S.HeroContainer>
       <S.HeroWrapper>
         <h1>Blog</h1>
-        <S.ArticleDetails>
-          <S.ImageContainer>
-            <Image
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&w=1000&q=80"
-              layout="fill"
-            />
-          </S.ImageContainer>
-          <S.ArticleDescription>
-            <span>Featured</span>
-            <h2>
-              Why Most Businesses fails, and how not to be another statistic?
-            </h2>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-            <S.AuthorDetails>
-              <Image
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                width={70}
-                height={70}
-              />
-              <S.DateContainer>
-                <span className="author">Chris Campbell</span>
-                <span className="date">Jun 22, 2022</span>
-              </S.DateContainer>
-            </S.AuthorDetails>
-          </S.ArticleDescription>
-        </S.ArticleDetails>
+        <Link href={`/blog/${slug}`}>
+          <S.ArticleDetails>
+            <S.ImageContainer>
+              <Image src={coverImage.url} layout="fill" />
+            </S.ImageContainer>
+            <S.ArticleDescription>
+              <span>Featured</span>
+              <h2>{title}</h2>
+              <p>{excerpt}</p>
+              <S.AuthorDetails>
+                <Image src={avatar} width={70} height={70} />
+                <S.DateContainer>
+                  <span className="author">{name}</span>
+                  <span className="date">Jun 22, 2022</span>
+                </S.DateContainer>
+              </S.AuthorDetails>
+            </S.ArticleDescription>
+          </S.ArticleDetails>
+        </Link>
       </S.HeroWrapper>
     </S.HeroContainer>
   );

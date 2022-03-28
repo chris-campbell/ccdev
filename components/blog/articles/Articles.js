@@ -1,107 +1,89 @@
 import styled from "styled-components";
 import Image from "next/image";
 import * as S from "./styles/styles";
+import Link from "next/link";
 
-function Articles() {
+const ArticleItem = styled.article`
+  width: 100%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    transition: 500ms;
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  h3 {
+    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.font.heading};
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  p {
+    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.font.paragraph};
+    font-size: 0.8rem;
+  }
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
+  height: 300px;
+  display: flex;
+  img {
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-basis: auto;
+  }
+`;
+
+const ArticleDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+function Articles({ allArticles }) {
+  const displayArticles = () => {
+    return allArticles.map((article, key) => {
+      const { coverImage, title, excerpt, authors } = article;
+
+      const authorName = authors[0].name;
+      const authorAvatar = authors[0].avatar.url;
+
+      return (
+        <Link key={key} href={`/blog/${article.slug}`}>
+          <ArticleItem key={key}>
+            <ImageContainer>
+              <Image src={coverImage.url} layout="fill" />
+            </ImageContainer>
+            <ArticleDetails>
+              <h3>{title}</h3>
+              <p>{excerpt}</p>
+              <S.AuthorDetails>
+                <Image src={authorAvatar} width={40} height={40} />
+                <S.DateContainer>
+                  <span className="author">{authorName}</span>
+                  <span className="date">Jun 22, 2022</span>
+                </S.DateContainer>
+              </S.AuthorDetails>
+            </ArticleDetails>
+          </ArticleItem>
+        </Link>
+      );
+    });
+  };
+
   return (
     <S.ArticlesContainer>
       <S.ArticlesWrapper>
         <h2>Articles</h2>
-        <S.ArticleItems>
-          <S.ArticleItem>
-            <S.ImageContainer>
-              <Image
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                width="200"
-                height="200"
-                layout="fill"
-              />
-            </S.ImageContainer>
-
-            <h3>
-              Why Most Businesses fails, and how not to be another statistic?
-            </h3>
-
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium.
-            </p>
-
-            <S.AuthorDetails>
-              <Image
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                width={70}
-                height={70}
-              />
-              <S.DateContainer>
-                <span className="author">Chris Campbell</span>
-                <span className="date">Jun 22, 2022</span>
-              </S.DateContainer>
-            </S.AuthorDetails>
-          </S.ArticleItem>
-          <S.ArticleItem>
-            <S.ImageContainer>
-              <Image
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                width="200"
-                height="200"
-                layout="fill"
-              />
-            </S.ImageContainer>
-
-            <h3>
-              Why Most Businesses fails, and how not to be another statistic?
-            </h3>
-
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium.
-            </p>
-
-            <S.AuthorDetails>
-              <Image
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                width={70}
-                height={70}
-              />
-              <S.DateContainer>
-                <span className="author">Chris Campbell</span>
-                <span className="date">Jun 22, 2022</span>
-              </S.DateContainer>
-            </S.AuthorDetails>
-          </S.ArticleItem>
-          <S.ArticleItem>
-            <S.ImageContainer>
-              <Image
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHw%3D&w=1000&q=80"
-                width="200"
-                height="200"
-                layout="fill"
-              />
-            </S.ImageContainer>
-
-            <h3>
-              Why Most Businesses fails, and how not to be another statistic?
-            </h3>
-
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium.
-            </p>
-
-            <S.AuthorDetails>
-              <Image
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                width={70}
-                height={70}
-              />
-              <S.DateContainer>
-                <span className="author">Chris Campbell</span>
-                <span className="date">Jun 22, 2022</span>
-              </S.DateContainer>
-            </S.AuthorDetails>
-          </S.ArticleItem>
-        </S.ArticleItems>
+        <S.ArticleItems>{displayArticles()}</S.ArticleItems>
+        {/* <Stack spacing={2}>
+          <Pagination count={10} variant="outlined" shape="rounded" />
+        </Stack> */}
       </S.ArticlesWrapper>
     </S.ArticlesContainer>
   );

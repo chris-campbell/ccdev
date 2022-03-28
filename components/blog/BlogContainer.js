@@ -1,11 +1,11 @@
 import Articles from "./articles/Articles";
 import Hero from "./hero/Hero";
 
-const BlogContainer = () => {
+const BlogContainer = ({ article, allArticles }) => {
   return (
     <>
-      <Hero />
-      <Articles />
+      <Hero article={article} />
+      <Articles allArticles={allArticles} />
     </>
   );
 };

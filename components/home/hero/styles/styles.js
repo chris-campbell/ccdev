@@ -9,7 +9,7 @@ export const HeroWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;
   padding: calc(250px - 150px) 150px;
-  min-height: 92vh;
+  min-height: 52vh;
   position: relative;
   @media (max-width: 580px) {
     padding: calc(250px - 150px) 50px;

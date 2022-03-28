@@ -55,27 +55,29 @@ export const ArticleItem = styled.article`
 
 export const ImageContainer = styled.div`
   width: 100%;
-  flex: 3;
-  margin-bottom: 1rem;
-  > span {
-    position: unset !important;
-  }
-
+  height: 300px;
+  max-width: 100%;
+  max-height: 300px;
+  position: relative;
   img {
-    object-fit: contain;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
     border-radius: 0.5rem;
   }
 `;
 
 export const ArticleItems = styled.div`
-  display: flex;
-  gap: 1rem;
-
-  @media (max-width: 1130px) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  @media (max-width: 1100px) {
     flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 780px) {
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -85,8 +87,8 @@ export const AuthorDetails = styled.div`
   align-items: center;
   img {
     border-radius: 10rem;
-    width: clamp(2rem, 4vw, 2.3rem) !important;
-    height: clamp(2rem, 4vw, 2.3rem) !important;
+    /* width: clamp(2rem, 4vw, 2.3rem) !important;
+    height: clamp(2rem, 4vw, 2.3rem) !important; */
   }
 `;
 

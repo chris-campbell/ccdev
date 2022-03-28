@@ -1,4 +1,4 @@
-export const theme = {
+const theme = {
   colors: {
     blue_300: "#23282f",
     blue_200: "#2b323b",
@@ -13,3 +13,5 @@ export const theme = {
     paragraph: "'Titillium Web', sans-serif",
   },
 };
+
+export default theme;

@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import { theme } from "./ThemeConfig";
+import theme from "../components/ThemeConfig";
 
 const GlobalStyles = createGlobalStyle`
   html,

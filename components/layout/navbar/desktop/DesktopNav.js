@@ -72,7 +72,9 @@ const DesktopNav = () => {
               initial="hidden"
               animate="visible"
             >
-              Hire
+              <Link href="/#fulltime">
+                <a>Hire</a>
+              </Link>
             </S.HireLink>
           </S.NavLinks>
         </nav>

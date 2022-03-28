@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Facebook from "@mui/icons-material/Facebook";
 import Instagram from "@mui/icons-material/Instagram";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+import Twitter from "@mui/icons-material/Twitter";
 import Link from "next/link";
 import { ArrowUpward } from "@mui/icons-material";
 
@@ -76,22 +77,38 @@ const Footer = () => {
       </Link>
 
       <FooterWrapper>
-        <Image
-          src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
-          width={50}
-          height={50}
-          alt="Chris Campbell Dev Mobile Logo"
-        />
+        <Link href="/">
+          <a>
+            <Image
+              src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
+              width={50}
+              height={50}
+              alt="Chris Campbell Dev Mobile Logo"
+            />
+          </a>
+        </Link>
         <FooterSocial>
           <Facebook />
-          <Instagram />
+          <Twitter />
           <LinkedIn />
         </FooterSocial>
 
         <FooterNav>
-          <li>Home</li>
-          <li>Blog</li>
-          <li>Work</li>
+          <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/work">
+              <a>Work</a>
+            </Link>
+          </li>
         </FooterNav>
       </FooterWrapper>
     </FooterContainer>

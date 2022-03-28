@@ -82,7 +82,7 @@ const Hero = () => {
             animate="visible"
           >
             <p>
-              I'm a software engineer who specializes in business growth by
+              I&apos;m a software engineer who specializes in business growth by
               focusing and developing a strong technical presents and expert
               level SEO practices to give businesses the competitive edge over
               the competition.

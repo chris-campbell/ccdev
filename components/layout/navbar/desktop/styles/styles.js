@@ -12,6 +12,8 @@ export const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   letter-spacing: 0.09rem;
+  position: relative;
+  z-index: 100;
 `;
 
 export const NavLinks = styled.ul`

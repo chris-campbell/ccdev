@@ -26,6 +26,12 @@ export const HeroWrapper = styled.div`
 export const ArticleDetails = styled.div`
   display: flex;
   gap: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: 500ms;
+  }
 
   @media (max-width: 1130px) {
     flex-direction: column;
