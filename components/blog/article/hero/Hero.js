@@ -44,7 +44,7 @@ function Hero({ article }) {
     <BlueBack>
       <HeroContainer>
         <ArticleNav>
-          <Link href="/blog" passhref>
+          <Link href="/blog" passHref={true}>
             <a>
               <span>
                 <BackToBlog /> Back to Articles

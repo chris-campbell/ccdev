@@ -54,7 +54,7 @@ function Articles({ allArticles }) {
       const authorAvatar = authors[0].avatar.url;
 
       return (
-        <Link key={key} href={`/blog/${article.slug}`} passhref>
+        <Link key={key} href={`/blog/${article.slug}`} passHref={true}>
           <a>
             <ArticleItem key={key}>
               <ImageContainer>
