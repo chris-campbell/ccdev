@@ -16,6 +16,7 @@
     "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.2.2",
     "@mui/styles": "^5.2.2",
+    "@netlify/plugin-nextjs": "^4.3.0",
     "babel-plugin-styled-components": "^2.0.6",
     "framer-motion": "^6.2.8",
     "graphql": "^16.3.0",
