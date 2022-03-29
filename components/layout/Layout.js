@@ -1,16 +1,15 @@
 import Footer from "./footer/Footer";
 import dynamic from "next/dynamic";
 
-const Navbar = process.browser
-  ? dynamic(() => import("./navBar/NavBar"), { ssr: false })
-  : null;
-// console.log("Procress", process.browser);
+const Navbar = dynamic(
+  () => import("./navBar/NavBar").then((mod) => mod.default),
+  { ssr: false }
+);
 
 function Layout({ children }) {
   return (
     <div>
-      {process.browser ? <Navbar /> : ""}
-      {/* <Navbar /> */}
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </div>
