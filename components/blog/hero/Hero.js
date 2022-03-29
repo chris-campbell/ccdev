@@ -19,7 +19,12 @@ export default function Hero({ article }) {
         <Link href={`/blog/${slug}`} passHref={true}>
           <S.ArticleDetails>
             <S.ImageContainer>
-              <Image src={coverImage.url} layout="fill" passHref={true} />
+              <Image
+                src={coverImage.url}
+                layout="fill"
+                passHref={true}
+                alt="Cover image"
+              />
             </S.ImageContainer>
             <S.ArticleDescription>
               <span>Featured</span>
