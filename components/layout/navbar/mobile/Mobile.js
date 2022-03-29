@@ -52,17 +52,23 @@ const MobileNav = () => {
                 </li>
                 <li onClick={() => toggleOpen()}>
                   <Link href="/blog" passHref={true}>
-                    <div className="header__icon">Blog</div>
+                    <a>
+                      <div className="header__icon">Blog</div>
+                    </a>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
                   <Link href="/work" passHref={true}>
-                    <div className="header__icon">Work</div>
+                    <a>
+                      <div className="header__icon">Work</div>
+                    </a>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
                   <Link href="/#fulltime" passHref={true}>
-                    <div className="header__icon">Hire</div>
+                    <a>
+                      <div className="header__icon">Hire</div>
+                    </a>
                   </Link>
                 </li>
               </S.MobileNav>
