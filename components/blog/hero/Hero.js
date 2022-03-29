@@ -16,17 +16,22 @@ export default function Hero({ article }) {
     <S.HeroContainer>
       <S.HeroWrapper>
         <h1>Blog</h1>
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`} passHref="true">
           <S.ArticleDetails>
             <S.ImageContainer>
-              <Image src={coverImage.url} layout="fill" />
+              <Image src={coverImage.url} layout="fill" passHref="true" />
             </S.ImageContainer>
             <S.ArticleDescription>
               <span>Featured</span>
               <h2>{title}</h2>
               <p>{excerpt}</p>
               <S.AuthorDetails>
-                <Image src={avatar} width={70} height={70} />
+                <Image
+                  src={avatar}
+                  width={70}
+                  height={70}
+                  alt="Author Avatar"
+                />
                 <S.DateContainer>
                   <span className="author">{name}</span>
                   <span className="date">Jun 22, 2022</span>

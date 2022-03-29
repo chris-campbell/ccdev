@@ -54,16 +54,21 @@ function Articles({ allArticles }) {
       const authorAvatar = authors[0].avatar.url;
 
       return (
-        <Link key={key} href={`/blog/${article.slug}`}>
+        <Link key={key} href={`/blog/${article.slug}`} passHref="true">
           <ArticleItem key={key}>
             <ImageContainer>
-              <Image src={coverImage.url} layout="fill" />
+              <Image src={coverImage.url} layout="fill" alt="cover img" />
             </ImageContainer>
             <ArticleDetails>
               <h3>{title}</h3>
               <p>{excerpt}</p>
               <S.AuthorDetails>
-                <Image src={authorAvatar} width={40} height={40} />
+                <Image
+                  src={authorAvatar}
+                  width={40}
+                  height={40}
+                  alt="Author Avatar"
+                />
                 <S.DateContainer>
                   <span className="author">{authorName}</span>
                   <span className="date">Jun 22, 2022</span>

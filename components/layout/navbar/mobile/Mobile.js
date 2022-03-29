@@ -45,22 +45,23 @@ const MobileNav = () => {
                         src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
                         width={70}
                         height={100}
+                        alt="Chris Campbell dev logo"
                       />
                     </a>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/blog">
+                  <Link href="/blog" passHref="true">
                     <div className="header__icon">Blog</div>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/">
+                  <Link href="/" passHref="true">
                     <div className="header__icon">Work</div>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/">
+                  <Link href="/" passHref="true">
                     <div className="header__icon">Hire</div>
                   </Link>
                 </li>
