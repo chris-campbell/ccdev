@@ -1,10 +1,7 @@
 import Footer from "./footer/Footer";
 import dynamic from "next/dynamic";
 
-const Navbar = dynamic(
-  () => import("./navbar/NavBar").then((mod) => mod.default),
-  { ssr: false }
-);
+const Navbar = dynamic(() => import("./navbar/NavBar"), { ssr: false });
 
 function Layout({ children }) {
   return (
