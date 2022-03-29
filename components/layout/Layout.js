@@ -2,7 +2,7 @@ import Footer from "./footer/Footer";
 import dynamic from "next/dynamic";
 
 const Navbar = dynamic(
-  () => import("./navBar/NavBar").then((mod) => mod.default),
+  () => import("./navbar/NavBar").then((mod) => mod.default),
   { ssr: false }
 );
 
