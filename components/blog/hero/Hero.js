@@ -16,10 +16,10 @@ export default function Hero({ article }) {
     <S.HeroContainer>
       <S.HeroWrapper>
         <h1>Blog</h1>
-        <Link href={`/blog/${slug}`} passHref="true">
+        <Link href={`/blog/${slug}`} passhref>
           <S.ArticleDetails>
             <S.ImageContainer>
-              <Image src={coverImage.url} layout="fill" passHref="true" />
+              <Image src={coverImage.url} layout="fill" passhref />
             </S.ImageContainer>
             <S.ArticleDescription>
               <span>Featured</span>

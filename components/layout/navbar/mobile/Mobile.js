@@ -51,17 +51,17 @@ const MobileNav = () => {
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/blog" passHref="true">
+                  <Link href="/blog" passhref>
                     <div className="header__icon">Blog</div>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/" passHref="true">
+                  <Link href="/" passhref>
                     <div className="header__icon">Work</div>
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/" passHref="true">
+                  <Link href="/" passhref>
                     <div className="header__icon">Hire</div>
                   </Link>
                 </li>

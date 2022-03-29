@@ -44,10 +44,12 @@ function Hero({ article }) {
     <BlueBack>
       <HeroContainer>
         <ArticleNav>
-          <Link href="/blog" passHref="true">
-            <span>
-              <BackToBlog /> Back to Articles
-            </span>
+          <Link href="/blog" passhref>
+            <a>
+              <span>
+                <BackToBlog /> Back to Articles
+              </span>
+            </a>
           </Link>
           <h1>{title}</h1>
         </ArticleNav>
