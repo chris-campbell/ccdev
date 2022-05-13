@@ -18,14 +18,14 @@ export const WorkWrapper = styled.div`
   }
 
   h1 {
-    font-family: ${(p) => p.theme.font.heading};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.heading};
+    color: ${(p) => p.theme.colors.white300};
     font-size: clamp(3rem, 10vw, 4rem);
   }
 
   p {
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.white300};
     font-size: clamp(1rem, 5vw, 1.2rem);
     max-width: 820px;
   }

@@ -15,7 +15,7 @@ const Blog = ({ articles }) => {
         <meta name="description" content="Professional" />
       </Head>
 
-      <BlogContainer article={article} allArticles={articles} />
+      <BlogContainer allArticles={articles} />
     </>
   );
 };

@@ -17,7 +17,7 @@ const DownScroll = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0.2rem 0.8rem;
-  font-family: ${(p) => p.theme.font.paragraph};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
   svg {
     font-size: 1.2rem;
     &:active {
@@ -29,7 +29,7 @@ const DownScroll = styled.div`
   &:hover {
     height: 3rem;
     transition: 400ms;
-    color: ${(p) => p.theme.colors.orange_300};
+    color: ${(p) => p.theme.colors.orange300};
   }
 `;
 

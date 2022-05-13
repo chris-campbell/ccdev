@@ -18,37 +18,37 @@ const Hero = () => {
           variants={V.lineAVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.white_300}
+          bgColor={(p) => p.theme.colors.white300}
         ></S.ColorLine>
         <S.ColorLine
           variants={V.lineBVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.grey_200}
+          bgColor={(p) => p.theme.colors.grey200}
         ></S.ColorLine>
         <S.ColorLine
           variants={V.lineCVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.grey_300}
+          bgColor={(p) => p.theme.colors.grey300}
         ></S.ColorLine>
         <S.ColorLine
           variants={V.lineDVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.orange_300}
+          bgColor={(p) => p.theme.colors.orange300}
         ></S.ColorLine>
         <S.ColorLine
           variants={V.lineEVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.blue_100}
+          bgColor={(p) => p.theme.colors.blue100}
         ></S.ColorLine>
         <S.ColorLine
           variants={V.lineFVariant}
           initial="hidden"
           animate="visible"
-          bgColor={(p) => p.theme.colors.blue_200}
+          bgColor={(p) => p.theme.colors.blue200}
         ></S.ColorLine>
       </S.HorizontalLines>
     </S.WorkContainer>

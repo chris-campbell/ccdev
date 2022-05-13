@@ -10,7 +10,7 @@ import { ArrowUpward } from "@mui/icons-material";
 
 const FooterContainer = styled.footer`
   width: 100%;
-  background: ${(p) => p.theme.colors.blue_200};
+  background: ${(p) => p.theme.colors.blue200};
   position: relative;
 `;
 
@@ -36,8 +36,8 @@ const FooterSocial = styled.div`
     padding: 0.8rem;
     border: 1px solid none;
     border-radius: 2rem;
-    background: ${(p) => p.theme.colors.blue_300};
-    color: ${(p) => p.theme.colors.blue_100};
+    background: ${(p) => p.theme.colors.blue300};
+    color: ${(p) => p.theme.colors.blue100};
     @media (max-width: 630px) {
       font-size: 3rem;
     }
@@ -47,8 +47,8 @@ const FooterSocial = styled.div`
 const FooterNav = styled.ul`
   display: flex;
   list-style-type: none;
-  font-family: ${(p) => p.theme.font.paragraph};
-  color: ${(p) => p.theme.colors.grey_200};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
+  color: ${(p) => p.theme.colors.grey200};
   gap: 1.5rem;
   padding-left: 0;
 `;
@@ -59,8 +59,8 @@ const UpArrow = styled(ArrowUpward)`
   bottom: 6.5rem;
   padding: 0.4rem 0.2rem;
   font-size: 2rem;
-  background: ${(p) => p.theme.colors.white_300};
-  color: ${(p) => p.theme.colors.blue_300};
+  background: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.blue300};
   border-radius: 1rem;
   @media (max-width: 630px) {
     display: none;

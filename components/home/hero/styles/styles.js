@@ -22,8 +22,8 @@ export const HeroWrapper = styled.div`
 export const SocialPanel = styled.div`
   display: flex;
   gap: 0.7rem;
-  font-family: ${(p) => p.theme.font.paragraph};
-  color: ${(p) => p.theme.colors.white_300};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
+  color: ${(p) => p.theme.colors.white300};
   list-style-type: none;
   li {
     display: flex;
@@ -42,14 +42,14 @@ export const FadeBox = styled(motion.div)`
   h1,
   h2,
   h3 {
-    font-family: ${(p) => p.theme.font.heading};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.heading};
+    color: ${(p) => p.theme.colors.white300};
   }
 
   h1 {
     font-size: clamp(0.875rem, 5vw, 1rem);
-    color: ${(p) => p.theme.colors.blue_100};
-    font-family: ${(p) => p.theme.font.paragraph};
+    color: ${(p) => p.theme.colors.blue100};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
     margin-bottom: 1rem;
     letter-spacing: 0.12rem;
   }
@@ -59,14 +59,14 @@ export const FadeBox = styled(motion.div)`
 
   h3 {
     font-size: clamp(2.5rem, 8vw, 5rem);
-    color: ${(p) => p.theme.colors.grey_200};
+    color: ${(p) => p.theme.colors.grey200};
     margin-bottom: 1rem;
   }
 
   p {
     font-size: 1.125rem;
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.white300};
     max-width: 48rem;
     letter-spacing: 0.04rem;
   }

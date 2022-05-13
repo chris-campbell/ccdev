@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const UXContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.white_300};
+  background-color: ${(p) => p.theme.colors.white300};
 `;
 
 const UXWrapper = styled.div`
@@ -21,17 +21,17 @@ const UXWrapper = styled.div`
     padding: calc(250px - 150px) 30px;
   }
   h3 {
-    font-family: ${(p) => p.theme.font.heading};
+    font-family: ${(p) => p.theme.fonts.heading};
     font-size: clamp(20px, 10vw, 35px);
-    color: ${(p) => p.theme.colors.grey_300};
+    color: ${(p) => p.theme.colors.grey300};
     margin-bottom: 2rem;
   }
 
   p {
     font-size: 1.3rem;
     line-height: 2.1rem;
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.grey_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.grey300};
     margin-bottom: 2rem;
   }
 `;
@@ -43,14 +43,14 @@ const DownloadButton = styled.div`
   svg {
     font-size: 1.45rem;
     padding: 0.2rem;
-    border: 2px solid ${(p) => p.theme.colors.blue_100};
+    border: 2px solid ${(p) => p.theme.colors.blue100};
     border-radius: 3rem;
     margin-right: 1rem;
-    color: ${(p) => p.theme.colors.blue_100};
+    color: ${(p) => p.theme.colors.blue100};
   }
   span {
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.grey_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.grey300};
   }
 `;
 

@@ -5,7 +5,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
 
 const WebDevServices = styled.section`
-  background-color: ${(p) => p.theme.colors.blue_200};
+  background-color: ${(p) => p.theme.colors.blue200};
 `;
 
 const WebDevWrapper = styled.div`
@@ -24,9 +24,9 @@ const WebDevWrapper = styled.div`
     padding: calc(250px - 150px) 30px;
   }
   h3 {
-    font-family: ${(p) => p.theme.font.heading};
+    font-family: ${(p) => p.theme.fonts.heading};
     font-size: clamp(20px, 10vw, 35px);
-    color: ${(p) => p.theme.colors.white_300};
+    color: ${(p) => p.theme.colors.white300};
     margin-bottom: 4rem;
   }
 `;
@@ -35,16 +35,16 @@ const Service = styled.div`
   h4 {
     display: flex;
     align-items: center;
-    color: ${(p) => p.theme.colors.blue_100};
-    font-family: ${(p) => p.theme.font.paragraph};
+    color: ${(p) => p.theme.colors.blue100};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
     font-size: 1.5rem;
     svg {
       margin-right: 0.5rem;
     }
   }
   p {
-    color: ${(p) => p.theme.colors.white_300};
-    font-family: ${(p) => p.theme.font.paragraph};
+    color: ${(p) => p.theme.colors.white300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
     font-size: 1.3rem;
     line-height: 2.1rem;
     margin-bottom: 2rem;
@@ -58,14 +58,14 @@ const DownloadButton = styled.div`
   svg {
     font-size: 1.45rem;
     padding: 0.2rem;
-    border: 2px solid ${(p) => p.theme.colors.blue_100};
+    border: 2px solid ${(p) => p.theme.colors.blue100};
     border-radius: 3rem;
     margin-right: 1rem;
-    color: ${(p) => p.theme.colors.blue_100};
+    color: ${(p) => p.theme.colors.blue100};
   }
   span {
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.grey_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.grey300};
   }
 `;
 

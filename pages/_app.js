@@ -1,36 +1,43 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
-import { ThemeProvider } from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "../components/ThemeConfig";
 
 const GlobalStyles = createGlobalStyle`
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
   html,
   body {
       padding: 0;
       margin: 0;
-      background-color: ${(p) => p.theme.colors.blue_300};
-       scroll-behavior: smooth;
+      background-color: ${(p) => p.theme.colors.blue300};
+      scroll-behavior: smooth;
   }
 
   main {
     min-height: 100vh;
-   
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
+
+    font-family: ${(p) => p.theme.fonts.heading};
+  }
+
+  p, span {
+    font-family: ${(p) => p.theme.fonts.paragraph};
   }
 
   a {
       color: inherit;
       text-decoration: none;
+      font-family: ${(p) => p.theme.fonts.paragraph};
   }
 
-  * {
-      box-sizing: border-box;
-  }
+
 `;
 
 function MyApp({ Component, pageProps }) {

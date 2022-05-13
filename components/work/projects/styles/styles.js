@@ -8,8 +8,8 @@ export const ProjectsContainer = styled.section`
 
 export const ProjectsWrapper = styled.div`
   h2 {
-    font-family: ${(p) => p.theme.font.heading};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.heading};
+    color: ${(p) => p.theme.colors.white300};
     font-size: clamp(2rem, 5vw, 3rem);
     margin: 5rem 0;
   }
@@ -41,14 +41,14 @@ export const ProjectsListItems = styled.ul`
   width: -webkit-fill-available;
   li {
     font-size: clamp(1rem, 5vw, 1.5rem);
-    font-family: ${(p) => p.theme.font.paragraph};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
     color: #72707061;
     flex-grow: 1;
     &:hover {
       font-weight: 600;
-      color: ${(p) => p.theme.colors.white_300};
+      color: ${(p) => p.theme.colors.white300};
       transition: 400ms;
       cursor: pointer;
     }
@@ -58,8 +58,8 @@ export const ProjectsListItems = styled.ul`
 export const ProjectsDescription = styled.div`
   flex: 4;
   font-size: clamp(1rem, 5vw, 1.2rem);
-  font-family: ${(p) => p.theme.font.paragraph};
-  color: ${(p) => p.theme.colors.white_300};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
+  color: ${(p) => p.theme.colors.white300};
   line-height: 1.9rem;
   letter-spacing: 0.1rem;
 `;
@@ -68,7 +68,7 @@ export const ProjectIcons = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  color: ${(p) => p.theme.colors.blue_100};
+  color: ${(p) => p.theme.colors.blue100};
   font-size: 1.5rem;
   justify-content: space-between;
 `;
@@ -81,15 +81,15 @@ export const Icons = styled.div`
 export const ExternalLinks = styled.div`
   display: flex;
   gap: 1rem;
-  color: ${(p) => p.theme.colors.white_300};
+  color: ${(p) => p.theme.colors.white300};
 `;
 
 export const Hobbies = styled.p`
-  font-family: ${(p) => p.theme.font.paragraph};
-  color: ${(p) => p.theme.colors.white_300};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
+  color: ${(p) => p.theme.colors.white300};
   margin-top: 4rem;
   span {
     margin-left: 1rem;
-    color: ${(p) => p.theme.colors.grey_200};
+    color: ${(p) => p.theme.colors.grey200};
   }
 `;

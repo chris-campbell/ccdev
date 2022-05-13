@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FullTimeContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.orange_300};
+  background-color: ${(p) => p.theme.colors.orange300};
 `;
 
 const FullTimeWrapper = styled.div`
@@ -20,17 +20,17 @@ const FullTimeWrapper = styled.div`
     padding: calc(250px - 150px) 30px;
   }
   h3 {
-    font-family: ${(p) => p.theme.font.heading};
+    font-family: ${(p) => p.theme.fonts.heading};
     font-size: clamp(20px, 10vw, 35px);
-    color: ${(p) => p.theme.colors.white_300};
+    color: ${(p) => p.theme.colors.white300};
     margin-bottom: 2rem;
   }
 
   p {
     font-size: 1.3rem;
     line-height: 2.1rem;
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.white_300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.white300};
     margin-bottom: 4rem;
   }
 `;
@@ -44,9 +44,9 @@ const WorkAvailiblity = styled.div`
     flex-direction: column;
   }
   button {
-    background: ${(p) => p.theme.colors.blue_100};
-    font-family: ${(p) => p.theme.font.paragraph};
-    color: ${(p) => p.theme.colors.white_300};
+    background: ${(p) => p.theme.colors.blue100};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
+    color: ${(p) => p.theme.colors.white300};
     padding: 1rem 1.5rem;
     border-radius: 2rem;
     border: none;
@@ -56,8 +56,8 @@ const WorkAvailiblity = styled.div`
     }
   }
   span {
-    color: ${(p) => p.theme.colors.white_300};
-    font-family: ${(p) => p.theme.font.paragraph};
+    color: ${(p) => p.theme.colors.white300};
+    font-family: ${(p) => p.theme.fonts.parapgraph};
     font-size: clamp(1rem, 5vw, 1.1rem);
   }
 `;

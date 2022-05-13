@@ -25,14 +25,14 @@ export const NavLinks = styled.ul`
 
 export const NavLink = styled(motion.li)`
   font-size: 0.9rem;
-  font-family: ${(p) => p.theme.font.paragraph};
+  font-family: ${(p) => p.theme.fonts.parapgraph};
   font-weight: 100;
-  color: ${(p) => p.theme.colors.white_300};
+  color: ${(p) => p.theme.colors.white300};
 `;
 
 export const HireLink = styled(NavLink)`
   padding: 0.5rem 1rem;
-  border: 1px solid ${(p) => p.theme.colors.orange_300};
+  border: 1px solid ${(p) => p.theme.colors.orange300};
   border-radius: 0.2rem;
-  color: ${(p) => p.theme.colors.orange_300};
+  color: ${(p) => p.theme.colors.orange300};
 `;

@@ -18,7 +18,7 @@ export const Drawer = styled.div`
   overflow-y: auto;
   opacity: ${(p) => (p.open ? "1" : "0")};
   height: 100vh;
-  background: ${(p) => p.theme.colors.blue_300};
+  background: ${(p) => p.theme.colors.blue300};
   min-height: 100vh;
   transition: width 700ms ease-in-out 0s;
 `;
@@ -37,7 +37,7 @@ export const MobileNav = styled.ul`
     font-size: 1.3rem;
     white-space: nowrap;
     justify-content: center;
-    font-family: ${(p) => p.theme.font.heading};
+    font-family: ${(p) => p.theme.fonts.heading};
 
     letter-spacing: 0.13rem;
     */ a {

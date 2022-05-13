@@ -1,12 +1,11 @@
 import Articles from "./articles/Articles";
-import Hero from "./hero/Hero";
+import styled from "styled-components";
 
-const BlogContainer = ({ article, allArticles }) => {
+const BlogContainer = ({ allArticles }) => {
   return (
-    <>
-      <Hero article={article} />
+    <div>
       <Articles allArticles={allArticles} />
-    </>
+    </div>
   );
 };
 
