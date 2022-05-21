@@ -2,8 +2,8 @@ import { gql } from "@apollo/client";
 import client from "../../apolloClient";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
 
-function ArticleDetail() {
-  return <ArticleDetails article={dummyArticle} />;
+function ArticleDetail({ article }) {
+  return <ArticleDetails article={article} />;
 }
 
 export default ArticleDetail;
