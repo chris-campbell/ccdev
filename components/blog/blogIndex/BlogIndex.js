@@ -2,6 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Accordion from "./accordion/Accordion";
 
+import { uniqueId } from "lodash";
+
 const BlogIndexContainer = styled.section`
   margin-left: 2rem;
 `;
@@ -23,6 +25,8 @@ const BlogIndexWrapper = styled.div`
 const BlogIndex = ({ allArticles, setPreview }) => {
   const [list, setList] = useState([]);
   const blogIndexRef = useRef(null);
+
+  let uniqueIndex = uniqueId("index_");
 
   const isNotIndex = (index) => {
     return index < 0;
@@ -49,13 +53,13 @@ const BlogIndex = ({ allArticles, setPreview }) => {
     return list.map((item) => {
       for (const [key, value] of Object.entries(item)) {
         return (
-          <>
+          <div key={key}>
             <Accordion
               title={key}
               articleList={value}
               setPreview={setPreview}
             />
-          </>
+          </div>
         );
       }
     });
