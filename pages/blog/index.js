@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BlogContainer from "../../components/blog/Blogcontainer";
+import BlogContainer from "../../components/blog/BlogContainer";
 import client from "../../apolloClient";
 import { gql } from "@apollo/client";
 
