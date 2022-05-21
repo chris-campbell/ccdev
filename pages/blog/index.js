@@ -4,10 +4,6 @@ import client from "../../apolloClient";
 import { gql } from "@apollo/client";
 
 const Blog = ({ articles }) => {
-  const article = articles[0];
-
-  console.log(article);
-
   return (
     <>
       <Head>
@@ -33,6 +29,7 @@ export const getStaticProps = async () => {
           featured
           category
           excerpt
+          createdAt
           coverImage {
             url
           }
@@ -62,7 +59,6 @@ export const getStaticProps = async () => {
 
   const { articles } = data;
 
-  console.log(articles);
   return {
     props: {
       articles,

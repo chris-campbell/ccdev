@@ -25,6 +25,7 @@ export const SocialPanel = styled.div`
   font-family: ${(p) => p.theme.fonts.parapgraph};
   color: ${(p) => p.theme.colors.white300};
   list-style-type: none;
+  margin-bottom: 1.5rem;
   li {
     display: flex;
     align-items: center;
@@ -58,9 +59,12 @@ export const FadeBox = styled(motion.div)`
   }
 
   h3 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    color: ${(p) => p.theme.colors.grey200};
+    font-size: clamp(2.1rem, 7vw, 4rem);
+    color: #bbbcbe;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    width: 67%;
+    letter-spacing: 0.1rem;
   }
 
   p {
