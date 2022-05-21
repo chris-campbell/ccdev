@@ -6,6 +6,7 @@ const theme = {
     orange300: "#FF7105",
     grey300: "#707070",
     grey200: "#BBBCBE",
+    grey100: "#aaa",
     white300: "#F2F2F2",
   },
   fonts: {

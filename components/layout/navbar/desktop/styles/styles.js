@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 export const NavbarContainer = styled.header`
   width: 100%;
+  border-bottom: 1px solid #46464687;
 `;
 
 export const NavbarWrapper = styled.div`
