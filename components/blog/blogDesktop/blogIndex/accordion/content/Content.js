@@ -1,6 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Item from "./item/Item";
+
+import { uniqueId } from "lodash";
+const IndexList = styled.ul`
+  margin: 1rem 0;
+  list-style-position: outside;
+`;
 
 const Content = ({ isShowing, articleList, setPreview }) => {
   return (
@@ -30,9 +36,4 @@ const ContentContainer = styled.div`
     font-size: 0.8rem;
     line-height: 1.5;
   }
-`;
-
-const IndexList = styled.ul`
-  margin: 1rem 0;
-  list-style-position: outside;
 `;
