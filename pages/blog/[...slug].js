@@ -1,9 +1,39 @@
 import { gql } from "@apollo/client";
 import client from "../../apolloClient";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
+import { RWebShare } from "react-web-share";
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 function ArticleDetail({ article }) {
-  return <ArticleDetails article={article} />;
+  const router = useRouter();
+  console.log(router.asPath);
+  return (
+    <div>
+      <Head>
+        <title>CCDev | Articles </title>
+        <meta property="og:image" content={`${article.coverImage.url}`} />
+        <meta property="og:title" content={article.title} />
+        <meta
+          property="og:url"
+          content={`https://localhost:3000${router.asPath}`}
+        />
+      </Head>
+
+      <RWebShare
+        data={{
+          text: article.title,
+          url: `https://localhost:3000${router.asPath}`,
+          title: "Share this article on Flamingos",
+          data: article.coverImage.url,
+        }}
+        onClick={() => console.info("share successful!")}
+      >
+        <button>Share</button>
+      </RWebShare>
+      <ArticleDetails article={article} />
+    </div>
+  );
 }
 
 export default ArticleDetail;

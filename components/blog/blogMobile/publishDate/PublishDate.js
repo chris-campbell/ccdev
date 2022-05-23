@@ -3,8 +3,8 @@ import styled from "styled-components";
 const PublishDateContainer = styled.div`
   font-family: ${(p) => p.theme.fonts.paragraph};
   color: #a8aaac;
-  margin-bottom: 1rem;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
 `;
 
 const PublishDate = ({ date }) => {
