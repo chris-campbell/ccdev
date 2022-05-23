@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const ItemContainer = styled.li`
   color: ${(props) => (props.selected ? "#ae44a9" : "#fff")};
@@ -10,9 +10,11 @@ const ItemContainer = styled.li`
   display: flex;
   align-items: center;
   text-transform: capitalize;
-  max-width: 85%;
+  max-width: 100%;
   padding: 0.5rem 0.6rem;
   word-spacing: 0.1rem;
+  margin-right: 0.8rem;
+
   &:hover {
     background-color: ${(p) => p.theme.colors.blue100};
     border-top-right-radius: 0.4rem;
@@ -36,12 +38,8 @@ const ItemContainer = styled.li`
 `;
 
 const Item = ({ item, setPreview }) => {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
   const itemRef = useRef(null);
-
-  const handleActive = () => {
-    setIsActive(!isActive);
-  };
 
   useEffect(() => {
     setPreview(item, itemRef);
@@ -49,12 +47,11 @@ const Item = ({ item, setPreview }) => {
 
   return (
     <ItemContainer
-      selected={isActive}
+      // selected={isActive}
       id={item.id}
       ref={itemRef}
       onClick={() => setPreview(item, itemRef)}
     >
-      {/* <span></span> */}
       {item.title}
     </ItemContainer>
   );

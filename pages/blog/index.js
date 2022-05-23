@@ -1,8 +1,13 @@
 import Head from "next/head";
-import BlogContainer from "../../components/blog/BlogContainer";
+// import BlogContainer from "../../components/blog/BlogContainer";
+import dynamic from "next/dynamic";
 import client from "../../apolloClient";
 import { gql } from "@apollo/client";
 
+const BlogContainer = dynamic(
+  () => import("../../components/blog/BlogContainer"),
+  { ssr: false }
+);
 const Blog = ({ articles }) => {
   return (
     <>
@@ -70,12 +75,12 @@ const dummyList = [
   {
     __typename: "Article",
     id: "cl0s7byl8eli00cisdrfooaiw",
-    title: "Writing Code for hardware, is it really as hard as it looks?",
-    slug: "going-full-time-with-content-creation",
+    title: "Warning: These 9 Mistakes Will Destroy Your JavaScript",
+    slug: "warning-these-9-mistakes-will-destroy-your-javascript",
     featured: false,
     category: "Code",
     excerpt:
-      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo.",
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
     createdAt: "2022-03-15T14:00:14.290877+00:00",
     coverImage: {
       __typename: "Asset",
@@ -113,12 +118,12 @@ const dummyList = [
   {
     __typename: "Article",
     id: "cl0tkmm0s7r4y0bk40q9srgwq",
-    title: "Creating team magic with programming agile software",
-    slug: "creating-team-magic-with-programming-agile-software",
+    title: "How To Take The Headache Out Of JavaScript",
+    slug: "how-to-take-the-headache-out-of-javascript",
     featured: false,
     category: "Start-up",
     excerpt:
-      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo.",
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
     createdAt: "2022-03-16T13:00:12.396803+00:00",
     coverImage: {
       __typename: "Asset",
@@ -155,12 +160,14 @@ const dummyList = [
   {
     __typename: "Article",
     id: "cl0uym7ty0bel0dixn18fasrn",
-    title: "Stop being the anti-social programmer, 10 ways to exit you bubble",
-    slug: "stop-being-the-anti-social-programmer-10-ways-to-exit-you-bubble",
+    title:
+      "Everything You Wanted to Know About JavaScript and Were Afraid To Ask",
+    slug:
+      "everything-you-wanted-to-know-about-javascript-and-were-afraid-to-ask",
     featured: false,
     category: "code",
     excerpt:
-      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo.",
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
     createdAt: "2022-03-17T12:19:34.816562+00:00",
     coverImage: {
       __typename: "Asset",
@@ -193,7 +200,279 @@ const dummyList = [
     featured: false,
     category: "Study",
     excerpt:
-      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo.",
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2022-03-17T13:09:24.667513+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/LJiJeHblRei5sbf15MUV",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>Avoid for the of watch show owner something with because absolutely of lane. Titles for son, ever being text much either spineless, away, just for review, turner try conduct, escape, middle been ideas at him, right to lobby, he back than the screen far he help show diet, of can few own, opposite so to the any of had my at incurred have careful to proceeded to desires projected in from writers.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0uym7ty0bel0dixn18fasrn",
+    title:
+      "Everything You Wanted to Know About JavaScript and Were Afraid To Ask",
+    slug:
+      "everything-you-wanted-to-know-about-javascript-and-were-afraid-to-ask",
+    featured: false,
+    category: "code",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2022-03-17T12:19:34.816562+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/BELHM3URaq94neoL2hlW",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>The five. Agency, many by for set now funds been crew the to and he least in gradually times more harmonics. After beings she come he in to than way. The from close word wasn&#39;t time, down being he what that best the thousand got felt to drew should and an her of long antiquity own a logging descriptions, coffee cities into they but feel the plot hall trumpet display shown the dresses for even the alarm synthesizers once go rendering analyzed her, to my phase almost back when to of parents time her to cut I of from the.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0v0eatp0u2w0dixq1er2ky4",
+    title: "Super virtual meeting that are taking over the workforce",
+    slug: "super-virtual-meeting-that-are-taking-over-the-workforce",
+    featured: false,
+    category: "Study",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2022-03-17T13:09:24.667513+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/LJiJeHblRei5sbf15MUV",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>Avoid for the of watch show owner something with because absolutely of lane. Titles for son, ever being text much either spineless, away, just for review, turner try conduct, escape, middle been ideas at him, right to lobby, he back than the screen far he help show diet, of can few own, opposite so to the any of had my at incurred have careful to proceeded to desires projected in from writers.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0uym7ty0bel0dixn18fasrn",
+    title:
+      "Everything You Wanted to Know About JavaScript and Were Afraid To Ask",
+    slug:
+      "everything-you-wanted-to-know-about-javascript-and-were-afraid-to-ask",
+    featured: false,
+    category: "code",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2024-03-17T12:19:34.816562+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/BELHM3URaq94neoL2hlW",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>The five. Agency, many by for set now funds been crew the to and he least in gradually times more harmonics. After beings she come he in to than way. The from close word wasn&#39;t time, down being he what that best the thousand got felt to drew should and an her of long antiquity own a logging descriptions, coffee cities into they but feel the plot hall trumpet display shown the dresses for even the alarm synthesizers once go rendering analyzed her, to my phase almost back when to of parents time her to cut I of from the.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0v0eatp0u2w0dixq1er2ky4",
+    title: "Super virtual meeting that are taking over the workforce",
+    slug: "super-virtual-meeting-that-are-taking-over-the-workforce",
+    featured: false,
+    category: "Study",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2024-03-17T13:09:24.667513+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/LJiJeHblRei5sbf15MUV",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>Avoid for the of watch show owner something with because absolutely of lane. Titles for son, ever being text much either spineless, away, just for review, turner try conduct, escape, middle been ideas at him, right to lobby, he back than the screen far he help show diet, of can few own, opposite so to the any of had my at incurred have careful to proceeded to desires projected in from writers.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0uym7ty0bel0dixn18fasrn",
+    title:
+      "Everything You Wanted to Know About JavaScript and Were Afraid To Ask",
+    slug:
+      "everything-you-wanted-to-know-about-javascript-and-were-afraid-to-ask",
+    featured: false,
+    category: "code",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2023-03-17T12:19:34.816562+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/BELHM3URaq94neoL2hlW",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>The five. Agency, many by for set now funds been crew the to and he least in gradually times more harmonics. After beings she come he in to than way. The from close word wasn&#39;t time, down being he what that best the thousand got felt to drew should and an her of long antiquity own a logging descriptions, coffee cities into they but feel the plot hall trumpet display shown the dresses for even the alarm synthesizers once go rendering analyzed her, to my phase almost back when to of parents time her to cut I of from the.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0v0eatp0u2w0dixq1er2ky4",
+    title: "Super virtual meeting that are taking over the workforce",
+    slug: "super-virtual-meeting-that-are-taking-over-the-workforce",
+    featured: false,
+    category: "Study",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2022-03-17T13:09:24.667513+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/LJiJeHblRei5sbf15MUV",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>Avoid for the of watch show owner something with because absolutely of lane. Titles for son, ever being text much either spineless, away, just for review, turner try conduct, escape, middle been ideas at him, right to lobby, he back than the screen far he help show diet, of can few own, opposite so to the any of had my at incurred have careful to proceeded to desires projected in from writers.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0uym7ty0bel0dixn18fasrn",
+    title:
+      "Everything You Wanted to Know About JavaScript and Were Afraid To Ask",
+    slug:
+      "everything-you-wanted-to-know-about-javascript-and-were-afraid-to-ask",
+    featured: false,
+    category: "code",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
+    createdAt: "2023-03-17T12:19:34.816562+00:00",
+    coverImage: {
+      __typename: "Asset",
+      url: "https://media.graphassets.com/BELHM3URaq94neoL2hlW",
+    },
+    content: {
+      __typename: "RichText",
+      html:
+        "<p>The five. Agency, many by for set now funds been crew the to and he least in gradually times more harmonics. After beings she come he in to than way. The from close word wasn&#39;t time, down being he what that best the thousand got felt to drew should and an her of long antiquity own a logging descriptions, coffee cities into they but feel the plot hall trumpet display shown the dresses for even the alarm synthesizers once go rendering analyzed her, to my phase almost back when to of parents time her to cut I of from the.</p>",
+    },
+    authors: [
+      {
+        __typename: "Author",
+        avatar: {
+          __typename: "Asset",
+          id: "cl0sxkttg36at0ck4woo9c06r",
+          url: "https://media.graphassets.com/u3czFcUAQ4u45ELTgtqd",
+          createdAt: "2022-03-16T02:14:58.033124+00:00",
+        },
+        name: "Chris Campbell",
+      },
+    ],
+    seo: null,
+  },
+  {
+    __typename: "Article",
+    id: "cl0v0eatp0u2w0dixq1er2ky4",
+    title: "Super virtual meeting that are taking over the workforce",
+    slug: "super-virtual-meeting-that-are-taking-over-the-workforce",
+    featured: false,
+    category: "Study",
+    excerpt:
+      "Integer vitae efficitur eros. Ut sit amet arcu lorem. In et lorem venenatis, euismod erat ut, porttitor nibh. Sed ullamcorper lacus leo, nec tristique lectu.Integer vitae.",
     createdAt: "2022-03-17T13:09:24.667513+00:00",
     coverImage: {
       __typename: "Asset",
