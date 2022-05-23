@@ -23,9 +23,8 @@ function ArticleDetail({ article }) {
       <RWebShare
         data={{
           text: article.title,
-          url: `https://localhost:3000${router.asPath}`,
+          url: `http://localhost:3000${router.asPath}`,
           title: "Share this article on Flamingos",
-          data: article.coverImage.url,
         }}
         onClick={() => console.info("share successful!")}
       >
