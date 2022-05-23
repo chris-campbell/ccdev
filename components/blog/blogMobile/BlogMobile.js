@@ -21,7 +21,7 @@ const BlogMobile = ({ allArticles }) => {
 
       <div>
         {activeList.map((item) => (
-          <S.CurrentListingContainer>
+          <S.CurrentListingContainer key={item.id}>
             <PublishDate date={item.createdAt} />
             <h2>{item.title}</h2>
             <div className="mobile-cover-image">
