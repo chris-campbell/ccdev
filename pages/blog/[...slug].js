@@ -14,16 +14,21 @@ function ArticleDetail({ article }) {
         <title>CCDev | Articles </title>
         <meta property="og:image" content={`${article.coverImage.url}`} />
         <meta property="og:title" content={article.title} />
+        <meta property="og:url" content={router.asPath} />
+
+        <meta name="twitter:image" content={`${article.coverImage.url}`} />
         <meta
-          property="og:url"
-          content={`https://localhost:3000${router.asPath}`}
+          name="twitter:title"
+          content="Ultimate Guide To Social Meta Tags: Open Graph And Twitter cards—Takanomi"
         />
+        <meta name="twitter:image" content={`${article.coverImage.url}`} />
+        <meta name="twitter:card" content="summary" />
       </Head>
 
       <RWebShare
         data={{
           text: article.title,
-          url: `http://localhost:3000${router.asPath}`,
+          url: `https://www.chriscampbelldev.com${router.asPath}`,
           title: "Share this article on Flamingos",
         }}
         onClick={() => console.info("share successful!")}
