@@ -7,12 +7,13 @@ import ArticleDetails from "../../components/articledetails/ArticleDetails";
 
 function ArticleDetail({ article }) {
   const router = useRouter();
-  console.log(router.asPath);
+
   return (
     <div>
       <Head>
         <title>CCDev | Articles </title>
         <meta property="og:image" content={`${article.coverImage.url}`} />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={article.title} />
         <meta
           property="og:url"
