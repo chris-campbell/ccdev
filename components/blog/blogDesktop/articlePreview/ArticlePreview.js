@@ -9,6 +9,7 @@ import NavButton from "./navButton/NavButton";
 
 const ArticlePreviewContainer = styled.div`
   max-width: 60%;
+  margin: 0 auto;
 `;
 
 const ArticleMeta = styled.div`

@@ -4,7 +4,6 @@ const PublishDateContainer = styled.div`
   font-family: ${(p) => p.theme.fonts.paragraph};
   color: #a8aaac;
   margin-bottom: 1rem;
-  font-size: clamp(0.8rem, 2vw, 1rem);
 `;
 
 const PublishDate = ({ date }) => {
