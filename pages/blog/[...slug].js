@@ -16,10 +16,10 @@ function ArticleDetail({ article }) {
         <meta property="og:title" content={article.title} />
         <meta property="og:url" content={router.asPath} />
 
-        <meta name="twitter:card" content="summary" />
         <meta name="twitter:image" content={`${article.coverImage.url}`} />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:image" content={`${article.coverImage.url}`} />
+        <meta name="twitter:card" content="summary" />
       </Head>
 
       <RWebShare
@@ -30,7 +30,7 @@ function ArticleDetail({ article }) {
         }}
         onClick={() => console.info("share successful!")}
       >
-        <button>Share</button>
+        <button>Share Button</button>
       </RWebShare>
       <ArticleDetails article={article} />
     </div>
