@@ -1,7 +1,12 @@
 import Head from "next/head";
-import BlogContainer from "../../components/blog/BlogContainer";
+import dynamic from "next/dynamic";
 import client from "../../apolloClient";
 import { gql } from "@apollo/client";
+
+const BlogContainer = dynamic(
+  () => import("../../components/blog/BlogContainer"),
+  { ssr: false }
+);
 
 const Blog = ({ articles }) => {
   return (
