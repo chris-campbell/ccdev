@@ -16,10 +16,9 @@ function ArticleDetail({ article }) {
         <meta property="og:title" content={article.title} />
         <meta property="og:url" content={router.asPath} />
 
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={`${article.coverImage.url}`} />
         <meta name="twitter:title" content={article.title} />
-        <meta name="twitter:image" content={`${article.coverImage.url}`} />
-        <meta name="twitter:card" content="summary" />
       </Head>
 
       <RWebShare
