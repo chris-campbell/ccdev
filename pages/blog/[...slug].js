@@ -1,43 +1,9 @@
 import { gql } from "@apollo/client";
 import client from "../../apolloClient";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
-import { RWebShare } from "react-web-share";
-import { useRouter } from "next/router";
-import Head from "next/head";
 
 function ArticleDetail({ article }) {
-  const router = useRouter();
-  console.log(router.asPath);
-  return (
-    <div>
-      <Head>
-        <title>CCDev | Articles </title>
-        <meta property="og:image" content={`${article.coverImage.url}`} />
-        <meta property="og:title" content={article.title} />
-        <meta property="og:url" content={router.asPath} />
-
-        <meta name="twitter:image" content={`${article.coverImage.url}`} />
-        <meta
-          name="twitter:title"
-          content="Ultimate Guide To Social Meta Tags: Open Graph And Twitter cards—Takanomi"
-        />
-        <meta name="twitter:image" content={`${article.coverImage.url}`} />
-        <meta name="twitter:card" content="summary" />
-      </Head>
-
-      <RWebShare
-        data={{
-          text: article.title,
-          url: `https://www.chriscampbelldev.com${router.asPath}`,
-          title: "Share this article on Flamingos",
-        }}
-        onClick={() => console.info("share successful!")}
-      >
-        <button>Share</button>
-      </RWebShare>
-      <ArticleDetails article={article} />
-    </div>
-  );
+  return <ArticleDetails article={article} />;
 }
 
 export default ArticleDetail;

@@ -1,42 +1,43 @@
 import { useState, useEffect } from "react";
 import BlogIndex from "./blogIndex/BlogIndex";
 import ArticlePreview from "./articlePreview/ArticlePreview";
+
 import styled from "styled-components";
 
 const BlogDesktop = ({ allArticles }) => {
-  const [activeEl, setActiveEl] = useState(null);
-  const [prevEl, setPrevEl] = useState(null);
+  const [activeId, setActiveId] = useState(null);
+  const [prevId, setPrevId] = useState(null);
   const [currentArticlePreview, setCurrentArticlePreview] = useState(
     allArticles[allArticles.length - 1]
   );
 
   const setPreviewData = (preview, id) => {
-    setActiveEl(id);
+    setActiveId(id);
     setCurrentArticlePreview(preview);
   };
 
   const setInactiveColor = (color) => {
-    if (prevEl)
+    if (prevId)
       return (
-        (prevEl.current.style.color = color),
-        (prevEl.current.style.fontWeight = 400)
+        (prevId.current.style.color = color),
+        (prevId.current.style.fontWeight = 400)
       );
   };
 
   const setActiveColor = (color) => {
     return (
-      (activeEl.current.style.color = color),
-      (activeEl.current.style.fontWeight = 600)
+      (activeId.current.style.color = color),
+      (activeId.current.style.fontWeight = 600)
     );
   };
 
   useEffect(() => {
-    if (activeEl !== null) {
+    if (activeId !== null) {
       setActiveColor("#ff7105");
-      setPrevEl(activeEl);
+      setPrevId(activeId);
       setInactiveColor("#FFF");
     }
-  }, [activeEl]);
+  }, [activeId]);
 
   return (
     <>
@@ -55,8 +56,7 @@ export default BlogDesktop;
 const BlogWrapper = styled.div`
   display: flex;
   max-width: 1600px;
-  padding: clamp(3rem, 6vw, 100px) 1rem;
+  padding: clamp(1rem, 4vw, 100px) 100px;
   margin: 0 auto;
-  gap: clamp(2rem, 4vw, 6rem);
-  justify-content: center;
+  gap: 2rem;
 `;
