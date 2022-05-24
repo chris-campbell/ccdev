@@ -14,11 +14,15 @@ function ArticleDetail({ article }) {
         <title>CCDev | Articles </title>
         <meta property="og:image" content={`${article.coverImage.url}`} />
         <meta property="og:title" content={article.title} />
-        <meta property="og:url" content={router.asPath} />
+        <meta
+          property="og:url"
+          content={`https://www.chriscampbelldev.com${router.asPath}`}
+        />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={`${article.coverImage.url}`} />
         <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:description" content={article.excerpt} />
+        <meta name="twitter:image" content={`${article.coverImage.url}`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <RWebShare
