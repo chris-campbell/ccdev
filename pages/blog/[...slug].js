@@ -1,9 +1,11 @@
 import { gql } from "@apollo/client";
 import client from "../../apolloClient";
+import { RWebShare } from "react-web-share";
+import { useRouter } from "next/router";
+import Head from "next/head";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
 
 function ArticleDetail({ article }) {
-
   const router = useRouter();
   console.log(router.asPath);
   return (
@@ -33,7 +35,6 @@ function ArticleDetail({ article }) {
       <ArticleDetails article={article} />
     </div>
   );
-
 }
 
 export default ArticleDetail;
