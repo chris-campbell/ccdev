@@ -5,7 +5,7 @@ const GeneralHead = ({ ogType, image, title, host, path }) => {
   return (
     <>
       <meta property="og:type" content={ogType} />
-      <meta property="og:image" itemprop="image" content={`${image}`} />
+      <meta property="og:image" itemProp="image" content={`${image}`} />
       <meta property="og:title" content={title} />
       <meta property="og:url" content={fullUrl} />
     </>
