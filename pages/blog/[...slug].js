@@ -18,13 +18,12 @@ function ArticleDetail({ article, host }) {
         {/* Default Meta */}
         <title>CCDev | Articles </title>
         {/* OG Sharing Meta */}
-        <GeneralHead
-          ogType="article"
-          image={url}
-          title={title}
-          host={host}
-          path={asPath}
-        />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:image" itemProp="image" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={`${host}${asPath}`} />
+
         {/* Twitter Meta */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={title} />
