@@ -26,7 +26,6 @@ function ArticleDetail({ article, host }) {
           path={asPath}
         />
         {/* Twitter Meta */}
-        {console.log({ url })}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={title} />
         <meta name="twitter:image:src" content={`${url}`} />
@@ -34,8 +33,6 @@ function ArticleDetail({ article, host }) {
         <meta name="twitter:image:height" content="400" />
         <meta name="twitter:card" content="summary" />
       </Head>
-
-      <Head></Head>
 
       <RWebShare
         data={{
