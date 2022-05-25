@@ -13,7 +13,7 @@ function ArticleDetail({ article, host }) {
   const asPath = useRouter().asPath;
 
   return (
-    <div>
+    <>
       <Head>
         {/* Default Meta */}
         <title>CCDev | Articles </title>
@@ -46,7 +46,7 @@ function ArticleDetail({ article, host }) {
         <button>Share Button</button>
       </RWebShare>
       <ArticleDetails article={article} />
-    </div>
+    </>
   );
 }
 
