@@ -4,8 +4,8 @@ import { RWebShare } from "react-web-share";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
-import GeneralHead from "../../heads/GeneralHead";
-import TwitterHead from "../../heads/TwitterHead";
+import GeneralHead from "../../components/heads/GeneralHead";
+import TwitterHead from "../../components/heads/TwitterHead";
 
 function ArticleDetail({ article, host }) {
   const { coverImage, title, excerpt } = article;
@@ -17,7 +17,6 @@ function ArticleDetail({ article, host }) {
       <Head>
         {/* Default Meta */}
         <title>CCDev | Articles </title>
-
         {/* OG Sharing Meta */}
         <GeneralHead
           ogType="article"
@@ -26,20 +25,24 @@ function ArticleDetail({ article, host }) {
           host={host}
           path={asPath}
         />
-
-        <TwitterHead
-          title={title}
-          description={excerpt}
-          image={url}
-          card={"summary_large_image"}
-        />
+        {/* Twitter Meta */}
+        {console.log({ url })}
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={title} />
+        <meta name="twitter:image:src" content={`${url}`} />
+        <meta name="twitter:image:width" content="400" />
+        <meta name="twitter:image:height" content="400" />
+        <meta name="twitter:card" content="summary" />
       </Head>
+
+      <Head></Head>
 
       <RWebShare
         data={{
-          text: `${excerpt}`,
+          text: `${title}`,
           url: `${host}${asPath}`,
           title: `${title}`,
+          files: `${url}`,
         }}
         onClick={() => console.info("share successful!")}
       >
