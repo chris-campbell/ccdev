@@ -4,33 +4,42 @@ import { RWebShare } from "react-web-share";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
+import GeneralHead from "../../heads/GeneralHead";
+import TwitterHead from "../../heads/TwitterHead";
 
-function ArticleDetail({ article }) {
-  const router = useRouter();
+function ArticleDetail({ article, host }) {
+  const { coverImage, title, excerpt } = article;
+  const { url } = coverImage;
+  const asPath = useRouter().asPath;
 
   return (
     <div>
       <Head>
+        {/* Default Meta */}
         <title>CCDev | Articles </title>
-        <meta property="og:image" content={`${article.coverImage.url}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={article.title} />
-        <meta
-          property="og:url"
-          content={`https://www.chriscampbelldev.com${router.asPath}`}
+
+        {/* OG Sharing Meta */}
+        <GeneralHead
+          ogType="article"
+          image={url}
+          title={title}
+          host={host}
+          path={asPath}
         />
 
-        <meta name="twitter:title" content={article.title} />
-        <meta name="twitter:description" content={article.excerpt} />
-        <meta name="twitter:image" content={`${article.coverImage.url}`} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <TwitterHead
+          title={title}
+          description={excerpt}
+          image={url}
+          card={"summary_large_image"}
+        />
       </Head>
 
       <RWebShare
         data={{
-          text: article.title,
-          url: `https://www.chriscampbelldev.com${router.asPath}`,
-          title: "Share this article on Flamingos",
+          text: `${excerpt}`,
+          url: `${host}${asPath}`,
+          title: `${title}`,
         }}
         onClick={() => console.info("share successful!")}
       >
@@ -44,27 +53,29 @@ function ArticleDetail({ article }) {
 export default ArticleDetail;
 
 // Gets all the different paths for all the different post
-export const getStaticPaths = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query {
-        articles {
-          slug
-        }
-      }
-    `,
-  });
+// export const getStaticPaths = async () => {
+//   const { data } = await client.query({
+//     query: gql`
+//       query {
+//         articles {
+//           slug
+//         }
+//       }
+//     `,
+//   });
 
-  const { articles } = data;
+//   const { articles } = data;
 
-  const paths = articles.map((article) => ({
-    params: { slug: [article.slug] },
-  }));
+//   const paths = articles.map((article) => ({
+//     params: { slug: [article.slug] },
+//   }));
 
-  return { paths, fallback: false };
-};
+//   return { paths, fallback: false };
+// };
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ req, params }) {
+  const { host } = req.headers;
+
   const slug = params.slug[0];
   const { data } = await client.query({
     query: gql`
@@ -111,6 +122,6 @@ export async function getStaticProps({ params }) {
   const article = articles[0];
 
   return {
-    props: { article },
+    props: { article, host },
   };
 }
