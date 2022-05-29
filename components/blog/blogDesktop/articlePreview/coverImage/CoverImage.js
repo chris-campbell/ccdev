@@ -1,15 +1,11 @@
 import Image from "next/image";
-import styled from "styled-components";
-
-const CoverImageContainer = styled.div`
-  margin-bottom: 2rem;
-`;
+import * as S from "./styles/styles";
 
 const CoverImage = ({ url }) => {
   return (
-    <CoverImageContainer>
+    <S.CoverImageContainer>
       {url ? <Image src={url} width={900} height={500} /> : null}
-    </CoverImageContainer>
+    </S.CoverImageContainer>
   );
 };
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const PublishDateContainer = styled.div`
   font-family: ${(p) => p.theme.fonts.paragraph};
-  color: #a8aaac;
+  color: ${(p) => p.theme.colors.grey400};
   margin-bottom: 0.5rem;
   font-size: 0.8rem;
 `;

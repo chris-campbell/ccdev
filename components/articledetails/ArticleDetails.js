@@ -1,33 +1,32 @@
-import React from "react";
 import PublishDate from "./publishDate/PublishDate";
 import CoverImage from "./coverImage/CoverImage";
 import Title from "./title/Title";
 import Content from "./content/Content";
 import Author from "./author/Author";
-import styled from "styled-components";
+import SocialIcons from "./socialIcons/SocialIcons";
+import { useRouter } from "next/router";
 
-const ArticleDetails = ({ article }) => {
+import * as S from "./styles/styles";
+
+const ArticleDetails = ({ article, host }) => {
   const { title, content, createdAt, coverImage, authors } = article;
+  const path = useRouter().asPath;
+  const url = `${host}${path}`;
 
   return (
-    <ArticleDetailsContainer>
-      <ArticleDetailsWrapper>
-        <PublishDate date={createdAt} />
-        <Title title={title} />
-        <CoverImage url={coverImage.url} />
-        <Content content={content} />
-        <Author authors={authors} />
-      </ArticleDetailsWrapper>
-    </ArticleDetailsContainer>
+    <>
+      <S.ArticleDetailsContainer>
+        <S.ArticleDetailsWrapper>
+          <PublishDate date={createdAt} />
+          <Title title={title} />
+          <SocialIcons url={url} title={title} />
+          <CoverImage url={coverImage.url} />
+          <Content content={content} />
+          <Author authors={authors} />
+        </S.ArticleDetailsWrapper>
+      </S.ArticleDetailsContainer>
+    </>
   );
 };
 
 export default ArticleDetails;
-
-const ArticleDetailsContainer = styled.div``;
-
-const ArticleDetailsWrapper = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: clamp(1rem, 4vw, 100px);
-`;

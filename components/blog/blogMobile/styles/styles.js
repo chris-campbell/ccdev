@@ -18,7 +18,7 @@ export const CurrentListingContainer = styled.div`
     margin-bottom: 1rem;
   }
   p {
-    color: #a8aaac;
+    color: ${(p) => p.theme.colors.grey400};
   }
 `;
 
