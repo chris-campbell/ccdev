@@ -4,6 +4,8 @@ import CoverImage from "./coverImage/CoverImage";
 import Excerpt from "./excerpt/Excerpt";
 import NavButton from "./navButton/NavButton";
 
+import * as S from "./styles/styles";
+
 const ArticlePreview = ({ currentPreview }) => {
   const { title, excerpt, createdAt, coverImage, slug } = currentPreview;
   return (
