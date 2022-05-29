@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import BlogIndex from "./blogIndex/BlogIndex";
 import ArticlePreview from "./articlePreview/ArticlePreview";
 
-import styled from "styled-components";
+import * as S from "./styles/styles";
 
 const BlogDesktop = ({ allArticles }) => {
   const [activeEl, setActiveEl] = useState(null);
@@ -41,22 +41,14 @@ const BlogDesktop = ({ allArticles }) => {
 
   return (
     <>
-      <BlogWrapper>
+      <S.BlogWrapper>
         <BlogIndex allArticles={allArticles} setPreview={setPreviewData} />
         <>
           <ArticlePreview currentPreview={currentArticlePreview} />
         </>
-      </BlogWrapper>
+      </S.BlogWrapper>
     </>
   );
 };
 
 export default BlogDesktop;
-
-const BlogWrapper = styled.div`
-  display: flex;
-  max-width: 1600px;
-  padding: clamp(3rem, 6vw, 100px) 1rem;
-  margin: 0 auto;
-  gap: 2rem;
-`;

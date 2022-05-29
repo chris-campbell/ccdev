@@ -1,82 +1,52 @@
-import { gql } from "@apollo/client";
-import client from "../../apolloClient";
-import { RWebShare } from "react-web-share";
-import { useRouter } from "next/router";
 import Head from "next/head";
+import client from "../../apolloClient";
 import ArticleDetails from "../../components/articledetails/ArticleDetails";
-import GeneralHead from "../../components/heads/GeneralHead";
-import TwitterHead from "../../components/heads/TwitterHead";
+import { gql } from "@apollo/client";
+import { useRouter } from "next/router";
 
 function ArticleDetail({ article, host }) {
-  const { coverImage, title, excerpt } = article;
+  console.log({ article });
+  const { coverImage } = article;
+  const { title, description, keyword } = article.seo;
+
   const { url } = coverImage;
-  const asPath = useRouter().asPath;
+  const path = useRouter().asPath;
+
+  console.log({ keyword, description });
 
   return (
     <>
       <Head>
         {/* Default Meta */}
         <title>CCDev | Articles </title>
+        <meta name="keywords" content={keyword.toString()} />
+
         {/* OG Sharing Meta */}
-        <GeneralHead
-          ogType="article"
-          image={url}
-          title={title}
-          host={host}
-          path={asPath}
-        />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" itemProp="image" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={`${host}${path}`} />
+
         {/* Twitter Meta */}
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={title} />
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image:src" content={`${url}`} />
         <meta name="twitter:image:width" content="400" />
         <meta name="twitter:image:height" content="400" />
         <meta name="twitter:card" content="summary" />
       </Head>
 
-      <RWebShare
-        data={{
-          text: `${title}`,
-          url: `${host}${asPath}`,
-          title: `${title}`,
-          files: `${url}`,
-        }}
-        onClick={() => console.info("share successful!")}
-      >
-        <button>Share Button</button>
-      </RWebShare>
-      <ArticleDetails article={article} />
+      <ArticleDetails article={article} host={host} />
     </>
   );
 }
 
 export default ArticleDetail;
 
-// Gets all the different paths for all the different post
-// export const getStaticPaths = async () => {
-//   const { data } = await client.query({
-//     query: gql`
-//       query {
-//         articles {
-//           slug
-//         }
-//       }
-//     `,
-//   });
-
-//   const { articles } = data;
-
-//   const paths = articles.map((article) => ({
-//     params: { slug: [article.slug] },
-//   }));
-
-//   return { paths, fallback: false };
-// };
-
 export async function getServerSideProps({ req, params }) {
   const { host } = req.headers;
-
   const slug = params.slug[0];
+
   const { data } = await client.query({
     query: gql`
       query Article($slug: String!) {
@@ -95,6 +65,12 @@ export async function getServerSideProps({ req, params }) {
             html
           }
           authors {
+            name
+            description
+            role
+            socials {
+              urls
+            }
             avatar {
               id
               url
@@ -113,12 +89,10 @@ export async function getServerSideProps({ req, params }) {
         }
       }
     `,
-
     variables: { slug },
   });
 
   const { articles } = data;
-
   const article = articles[0];
 
   return {

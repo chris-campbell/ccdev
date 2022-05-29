@@ -1,10 +1,4 @@
-import styled from "styled-components";
-
-const PublishDateContainer = styled.div`
-  font-family: ${(p) => p.theme.fonts.paragraph};
-  color: #a8aaac;
-  margin-bottom: 1rem;
-`;
+import * as S from "./styles/styles";
 
 const PublishDate = ({ date }) => {
   const formattedDate = new Date(date);
@@ -16,7 +10,7 @@ const PublishDate = ({ date }) => {
   const time = formattedDate.toLocaleTimeString("en-us", timeFormatOptions);
 
   return (
-    <PublishDateContainer>{`Posted on ${dateOfMonth} ${month}, ${year} - ${time}`}</PublishDateContainer>
+    <S.PublishDateContainer>{`Posted on ${dateOfMonth} ${month}, ${year} - ${time}`}</S.PublishDateContainer>
   );
 };
 

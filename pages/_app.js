@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "../components/ThemeConfig";
+import Head from "next/head";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -92,6 +93,9 @@ box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18);
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Layout>

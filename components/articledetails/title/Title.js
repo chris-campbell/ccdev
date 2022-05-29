@@ -1,14 +1,7 @@
-import styled from "styled-components";
-
-const TitleContainer = styled.h1`
-  color: ${(p) => p.theme.colors.white300};
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-  max-width: 42rem;
-`;
+import * as S from "./styles/styles";
 
 const Title = ({ title }) => {
-  return <TitleContainer>{title}</TitleContainer>;
+  return <S.TitleContainer>{title}</S.TitleContainer>;
 };
 
 export default Title;
