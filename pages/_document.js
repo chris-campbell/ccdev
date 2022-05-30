@@ -12,7 +12,7 @@ export default class CustomDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Fredoka+One&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=Titillium+Web:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>

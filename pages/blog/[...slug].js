@@ -11,13 +11,14 @@ function ArticleDetail({ article, host }) {
 
   const { url } = coverImage;
   const path = useRouter().asPath;
-  console.log(useRouter().basePath);
-  console.log(useRouter().path);
+  const base = useRouter().basePath;
 
   return (
     <>
       <Head>
         {/* Default Meta */}
+        {console.log(base)}
+        {console.log(path)}
         <title>CCDev | Articles </title>
         <meta name="keywords" content={keyword.toString()} />
 
