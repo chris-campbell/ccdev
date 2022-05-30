@@ -41,6 +41,7 @@ function ArticleDetail({ article, host }) {
         <meta name="twitter:image:width" content="400" />
         <meta name="twitter:image:height" content="400" />
         <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@2ndplayr" />
       </Head>
 
       <ArticleDetails article={article} host={host} />
