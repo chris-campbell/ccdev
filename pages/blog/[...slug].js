@@ -30,8 +30,6 @@ function ArticleDetail({ article, host }) {
 
         <meta property="og:image" itemProp="image" content={url} />
         <meta property="og:image:secure_url" content={url} />
-        <meta property="og:image:type" content="image/jpeg" />
-
         <meta property="og:site_name" content="chriscampbelldev" />
 
         {/* Twitter Meta */}
