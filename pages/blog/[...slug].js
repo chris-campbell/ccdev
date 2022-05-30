@@ -28,7 +28,7 @@ function ArticleDetail({ article, host }) {
         <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:locale" content="en_US" />
 
-        <meta property="og:image" itemprop="image" content={url} />
+        <meta property="og:image" itemProp="image" content={url} />
         <meta property="og:image:secure_url" content={url} />
         <meta property="og:image:type" content="image/jpeg" />
 
