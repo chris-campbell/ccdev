@@ -91,7 +91,7 @@ export async function getServerSideProps({ req, params }) {
             description
             keyword
             image {
-              id
+              url
             }
           }
         }

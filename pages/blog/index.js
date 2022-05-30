@@ -2,7 +2,6 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import client from "../../apolloClient";
 import { gql } from "@apollo/client";
-import { useRouter } from "next/router";
 
 const BlogContainer = dynamic(
   () => import("../../components/blog/BlogContainer"),
@@ -10,10 +9,6 @@ const BlogContainer = dynamic(
 );
 
 const Blog = ({ articles }) => {
-  const basePath = useRouter().basePath;
-
-  console.log(basePath);
-
   return (
     <>
       <Head>
