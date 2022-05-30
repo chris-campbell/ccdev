@@ -16,8 +16,6 @@ function ArticleDetail({ article, host }) {
     <>
       <Head>
         {/* Default Meta */}
-
-        {console.log(path)}
         <title>CCDev | {title} </title>
         <meta name="keywords" content={keyword.toString()} />
         <meta name="description" content={description} />
