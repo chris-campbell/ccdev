@@ -11,7 +11,7 @@ import * as S from "./styles/styles";
 const ArticleDetails = ({ article, host }) => {
   const { title, content, createdAt, coverImage, authors } = article;
   const path = useRouter().asPath;
-  const url = `${host}${path}`;
+  const url = `https://${host}${path}`;
 
   return (
     <>
