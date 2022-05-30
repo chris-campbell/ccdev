@@ -16,6 +16,7 @@ function ArticleDetail({ article, host }) {
     <>
       <Head>
         {/* Default Meta */}
+        {console.log(host)}
         <title>CCDev | {title} </title>
         <meta name="keywords" content={keyword.toString()} />
         <meta name="description" content={description} />
@@ -24,7 +25,7 @@ function ArticleDetail({ article, host }) {
         <meta property="og:type" content="article" />
         <meta property="og:image" itemProp="image" content={url} />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content={`${host}${path}`} />
+        <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:locale" content="en_US" />
 
         <meta property="og:image" content={url} />
