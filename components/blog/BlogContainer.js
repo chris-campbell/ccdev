@@ -16,7 +16,7 @@ const BlogContainer = ({ allArticles }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
-  return width < 800 ? (
+  return width < 700 ? (
     <BlogMobile allArticles={allArticles} />
   ) : (
     <BlogDesktop allArticles={allArticles} />

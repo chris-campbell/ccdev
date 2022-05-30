@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
       margin: 0;
       background-color: ${(p) => p.theme.colors.blue300};
       scroll-behavior: smooth;
+      height:100%;
   }
 
   main {
@@ -24,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-
+    text-transform: uppercase;
     font-family: ${(p) => p.theme.fonts.heading};
     
   }

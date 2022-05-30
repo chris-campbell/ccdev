@@ -11,8 +11,8 @@ function ArticleDetail({ article, host }) {
 
   const { url } = coverImage;
   const path = useRouter().asPath;
-
-  console.log({ keyword, description });
+  console.log(useRouter().basePath);
+  console.log(useRouter().path);
 
   return (
     <>

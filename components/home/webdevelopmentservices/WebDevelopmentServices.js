@@ -14,20 +14,14 @@ const WebDevWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1600px;
-  padding: calc(250px - 150px) 150px;
-  min-height: 50vh;
-  @media (max-width: 580px) {
-    padding: calc(250px - 150px) 50px;
-  }
-  @media (max-width: 460px) {
-    padding: calc(250px - 150px) 30px;
-  }
+  max-width: 1200px;
+  padding: clamp(2rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+
   h3 {
     font-family: ${(p) => p.theme.fonts.heading};
-    font-size: clamp(20px, 10vw, 35px);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: ${(p) => p.theme.colors.white300};
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -37,15 +31,16 @@ const Service = styled.div`
     align-items: center;
     color: ${(p) => p.theme.colors.blue100};
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-bottom: 1rem;
     svg {
       margin-right: 0.5rem;
     }
   }
   p {
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.grey200};
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 2.1rem;
     margin-bottom: 2rem;
   }
@@ -66,6 +61,7 @@ const DownloadButton = styled.div`
   span {
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.grey300};
+    font-size: clamp(1rem, 3vw, 2rem);
   }
 `;
 

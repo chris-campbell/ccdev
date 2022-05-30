@@ -10,17 +10,11 @@ export const ProjectsWrapper = styled.div`
   h2 {
     font-family: ${(p) => p.theme.fonts.heading};
     color: ${(p) => p.theme.colors.white300};
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
     margin: 5rem 0;
   }
 
-  padding: calc(250px - 150px) 150px;
-  @media (max-width: 580px) {
-    padding: calc(250px - 150px) 50px;
-  }
-  @media (max-width: 460px) {
-    padding: calc(250px - 150px) 30px;
-  }
+  padding: clamp(2.5rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
 `;
 
 export const ProjectsBox = styled.div`
@@ -41,7 +35,7 @@ export const ProjectsListItems = styled.ul`
   width: -webkit-fill-available;
   li {
     font-size: clamp(1rem, 5vw, 1.5rem);
-    font-family: ${(p) => p.theme.fonts.parapgraph};
+    font-family: ${(p) => p.theme.fonts.heading};
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
     color: #72707061;
@@ -57,8 +51,8 @@ export const ProjectsListItems = styled.ul`
 
 export const ProjectsDescription = styled.div`
   flex: 4;
-  font-size: clamp(1rem, 5vw, 1.2rem);
-  font-family: ${(p) => p.theme.fonts.parapgraph};
+  font-size: 1rem;
+  font-family: ${(p) => p.theme.fonts.paragraph};
   color: ${(p) => p.theme.colors.white300};
   line-height: 1.9rem;
   letter-spacing: 0.1rem;

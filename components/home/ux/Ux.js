@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 const UXContainer = styled.section`
   background-color: ${(p) => p.theme.colors.white300};
@@ -11,24 +10,18 @@ const UXWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1600px;
-  padding: calc(250px - 150px) 150px;
-  min-height: 50vh;
-  @media (max-width: 580px) {
-    padding: calc(250px - 150px) 50px;
-  }
-  @media (max-width: 460px) {
-    padding: calc(250px - 150px) 30px;
-  }
+  max-width: 1200px;
+  padding: clamp(2rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+
   h3 {
     font-family: ${(p) => p.theme.fonts.heading};
-    font-size: clamp(20px, 10vw, 35px);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: ${(p) => p.theme.colors.grey300};
     margin-bottom: 2rem;
   }
 
   p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 2.1rem;
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.grey300};
@@ -65,10 +58,6 @@ const UX = () => {
           and performance, while always keeping the customer’s experience at the
           forefront.
         </p>
-        <DownloadButton>
-          <ArrowDownwardIcon />
-          <span>Example UX/UI Designs</span>
-        </DownloadButton>
       </UXWrapper>
     </UXContainer>
   );

@@ -9,25 +9,20 @@ export const WorkWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
   max-width: 1600px;
-  padding: calc(250px - 150px) 150px;
-  @media (max-width: 580px) {
-    padding: calc(250px - 150px) 50px;
-  }
-  @media (max-width: 460px) {
-    padding: calc(250px - 150px) 30px;
-  }
+  padding: clamp(2.5rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
 
   h1 {
     font-family: ${(p) => p.theme.fonts.heading};
     color: ${(p) => p.theme.colors.white300};
-    font-size: clamp(3rem, 10vw, 4rem);
+    font-size: clamp(2rem, 10vw, 3rem);
+    margin-bottom: 1rem;
   }
 
   p {
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.white300};
-    font-size: clamp(1rem, 5vw, 1.2rem);
-    max-width: 820px;
+    font-size: 1rem;
+    max-width: 43.25rem;
   }
 `;
 

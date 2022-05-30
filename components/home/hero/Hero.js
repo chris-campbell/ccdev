@@ -3,35 +3,6 @@ import * as V from "./variants/heroVariants";
 import Facebook from "@mui/icons-material/Facebook";
 import Instagram from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import Link from "next/link";
-import styled from "styled-components";
-
-const DownScroll = styled.div`
-  width: fit-content;
-  height: 2rem;
-  position: absolute;
-  bottom: 0;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.2rem 0.8rem;
-  font-family: ${(p) => p.theme.fonts.parapgraph};
-  svg {
-    font-size: 1.2rem;
-    &:active {
-      transform: scale(0.8);
-      transition: 300ms;
-    }
-  }
-
-  &:hover {
-    height: 3rem;
-    transition: 400ms;
-    color: ${(p) => p.theme.colors.orange300};
-  }
-`;
 
 const Hero = () => {
   return (
@@ -89,9 +60,9 @@ const Hero = () => {
             </p>
           </S.FadeBox>
         </div>
-        <DownScroll>
+        {/* <DownScroll>
           <Link href="/#fulltime">Hire</Link>
-        </DownScroll>
+        </DownScroll> */}
       </S.HeroWrapper>
     </section>
   );

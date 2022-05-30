@@ -1,8 +1,6 @@
 import * as S from "./styles/styles";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
-import useDimensions from "../../../../hooks/windowDimensions";
 
 const DesktopNav = () => {
   const logoUrl = "https://hoppr-portfolio.s3.us-east-2.amazonaws.com/logo.svg";

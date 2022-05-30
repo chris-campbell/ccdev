@@ -5,6 +5,7 @@ import IndexButtons from "./indexButtons/IndexButtons";
 import NavButton from "./navButton/NavButton";
 import Excerpt from "./excerpt/Excerpt";
 import PublishDate from "./publishDate/PublishDate";
+
 import * as S from "./styles/styles";
 
 const BlogMobile = ({ allArticles }) => {
@@ -25,12 +26,11 @@ const BlogMobile = ({ allArticles }) => {
           <S.CurrentListingContainer key={item.id}>
             <PublishDate date={item.createdAt} />
             <h2>{item.title}</h2>
-            <div>
+            <S.CoverImageFrame>
               <Image src={item.coverImage?.url} width={900} height={600} />
-            </div>
+            </S.CoverImageFrame>
             <S.NavContent>
-              <Excerpt content={item.excerpt} />
-              <NavButton slug={item.slug} />
+              <Excerpt content={item.excerpt} slug={item.slug} />
             </S.NavContent>
           </S.CurrentListingContainer>
         ))}

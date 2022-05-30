@@ -36,4 +36,16 @@ export const HireLink = styled(NavLink)`
   border: 1px solid ${(p) => p.theme.colors.orange300};
   border-radius: 0.2rem;
   color: ${(p) => p.theme.colors.orange300};
+  transition: 300ms ease-in;
+  &:hover {
+    background-color: ${(p) => p.theme.colors.orange300};
+    color: ${(p) => p.theme.colors.white300};
+    transition: 300ms ease-out;
+  }
+
+  &:active {
+    background-color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.blue300};
+    border: 1px solid transparent;
+  }
 `;

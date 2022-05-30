@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const MenuButton = styled(MenuIcon)`
   z-index: 20;
-  color: #f2f2f2;
+  color: ${(p) => p.theme.colors.white300};
   font-size: 2.3rem;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
@@ -40,7 +40,7 @@ export const MobileNav = styled.ul`
     font-family: ${(p) => p.theme.fonts.heading};
 
     letter-spacing: 0.13rem;
-    */ a {
+    a {
       text-decoration: none;
     }
     .header__icon {
