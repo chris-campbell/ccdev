@@ -28,6 +28,11 @@ function ArticleDetail({ article, host }) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content={`${host}${path}`} />
 
+        <meta property="og:image" content={url} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+
         {/* Twitter Meta */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
