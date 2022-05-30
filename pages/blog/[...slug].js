@@ -11,7 +11,6 @@ function ArticleDetail({ article, host }) {
 
   const { url } = coverImage;
   const path = useRouter().asPath;
-  const base = useRouter().basePath;
 
   return (
     <>
@@ -19,14 +18,16 @@ function ArticleDetail({ article, host }) {
         {/* Default Meta */}
         {console.log(base)}
         {console.log(path)}
-        <title>CCDev | Articles </title>
+        <title>CCDev | {title} </title>
         <meta name="keywords" content={keyword.toString()} />
+        <meta name="description" content={description} />
 
         {/* OG Sharing Meta */}
         <meta property="og:type" content="article" />
         <meta property="og:image" itemProp="image" content={url} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={`${host}${path}`} />
+        <meta property="og:locale" content="en_US" />
 
         <meta property="og:image" content={url} />
         <meta property="og:image:type" content="image/png" />
