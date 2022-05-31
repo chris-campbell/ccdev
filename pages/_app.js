@@ -27,20 +27,37 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: ${(p) => p.theme.fonts.heading};
-    
   }
 
-  h1 {
-    font-size: clamp(1.5rem, 3vw, 2rem)
-  }
+h1 {
+font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2.587rem);
+line-height: 1.1;
+}
 
-  h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem)
-  }
+h2 {
+font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 2.025rem);
+line-height: 1.1;
+}
 
-  p, span {
-    font-family: ${(p) => p.theme.fonts.paragraph};
-  }
+h3 {
+font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.688rem);
+line-height: 1.1;
+}
+
+h4 {
+font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
+line-height: 1.1;
+}
+
+p {
+font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
+line-height: 1.1;
+}
+
+span {
+font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
+line-height: 1.1;
+}
 
   a {
       color: inherit;

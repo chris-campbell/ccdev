@@ -22,7 +22,7 @@ function ArticleDetail({ article, host }) {
         <meta name="description" content={description} />
 
         {/* OG Sharing Meta */}
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:image" content={image.url} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={`https://${host}${path}`} />
