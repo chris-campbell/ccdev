@@ -12,6 +12,7 @@ const nextConfig = {
       "images.unsplash.com",
       "media.graphcms.com",
       "media.graphassets.com",
+      "s3.us-east-2.amazonaws.com",
     ],
   },
 };

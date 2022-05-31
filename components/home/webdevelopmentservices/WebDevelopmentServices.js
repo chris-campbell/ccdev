@@ -14,14 +14,25 @@ const WebDevWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
-  padding: clamp(2rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+  max-width: 1500px;
+  padding: clamp(2rem, 7vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 
   h3 {
     font-family: ${(p) => p.theme.fonts.heading};
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     color: ${(p) => p.theme.colors.white300};
     margin-bottom: 3rem;
+  }
+`;
+
+const Services = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @media (max-width: 794px) {
+    flex-direction: column;
+    gap: 0;
   }
 `;
 
@@ -52,43 +63,44 @@ const WebDevelopmentServices = () => {
     <WebDevServices>
       <WebDevWrapper>
         <h3>Web Development Services</h3>
-
-        <Service>
-          <h4>
-            <WebIcon />
-            <span>Web App Development</span>
-          </h4>
-          <p>
-            Have your designs materialized, using powerful wireframing tools,
-            we’ll together determine the best way to mesh both your design ideas
-            and performance, while always keeping the customer’s experience at
-            the forefront.
-          </p>
-        </Service>
-        <Service>
-          <h4>
-            <StorefrontIcon />
-            <span>E-Commerce</span>
-          </h4>
-          <p>
-            Build a Fast and seamless e-commerce platform that delivers a
-            reliable and secure shopping experience for you customers. Avoid
-            fees from sites like Etsy and keep your profits where they belong;
-            with you.
-          </p>
-        </Service>
-        <Service>
-          <h4>
-            <ArchitectureIcon />
-            <span>Web-Redesign</span>
-          </h4>
-          <p>
-            Breathe new life into your existing platform. Whether it needs a
-            face-lift or just to have its performance-optimized, improving your
-            site’s aesthetics will drastically change how quickly customers open
-            their wallets.
-          </p>
-        </Service>
+        <Services>
+          <Service>
+            <h4>
+              <WebIcon />
+              <span>Web App Development</span>
+            </h4>
+            <p>
+              Have your designs materialized, using powerful wireframing tools,
+              we’ll together determine the best way to mesh both your design
+              ideas and performance, while always keeping the customer’s
+              experience at the forefront.
+            </p>
+          </Service>
+          <Service>
+            <h4>
+              <StorefrontIcon />
+              <span>E-Commerce</span>
+            </h4>
+            <p>
+              Build a Fast and seamless e-commerce platform that delivers a
+              reliable and secure shopping experience for you customers. Avoid
+              fees from sites like Etsy and keep your profits where they belong;
+              with you.
+            </p>
+          </Service>
+          <Service>
+            <h4>
+              <ArchitectureIcon />
+              <span>Web-Redesign</span>
+            </h4>
+            <p>
+              Breathe new life into your existing platform. Whether it needs a
+              face-lift or just to have its performance-optimized, improving
+              your site’s aesthetics will drastically change how quickly
+              customers open their wallets.
+            </p>
+          </Service>
+        </Services>
       </WebDevWrapper>
     </WebDevServices>
   );

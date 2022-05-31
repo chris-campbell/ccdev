@@ -6,9 +6,9 @@ export const HeroWrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+  padding: clamp(3rem, 8vw, calc(250px - 75px)) clamp(1rem, 10vw, 150px);
   position: relative;
 `;
 
@@ -64,8 +64,8 @@ export const FadeBox = styled(motion.div)`
     font-size: 1rem;
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.grey200};
-    max-width: 48rem;
+    max-width: 50rem;
     letter-spacing: 0.04rem;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 `;

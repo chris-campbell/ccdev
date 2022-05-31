@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export const NavbarContainer = styled.header`
   width: 100%;
   border-bottom: 1px solid #46464687;
+  padding: 1rem 0;
 `;
 
 export const NavbarWrapper = styled.div`

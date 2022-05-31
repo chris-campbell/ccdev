@@ -42,8 +42,8 @@ const MobileNav = () => {
                   <Link href="/">
                     <a>
                       <Image
-                        src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
-                        width={70}
+                        src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/sq-logo-2ndplayer.svg"
+                        width={80}
                         height={100}
                         alt="Chris Campbell dev logo"
                       />
@@ -72,12 +72,6 @@ const MobileNav = () => {
                   </Link>
                 </li>
               </S.MobileNav>
-              <S.Divider className="divider"></S.Divider>
-              <S.Social className="social">
-                <GitHubIcon />
-                <TwitterIcon />
-                <LinkedInIcon />
-              </S.Social>
             </S.Drawer>
           </S.TransparentWall>
         </div>

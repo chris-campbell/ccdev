@@ -80,9 +80,9 @@ const Footer = () => {
         <Link href="/">
           <a>
             <Image
-              src="https://hoppr-portfolio.s3.us-east-2.amazonaws.com/mobile_logo.svg"
-              width={50}
-              height={50}
+              src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/sq-logo-2ndplayer.svg"
+              width={80}
+              height={80}
               alt="Chris Campbell Dev Mobile Logo"
             />
           </a>

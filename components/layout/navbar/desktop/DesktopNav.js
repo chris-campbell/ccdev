@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const DesktopNav = () => {
-  const logoUrl = "https://hoppr-portfolio.s3.us-east-2.amazonaws.com/logo.svg";
+  const logoUrl =
+    "https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/sq-logo-2ndplayer.svg";
   const logoAlt = "Chris Campbell Dev Logo";
 
   const fadeUpANav = {
@@ -44,7 +45,7 @@ const DesktopNav = () => {
       <S.NavbarWrapper>
         <Link href="/">
           <a>
-            <Image src={logoUrl} alt={logoAlt} width={100} height={100} />
+            <Image src={logoUrl} alt={logoAlt} width={75} height={75} />
           </a>
         </Link>
 

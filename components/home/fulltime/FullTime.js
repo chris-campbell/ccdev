@@ -10,7 +10,7 @@ const FullTimeWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1500px;
   padding: clamp(2rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
 
   h3 {

@@ -21,15 +21,23 @@ export const Drawer = styled.div`
   background: ${(p) => p.theme.colors.blue300};
   min-height: 100vh;
   transition: width 700ms ease-in-out 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const MobileNav = styled.ul`
   opacity: ${(p) => (p.open ? "1" : "0")};
   transition: all 1s ease-in-out;
   list-style: none;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
   margin-bottom: 1.5rem;
   padding-left: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   li {
     display: flex;
     align-items: center;
@@ -38,7 +46,6 @@ export const MobileNav = styled.ul`
     white-space: nowrap;
     justify-content: center;
     font-family: ${(p) => p.theme.fonts.heading};
-
     letter-spacing: 0.13rem;
     a {
       text-decoration: none;
