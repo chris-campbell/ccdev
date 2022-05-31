@@ -14,12 +14,10 @@ const ItemContainer = styled.li`
   padding: 0.5rem 0.6rem;
   word-spacing: 0.1rem;
   &:hover {
-    background-color: ${(p) => p.theme.colors.blue100};
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    color: ${(p) => p.theme.colors.blue300} !important;
+    box-sizing: border-box;
+    color: ${(p) => p.theme.colors.blue100} !important;
+    transition: 200ms;
+    cursor: pointer;
   }
 
   &:active {

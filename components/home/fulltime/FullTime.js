@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FullTimeContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.orange300};
+  background-color: ${(p) => p.theme.colors.blue300};
 `;
 
 const FullTimeWrapper = styled.div`

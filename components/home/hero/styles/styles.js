@@ -53,7 +53,7 @@ export const FadeBox = styled(motion.div)`
   }
 
   h3 {
-    font-size: clamp(2.1rem, 5vw, 4rem);
+    font-size: clamp(2.1rem, 7vw, 5rem);
     color: #bbbcbe;
     margin-bottom: 1rem;
     width: 76%;

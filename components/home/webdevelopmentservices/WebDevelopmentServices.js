@@ -71,8 +71,10 @@ const WebDevelopmentServices = () => {
             <span>E-Commerce</span>
           </h4>
           <p>
-            Build a Fast and seamless E-commerce platform that delivers a
-            pleasant shopping experience to your customers.
+            Build a Fast and seamless e-commerce platform that delivers a
+            reliable and secure shopping experience for you customers. Avoid
+            fees from sites like Etsy and keep your profits where they belong;
+            with you.
           </p>
         </Service>
         <Service>
