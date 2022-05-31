@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectsContainer = styled.section`
   clear: both;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1300px;
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -14,7 +14,7 @@ export const ProjectsWrapper = styled.div`
     margin: 5rem 0;
   }
 
-  padding: clamp(2.5rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+  padding: clamp(2.5rem, 10vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 `;
 
 export const ProjectsBox = styled.div`
@@ -34,7 +34,7 @@ export const ProjectsListItems = styled.ul`
   padding-left: 0;
   width: -webkit-fill-available;
   li {
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
     font-family: ${(p) => p.theme.fonts.heading};
     margin-bottom: 1rem;
     letter-spacing: 0.1rem;
@@ -54,7 +54,7 @@ export const ProjectsDescription = styled.div`
   font-size: 1rem;
   font-family: ${(p) => p.theme.fonts.paragraph};
   color: ${(p) => p.theme.colors.white300};
-  line-height: 1.9rem;
+  line-height: 1.5rem;
   letter-spacing: 0.1rem;
 `;
 

@@ -43,25 +43,7 @@ const Service = styled.div`
     font-size: 1rem;
     line-height: 2.1rem;
     margin-bottom: 2rem;
-  }
-`;
-
-const DownloadButton = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  svg {
-    font-size: 1.45rem;
-    padding: 0.2rem;
-    border: 2px solid ${(p) => p.theme.colors.blue100};
-    border-radius: 3rem;
-    margin-right: 1rem;
-    color: ${(p) => p.theme.colors.blue100};
-  }
-  span {
-    font-family: ${(p) => p.theme.fonts.parapgraph};
-    color: ${(p) => p.theme.colors.grey300};
-    font-size: clamp(1rem, 3vw, 2rem);
+    max-width: 45rem;
   }
 `;
 

@@ -49,7 +49,7 @@ export const FadeBox = styled(motion.div)`
     letter-spacing: 0.12rem;
   }
   h2 {
-    font-size: clamp(2.1rem, 6vw, 5rem);
+    font-size: clamp(2.1rem, 6vw, 4rem);
   }
 
   h3 {
@@ -66,5 +66,6 @@ export const FadeBox = styled(motion.div)`
     color: ${(p) => p.theme.colors.grey200};
     max-width: 48rem;
     letter-spacing: 0.04rem;
+    line-height: 1.5;
   }
 `;

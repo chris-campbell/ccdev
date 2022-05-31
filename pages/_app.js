@@ -25,23 +25,26 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
     font-family: ${(p) => p.theme.fonts.heading};
   }
 
+  p, span, a {
+    font-family: ${(p) => p.theme.fonts.paragraph};
+  }
+
 h1 {
-font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2.587rem);
+font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2rem);
 line-height: 1.1;
 }
 
 h2 {
-font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 2.025rem);
-line-height: 1.1;
+  font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 1.6rem);
+  line-height: 1.1;
 }
 
 h3 {
-font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.688rem);
-line-height: 1.1;
+  font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.488rem);
+  line-height: 1.1;
 }
 
 h4 {
@@ -50,13 +53,13 @@ line-height: 1.1;
 }
 
 p {
-font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
-line-height: 1.1;
+  font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
+  line-height: 1.3;
 }
 
 span {
-font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
-line-height: 1.1;
+  font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
+  line-height: 1.1;
 }
 
   a {

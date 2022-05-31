@@ -26,6 +26,7 @@ const FullTimeWrapper = styled.div`
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.white300};
     margin-bottom: 4rem;
+    max-width: 45rem;
   }
 `;
 
@@ -44,7 +45,7 @@ const WorkAvailiblity = styled.div`
     padding: 1rem 1.5rem;
     border-radius: 2rem;
     border: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     @media (max-width: 480px) {
       margin-bottom: 1rem;
     }
@@ -69,7 +70,6 @@ const FullTime = () => {
         </p>
         <WorkAvailiblity>
           <button>Download Resume</button>
-          <span>Availability: Yes</span>
         </WorkAvailiblity>
       </FullTimeWrapper>
     </FullTimeContainer>

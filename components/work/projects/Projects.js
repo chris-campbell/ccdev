@@ -28,18 +28,20 @@ export const Projects = () => {
         <S.ProjectsBox className="projects-bx">
           <S.ProjectsListItems>{listProjectNames()}</S.ProjectsListItems>
           <S.ProjectsDescription className="projects-description">
-            {projects[projectIndex].description}
-            <S.ProjectIcons>
-              <S.Icons>
-                {projects[projectIndex].icons.map((icon, i) => (
-                  <span key={i}>{icon}</span>
-                ))}
-              </S.Icons>
-              <S.ExternalLinks>
-                <SiGithub />
-                <FiExternalLink />
-              </S.ExternalLinks>
-            </S.ProjectIcons>
+            <div>
+              {projects[projectIndex].description}
+              <S.ProjectIcons>
+                <S.Icons>
+                  {projects[projectIndex].icons.map((icon, i) => (
+                    <span key={i}>{icon}</span>
+                  ))}
+                </S.Icons>
+                <S.ExternalLinks>
+                  <SiGithub />
+                  <FiExternalLink />
+                </S.ExternalLinks>
+              </S.ProjectIcons>
+            </div>
           </S.ProjectsDescription>
         </S.ProjectsBox>
 

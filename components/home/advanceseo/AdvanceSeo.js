@@ -25,6 +25,7 @@ const AdvanceSeoWrapper = styled.div`
     font-family: ${(p) => p.theme.fonts.parapgraph};
     color: ${(p) => p.theme.colors.white300};
     margin-bottom: 2rem;
+    max-width: 45rem;
   }
 `;
 
