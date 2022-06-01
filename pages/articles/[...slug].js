@@ -5,10 +5,8 @@ import { gql } from "@apollo/client";
 import { useRouter } from "next/router";
 
 function ArticleDetail({ article, host }) {
-  console.log({ article });
   const { coverImage } = article;
   const { title, description, keyword, image } = article.seo;
-
   const { url } = coverImage;
   const path = useRouter().asPath;
 
@@ -16,8 +14,7 @@ function ArticleDetail({ article, host }) {
     <>
       <Head>
         {/* Default Meta */}
-        {console.log(host)}
-        <title>CCDev | {title} </title>
+        <title>2nd Player | {title} </title>
         <meta name="keywords" content={keyword.toString()} />
         <meta name="description" content={description} />
 
@@ -27,17 +24,14 @@ function ArticleDetail({ article, host }) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:locale" content="en_US" />
-
         <meta property="og:image" itemProp="image" content={url} />
         <meta property="og:image:secure_url" content={url} />
-        <meta property="og:site_name" content="chriscampbelldev" />
+        <meta property="og:site_name" content="2ndPlayer" />
 
         {/* Twitter Meta */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image:src" content={`${url}`} />
-        {/* <meta name="twitter:image:width" content="400" />
-        <meta name="twitter:image:height" content="400" /> */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@2ndplayr" />
       </Head>

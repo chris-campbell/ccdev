@@ -32,7 +32,7 @@ const FooterSocial = styled.div`
   gap: 1.2rem;
 
   svg {
-    font-size: 3.5rem;
+    font-size: 3rem;
     padding: 0.8rem;
     border: 1px solid none;
     border-radius: 2rem;
@@ -56,7 +56,7 @@ const FooterNav = styled.ul`
 const UpArrow = styled(ArrowUpward)`
   position: absolute;
   right: 1rem;
-  bottom: 6.5rem;
+  bottom: 8.3rem;
   padding: 0.4rem 0.2rem;
   font-size: 2rem;
   background: ${(p) => p.theme.colors.white300};

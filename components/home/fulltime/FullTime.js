@@ -11,7 +11,7 @@ const FullTimeWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1500px;
-  padding: clamp(2rem, 5vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+  padding: clamp(2rem, 10vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 
   h3 {
     font-family: ${(p) => p.theme.fonts.heading};

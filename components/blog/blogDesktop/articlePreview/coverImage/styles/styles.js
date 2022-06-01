@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const CoverImageContainer = styled.div`
   margin-bottom: 2rem;
-
   border-radius: 0.3rem;
   box-sizing: content-box;
   & > span {

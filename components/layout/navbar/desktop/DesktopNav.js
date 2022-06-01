@@ -57,7 +57,7 @@ const DesktopNav = () => {
               </Link>
             </S.NavLink>
             <S.NavLink variants={fadeUpBNav} initial="hidden" animate="visible">
-              <Link href="/blog">
+              <Link href="/articles">
                 <a>Blog_</a>
               </Link>
             </S.NavLink>

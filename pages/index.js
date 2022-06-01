@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>CCDev</title>
+        <title>2ndPlayer</title>
         <meta name="description" content="Professional" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

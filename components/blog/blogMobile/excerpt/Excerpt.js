@@ -32,7 +32,7 @@ const Excerpt = ({ content, slug }) => {
         textTruncateChild={
           <>
             <br />
-            <Link href={`/blog/${slug}`}>Read more</Link>
+            <Link href={`/articles/${slug}`}>Read more</Link>
           </>
         }
       />

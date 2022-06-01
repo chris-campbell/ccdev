@@ -5,7 +5,7 @@ import * as S from "./styles/styles";
 const NavButton = ({ slug }) => {
   return (
     <S.NavButtonContainer>
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/articles/${slug}`}>
         <a>
           <S.NavBbtn />
         </a>
