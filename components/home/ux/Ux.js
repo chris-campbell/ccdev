@@ -12,7 +12,7 @@ const UXWrapper = styled.div`
   margin: 0 auto;
   max-width: 1500px;
   gap: 6rem;
-  padding: clamp(2rem, 10vw, calc(250px - 150px)) clamp(1rem, 10vw, 150px);
+  padding: clamp(2rem, 10vw, calc(250px - 200px)) clamp(1rem, 10vw, 150px);
 
   @media (max-width: 794px) {
     gap: 0;

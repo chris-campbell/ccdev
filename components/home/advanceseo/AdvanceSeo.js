@@ -11,7 +11,7 @@ const AdvanceSeoWrapper = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1500px;
-  padding: clamp(2rem, 7vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
+  padding: clamp(2rem, 7vw, calc(250px - 200px)) clamp(1rem, 10vw, 150px);
 
   @media (max-width: 794px) {
     .seo-image {

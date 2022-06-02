@@ -52,6 +52,10 @@ font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
 line-height: 1.1;
 }
 
+li {
+  font-family: ${(p) => p.theme.fonts.paragraph};
+}
+
 p {
   font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
   line-height: 1.3;
