@@ -1,117 +1,128 @@
 import React from "react";
 import Image from "next/image";
-import styled from "styled-components";
-import Facebook from "@mui/icons-material/Facebook";
-import Instagram from "@mui/icons-material/Instagram";
-import LinkedIn from "@mui/icons-material/LinkedIn";
-import Twitter from "@mui/icons-material/Twitter";
 import Link from "next/link";
-import { ArrowUpward } from "@mui/icons-material";
 
-const FooterContainer = styled.footer`
-  width: 100%;
-  background: ${(p) => p.theme.colors.blue200};
-  position: relative;
-`;
-
-const FooterWrapper = styled.div`
-  margin: 0 auto;
-  display: flex;
-  width: 98%;
-  padding: 2rem;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: 630px) {
-    flex-direction: column;
-    gap: 2rem;
-  }
-`;
-
-const FooterSocial = styled.div`
-  display: flex;
-  gap: 1.2rem;
-
-  svg {
-    font-size: 3rem;
-    padding: 0.8rem;
-    border: 1px solid none;
-    border-radius: 2rem;
-    background: ${(p) => p.theme.colors.blue300};
-    color: ${(p) => p.theme.colors.blue100};
-    @media (max-width: 630px) {
-      font-size: 3rem;
-    }
-  }
-`;
-
-const FooterNav = styled.ul`
-  display: flex;
-  list-style-type: none;
-  font-family: ${(p) => p.theme.fonts.parapgraph};
-  color: ${(p) => p.theme.colors.grey200};
-  gap: 1.5rem;
-  padding-left: 0;
-`;
-
-const UpArrow = styled(ArrowUpward)`
-  position: absolute;
-  right: 1rem;
-  bottom: 8.3rem;
-  padding: 0.4rem 0.2rem;
-  font-size: 2rem;
-  background: ${(p) => p.theme.colors.white300};
-  color: ${(p) => p.theme.colors.blue300};
-  border-radius: 1rem;
-  @media (max-width: 630px) {
-    display: none;
-  }
-`;
+import * as S from "./styles/styles";
 
 const Footer = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
-    <FooterContainer>
-      <Link href="/#navbar">
-        <a>
-          <UpArrow />
-        </a>
-      </Link>
+    <>
+      <S.FooterContainer>
+        <S.FooterWrapper>
+          <Link href="/">
+            <a>
+              <S.Frame>
+                <Image
+                  src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/flat_sub.svg"
+                  width={150}
+                  height={40}
+                />
+              </S.Frame>
+            </a>
+          </Link>
 
-      <FooterWrapper>
-        <Link href="/">
-          <a>
-            <Image
-              src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/sq-logo-2ndplayer.svg"
-              width={80}
-              height={80}
-              alt="Chris Campbell Dev Mobile Logo"
-            />
-          </a>
-        </Link>
-        <FooterSocial>
-          <Facebook />
-          <Twitter />
-          <LinkedIn />
-        </FooterSocial>
+          <S.FooterNav>
+            <div>
+              <h4>Site</h4>
+              <ul>
+                <li>
+                  <Link href="/">
+                    <a>Home</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/work">
+                    <a>Work</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/articles">
+                    <a>Blog</a>
+                  </Link>
+                </li>
+                <li>
+                  <>
+                    <a onClick={handleOpen}>Contact</a>
+                  </>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4>Social</h4>
+              <ul>
+                <li>
+                  <Link href="https://github.com/chris-campbell">
+                    <a target="_blank">GitHub</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.linkedin.com/in/chris-c-6a2267109/">
+                    <a target="_blank">LinkedIn</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://twitter.com/2ndplayr">
+                    <a target="_blank">Twitter</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.reddit.com/user/2ndplayerco">
+                    <a target="_blank">Reddit</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4>Media</h4>
+              <ul>
+                <li>
+                  <Link href="https://www.youtube.com/channel/UCAPA1_oy3WFOZVCSAR3mC-Q">
+                    <a target="_blank">
+                      <Image
+                        src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/youtube_black.svg"
+                        width={30}
+                        height={30}
+                      />
+                    </a>
+                  </Link>
+                </li>
 
-        <FooterNav>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/work">
-              <a>Work</a>
-            </Link>
-          </li>
-        </FooterNav>
-      </FooterWrapper>
-    </FooterContainer>
+                <li>
+                  <Link href="https://www.twitch.tv/2ndplayerco">
+                    <a target="_blank">
+                      <Image
+                        src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/twitch_white.svg"
+                        width={30}
+                        height={30}
+                      />
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </S.FooterNav>
+        </S.FooterWrapper>
+        <S.Legal>
+          <Link href="http://www.ebay.com">Terms of Service</Link>
+          <Link href="http://www.ebay.com">Policy</Link>
+        </S.Legal>
+      </S.FooterContainer>
+
+      <S.ContactModalContainer
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <S.ModalContent>
+          <h2>Reach out!</h2>
+        </S.ModalContent>
+      </S.ContactModalContainer>
+    </>
   );
 };
 

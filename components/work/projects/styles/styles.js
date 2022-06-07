@@ -3,73 +3,74 @@ import styled from "styled-components";
 export const ProjectsContainer = styled.section`
   clear: both;
   margin: 0 auto;
-  max-width: 1300px;
-`;
+  background-color: ${(p) => p.theme.colors.blue300};
+  min-height: 40vh;
 
-export const ProjectsWrapper = styled.div`
-  h2 {
-    font-family: ${(p) => p.theme.fonts.heading};
-    color: ${(p) => p.theme.colors.white300};
-    font-size: clamp(1.5rem, 10vw, 2.5rem);
-    margin: 5rem 0;
-  }
+  .project-inner {
+    max-width: 1600px;
+    padding: clamp(2rem, 7vw, 10rem);
+    margin: 0 auto;
 
-  padding: clamp(2.5rem, 10vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
-`;
-
-export const ProjectsBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  @media (max-width: 879px) {
-    flex-direction: column;
-  }
-`;
-
-export const ProjectsListItems = styled.ul`
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-  padding-left: 0;
-  width: -webkit-fill-available;
-  li {
-    font-size: clamp(1rem, 5vw, 1.2rem);
-    font-family: ${(p) => p.theme.fonts.heading};
-    margin-bottom: 1rem;
-    letter-spacing: 0.1rem;
-    color: #72707061;
-    flex-grow: 1;
-    &:hover {
-      font-weight: 600;
+    h2 {
+      font-family: ${(p) => p.theme.fonts.paragraph};
+      font-size: 1.3rem;
       color: ${(p) => p.theme.colors.white300};
-      transition: 400ms;
-      cursor: pointer;
+      margin: 2rem 0;
     }
   }
-`;
 
-export const ProjectsDescription = styled.div`
-  flex: 4;
-  font-size: 1rem;
-  font-family: ${(p) => p.theme.fonts.paragraph};
-  color: ${(p) => p.theme.colors.white300};
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
-`;
+  .projects-wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
 
-export const ExternalLinks = styled.div`
-  display: flex;
-  gap: 1rem;
-  color: ${(p) => p.theme.colors.white300};
-`;
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
+    }
 
-export const Hobbies = styled.p`
-  font-family: ${(p) => p.theme.fonts.parapgraph};
-  color: ${(p) => p.theme.colors.white300};
-  margin-top: 4rem;
-  span {
-    margin-left: 1rem;
-    color: ${(p) => p.theme.colors.grey200};
+    @media (max-width: 721px) {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 0;
+      row-gap: 1rem;
+    }
+
+    .projects-details {
+      position: relative;
+      bottom: 1.2rem;
+      background-color: ${(p) => p.theme.colors.blue200};
+      border-bottom-left-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+
+    .project-details-wrapper {
+      padding: 1rem 0;
+      h4 {
+        color: ${(p) => p.theme.colors.white300};
+        font-size: 1.1rem;
+        letter-spacing: 0.04rem;
+      }
+
+      .external-links {
+        display: flex;
+        margin-top: 0.9rem;
+        gap: 0.8rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  .project-item-wrapper {
+    position: relative;
+
+    .project-image-frame {
+      & > span {
+        border-top-right-radius: 0.3rem;
+        border-top-left-radius: 0.3rem;
+        box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 14%) !important;
+        background-color: #e1dede !important;
+      }
+    }
   }
 `;

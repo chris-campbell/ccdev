@@ -21,7 +21,7 @@ const Icons = ({ projects, index }) => {
       <ProjectIcons>
         <IconsBar>
           {projects[index].icons.map((icon) => (
-            <Icon url={icon.url} />
+            <Icon key={icon.id} url={icon.url} />
           ))}
         </IconsBar>
       </ProjectIcons>

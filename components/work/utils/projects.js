@@ -10,14 +10,17 @@ const projects = [
     github: "https://github.com/chris-campbell/helloDixieCo",
     icons: [
       {
+        id: 1,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
       },
       {
+        id: 2,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
       },
       {
+        id: 3,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/GraphQL_Logo.svg",
       },
@@ -34,10 +37,12 @@ const projects = [
     github: "https://github.com/chris-campbell/movieSearchApp",
     icons: [
       {
+        id: 4,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
       },
       {
+        id: 5,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
       },
@@ -53,10 +58,12 @@ const projects = [
     github: "https://github.com/chris-campbell/movieSearchApp",
     icons: [
       {
+        id: 6,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
       },
       {
+        id: 7,
         url:
           "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
       },

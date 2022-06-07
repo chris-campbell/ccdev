@@ -1,6 +1,5 @@
 import Footer from "./footer/Footer";
 import dynamic from "next/dynamic";
-import TempFooter from "./TempFooter";
 
 const Navbar = dynamic(() => import("./navbar/Navbar"), { ssr: false });
 
@@ -9,7 +8,7 @@ function Layout({ children }) {
     <div>
       <Navbar />
       <main>{children}</main>
-      <TempFooter />
+      <Footer />
     </div>
   );
 }
