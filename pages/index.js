@@ -7,7 +7,10 @@ export default function Home({ articles }) {
       <Head>
         <title>2ndPlayer</title>
         <meta name="description" content="Professional" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="shortcut icon"
+          href="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/favicon-16x16.png"
+        />
       </Head>
 
       <HomeContainer articles={articles} />
