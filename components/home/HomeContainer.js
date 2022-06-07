@@ -5,7 +5,7 @@ import WebDevelopmentServices from "./webdevelopmentservices/WebDevelopmentServi
 import AdvanceSeo from "./advanceseo/AdvanceSeo";
 import FullTime from "./fulltime/FullTime";
 
-function HomeContainer() {
+function HomeContainer({ articles }) {
   return (
     <>
       <Hero />

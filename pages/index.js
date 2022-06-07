@@ -1,7 +1,7 @@
 import Head from "next/head";
 import HomeContainer from "../components/home/HomeContainer";
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <div>
       <Head>
@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomeContainer />
+      <HomeContainer articles={articles} />
     </div>
   );
 }

@@ -50,6 +50,14 @@ const FooterNav = styled.div`
     color: ${(p) => p.theme.colors.grey200};
     list-style: none;
     margin-bottom: 0.2rem;
+    &:hover {
+      transition: color 300ms;
+      color: ${(p) => p.theme.colors.orange300};
+    }
+
+    &:active {
+      color: ${(p) => p.theme.colors.blue300};
+    }
   }
 `;
 
@@ -73,49 +81,94 @@ const TempFooter = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Frame>
-          <Image
-            src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/flat_sub.svg"
-            width={150}
-            height={40}
-          />
-        </Frame>
+        <Link href="/">
+          <a>
+            <Frame>
+              <Image
+                src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/flat_sub.svg"
+                width={150}
+                height={40}
+              />
+            </Frame>
+          </a>
+        </Link>
 
         <FooterNav>
           <div>
             <h4>Site</h4>
             <ul>
-              <li>Home</li>
-              <li>Work</li>
-              <li>Blog</li>
-              <li>Contact</li>
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/work">
+                  <a>Work</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/articles">
+                  <a>Blog</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact">
+                  <a>Contact</a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <h4>Social</h4>
             <ul>
-              <li>GitHub</li>
-              <li>LinkedIn</li>
-              <li>Twitter</li>
-              <li>Reddit</li>
+              <li>
+                <Link href="https://github.com/chris-campbell">
+                  <a target="_blank">GitHub</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.linkedin.com/in/chris-c-6a2267109/">
+                  <a target="_blank">LinkedIn</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://twitter.com/2ndplayr">
+                  <a target="_blank">Twitter</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.reddit.com/user/2ndplayerco">
+                  <a target="_blank">Reddit</a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <h4>Media</h4>
             <ul>
               <li>
-                <Image
-                  src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/youtube_black.svg"
-                  width={30}
-                  height={30}
-                />
+                <Link href="https://www.youtube.com/channel/UCAPA1_oy3WFOZVCSAR3mC-Q">
+                  <a target="_blank">
+                    <Image
+                      src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/youtube_black.svg"
+                      width={30}
+                      height={30}
+                    />
+                  </a>
+                </Link>
               </li>
+
               <li>
-                <Image
-                  src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/twitch_white.svg"
-                  width={30}
-                  height={30}
-                />
+                <Link href="https://www.twitch.tv/2ndplayerco">
+                  <a target="_blank">
+                    <Image
+                      src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/social_icons/twitch_white.svg"
+                      width={30}
+                      height={30}
+                    />
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -37,10 +37,6 @@ const Item = ({ item, setPreview }) => {
   const [isActive, setIsActive] = useState(false);
   const itemRef = useRef(null);
 
-  const handleActive = () => {
-    setIsActive(!isActive);
-  };
-
   useEffect(() => {
     setPreview(item, itemRef);
   }, []);
@@ -52,7 +48,6 @@ const Item = ({ item, setPreview }) => {
       ref={itemRef}
       onClick={() => setPreview(item, itemRef)}
     >
-      {/* <span></span> */}
       {item.title}
     </ItemContainer>
   );

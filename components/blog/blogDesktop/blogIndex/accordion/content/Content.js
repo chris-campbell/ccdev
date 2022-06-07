@@ -1,8 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Item from "./item/Item";
 
-import { uniqueId } from "lodash";
 const IndexList = styled.ul`
   margin: 1rem 0;
   list-style-position: outside;

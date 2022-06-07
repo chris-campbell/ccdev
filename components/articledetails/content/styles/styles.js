@@ -41,4 +41,11 @@ export const ContentWrapper = styled.div`
   a {
     color: ${(p) => p.theme.colors.blue100};
   }
+
+  img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+  }
 `;

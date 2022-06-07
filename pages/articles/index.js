@@ -1,18 +1,25 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import client from "../../apolloClient";
-import { gql } from "@apollo/client";
+import { fetchAllArticles } from "../../query/query";
+import { AppContext } from "../../context/state";
+import { useContext, useEffect } from "react";
 
 const BlogContainer = dynamic(
   () => import("../../components/blog/BlogContainer"),
   { ssr: false }
 );
 
-const Blog = ({ articles }) => {
+const Blog = (articles) => {
+  const { setCurrentArticles } = useContext(AppContext);
+
+  useEffect(() => {
+    setCurrentArticles(articles);
+  }, []);
+
   return (
     <>
       <Head>
-        <title>CCDev | Articles, Tutorial & Tech News </title>
+        <title>2ndPlayer | Articles, Tutorial & Tech News </title>
         <meta
           name="description"
           content="Articles and tutorials that focus on both programming and tech products and news."
@@ -20,7 +27,7 @@ const Blog = ({ articles }) => {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <BlogContainer allArticles={articles} />
+      <BlogContainer articles={articles} />
     </>
   );
 };
@@ -28,51 +35,7 @@ const Blog = ({ articles }) => {
 export default Blog;
 
 export const getStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query {
-        articles {
-          id
-          title
-          slug
-          featured
-          category
-          excerpt
-          createdAt
-          coverImage {
-            url
-          }
-          content {
-            html
-          }
-          authors {
-            name
-            role
-            description
-            socials {
-              urls
-            }
-            avatar {
-              id
-              url
-              createdAt
-            }
-          }
-          seo {
-            title
-            description
-            keyword
-
-            image {
-              url
-            }
-          }
-        }
-      }
-    `,
-  });
-
-  const { articles } = data;
+  const { articles } = await fetchAllArticles(5);
 
   return {
     props: {

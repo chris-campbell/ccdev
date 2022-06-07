@@ -4,6 +4,8 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "../components/ThemeConfig";
 import Head from "next/head";
 
+import AppWrapper from "../context/state";
+
 const GlobalStyles = createGlobalStyle`
   * {
       box-sizing: border-box;
@@ -25,10 +27,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
     font-family: ${(p) => p.theme.fonts.heading};
   }
 
-  p, span, a {
+  p, span, a, blockquote {
     font-family: ${(p) => p.theme.fonts.paragraph};
   }
 
@@ -56,10 +59,16 @@ li {
   font-family: ${(p) => p.theme.fonts.paragraph};
 }
 
-p {
+p, blockquote {
   font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
   line-height: 1.3;
 }
+
+ blockquote {
+   font-style: italic;
+   margin-bottom: 2rem;
+   color: ${(p) => p.theme.colors.white300} !important; 
+ }
 
 span {
   font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
@@ -79,25 +88,27 @@ span {
     border-radius: 0.2rem;
   }
 
+  blockquote {
+    
+      color: #aaa;
+
+  }
+
 
   pre {
-    /* display: block; */
-    /* height: auto; */
     border: 3px solid #316ec985;
     max-width: 100%;
-        overflow-x: auto;
-      /* -webkit-overflow-scrolling: touch; */
-          white-space: pre;
+    overflow-x: auto;
+    white-space: pre;
     word-spacing: normal;
-      /* white-space: pre-wrap; */
     padding: 3rem;
     background-color: #171a1f;
     border-radius: 0.5rem;
     width: 100%;
--webkit-box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18); 
-box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18);
- /* word-break: break-all; */
-      ::-webkit-scrollbar {
+    -webkit-box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18); 
+    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18);
+
+  ::-webkit-scrollbar {
     background-color: transparent;
     padding-left: 1rem;
   }
@@ -121,10 +132,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Layout>
-          <Component {...pageProps} />
+          <AppWrapper>
+            <Component {...pageProps} />
+          </AppWrapper>
         </Layout>
       </ThemeProvider>
     </>

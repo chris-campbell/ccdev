@@ -1,41 +1,67 @@
-import { SiNextdotjs } from "react-icons/si";
-import { SiGraphql } from "react-icons/si";
-import { SiReact } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiNodedotjs } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-
-export const projects = [
+const projects = [
   {
-    name: "Hello Dixie Co.",
+    id: 1,
+    name: "Hello Dixie",
+    image:
+      "https://s3.us-east-2.amazonaws.com/2ndplayer.co/trans/hello-dixie.png",
+    description:
+      "Freelance project for a budding Branding Identity Studio in NYC. Using NextJS made it possible to give this Studio a strong SEO presences, allowing them to be found by potential clients.",
+    liveSite: "https://www.hellodixie.co",
+    github: "https://github.com/chris-campbell/helloDixieCo",
     icons: [
-      <SiReact key={0} />,
-      <SiNextdotjs key={1} />,
-      <SiGraphql key={2} />,
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
+      },
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
+      },
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/GraphQL_Logo.svg",
+      },
     ],
-    description:
-      "Hello Dixie t enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
   },
   {
-    name: "Laymanns",
+    id: 2,
+    name: "Sky Movies",
+    image:
+      "https://s3.us-east-2.amazonaws.com/2ndplayer.co/trans/sky-movies.png",
+    description:
+      "Movie Search Application that takes advantage of the Movie Database API to allow its users to type in any movie name and display it's details.",
+    liveSite: "https://movie-search-app-pink-nu.vercel.app/",
+    github: "https://github.com/chris-campbell/movieSearchApp",
     icons: [
-      <SiReact key={3} />,
-      <SiNodedotjs key={4} />,
-      <SiExpress key={5} />,
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
+      },
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
+      },
     ],
-    description:
-      "Laymanns is designed to be a blogging platform that allows its users to create articles and provide extra context to other users post. Providing further context will aid in making complex topics easier to grasp. especially useful for blogging tutorials.",
   },
   {
-    name: "Movie Searcher",
-    icons: [<SiReact key={6} />, <SiGraphql key={7} />],
+    id: 3,
+    name: "Savorys",
+    image: "https://s3.us-east-2.amazonaws.com/2ndplayer.co/trans/savorys.png",
     description:
-      "Simple mevie search application built primarly with React JS. Application allows its users to search for a movie and returns results queried from the MovieDB.",
-  },
-  {
-    name: "Sudoku",
-    icons: [<SiReact key={8} />, <SiTypescript key={9} />],
-    description:
-      "Simple Sudoku application that strictly enforces the rules of a sudoku game.",
+      "Savorys is a E-commerce landing page that users and user to view the limited menu, add items to cart and securly purchase items. Intended to be a short menu of popular pastery items.",
+    liveSite: "https://movie-search-app-pink-phi.vercel.app/",
+    github: "https://github.com/chris-campbell/movieSearchApp",
+    icons: [
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/React-icon.svg",
+      },
+      {
+        url:
+          "https://s3.us-east-2.amazonaws.com/2ndplayer.co/code-icons/nextjs-icon-svgrepo-com.svg",
+      },
+    ],
   },
 ];
+
+export default projects;

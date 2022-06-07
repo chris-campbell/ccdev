@@ -8,7 +8,7 @@ export const WorkContainer = styled.section`
 export const WorkWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1600px;
   padding: clamp(2.5rem, 10vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 
   h1 {

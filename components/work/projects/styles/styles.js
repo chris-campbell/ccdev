@@ -58,20 +58,6 @@ export const ProjectsDescription = styled.div`
   letter-spacing: 0.1rem;
 `;
 
-export const ProjectIcons = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  color: ${(p) => p.theme.colors.blue100};
-  font-size: 1.5rem;
-  justify-content: space-between;
-`;
-
-export const Icons = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
-
 export const ExternalLinks = styled.div`
   display: flex;
   gap: 1rem;

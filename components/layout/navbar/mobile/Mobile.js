@@ -51,7 +51,7 @@ const MobileNav = () => {
                   </Link>
                 </li>
                 <li onClick={() => toggleOpen()}>
-                  <Link href="/blog" passHref={true}>
+                  <Link href="/articles" passHref={true}>
                     <a>
                       <div className="header__icon">Blog</div>
                     </a>
