@@ -25,6 +25,8 @@ const Blog = (articles) => {
           content="Articles and tutorials that focus on both programming and tech products and news."
         />
         <meta name="robots" content="index, follow" />
+        <meta property="og:site_name" content="2ndPlayer" />
+        <meta property="og:locale" content="en_US" />
       </Head>
 
       <BlogContainer articles={articles} />

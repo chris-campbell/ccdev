@@ -5,6 +5,9 @@ const nextConfig = {
   crossOrigin: "anonymous",
   env: {
     messengerId: "709075823675090",
+    serviceId: "service_qbpmz5j",
+    templateId: "template_6euvv2s",
+    publicKey: "OYpkvOmoF94W63zrA",
   },
   images: {
     domains: [
