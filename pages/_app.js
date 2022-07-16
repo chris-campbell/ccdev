@@ -1,10 +1,9 @@
-import "../styles/globals.css";
+import Head from "next/head";
 import Layout from "../components/layout/Layout";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from "../components/ThemeConfig";
-import Head from "next/head";
-
 import AppWrapper from "../context/state";
+import "../styles/globals.css";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -35,50 +34,50 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${(p) => p.theme.fonts.paragraph};
   }
 
-h1 {
-font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2rem);
-line-height: 1.1;
-}
-
-h2 {
-  font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 1.6rem);
+  h1 {
+  font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2rem);
   line-height: 1.1;
-}
+  }
 
-h3 {
-  font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.488rem);
+  h2 {
+    font-size: clamp(1.575rem, calc( 12px + 1.800vw ), 1.6rem);
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: clamp(1.282rem, calc( 12px + 1.350vw ), 1.488rem);
+    line-height: 1.1;
+  }
+
+  h4 {
+  font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
   line-height: 1.1;
-}
+  }
 
-h4 {
-font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
-line-height: 1.1;
-}
+  li {
+    font-family: ${(p) => p.theme.fonts.paragraph};
+  }
 
-li {
-  font-family: ${(p) => p.theme.fonts.paragraph};
-}
+  p, blockquote {
+    font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
+    line-height: 1.3;
+  }
 
-p, blockquote {
-  font-size: clamp(1.035rem, calc( 12px + 0.540vw ), 1.125rem);
-  line-height: 1.3;
-}
+  blockquote {
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: ${(p) => p.theme.colors.white300} !important; 
+  }
 
- blockquote {
-   font-style: italic;
-   margin-bottom: 2rem;
-   color: ${(p) => p.theme.colors.white300} !important; 
- }
-
-span {
-  font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
-  line-height: 1.1;
-}
+  span {
+    font-size: clamp(0.900rem, calc( 12px + 0.360vw ), 1.012rem);
+    line-height: 1.1;
+  }
 
   a {
-      color: inherit;
-      text-decoration: none;
-      font-family: ${(p) => p.theme.fonts.paragraph};
+    color: inherit;
+    text-decoration: none;
+    font-family: ${(p) => p.theme.fonts.paragraph};
   }
 
   iframe {
@@ -89,24 +88,22 @@ span {
   }
 
   blockquote {
-    
-      color: #aaa;
-
+    color: #aaa;
   }
 
-
   pre {
-    border: 3px solid #316ec985;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: pre;
+    border: 0px solid #316ec985 !important;
+    margin-bottom: 2rem !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    white-space: pre !important;
     word-spacing: normal;
-    padding: 3rem;
-    background-color: #171a1f;
+    padding: 3rem 3rem 2rem 3rem !important;
+    background-color: #171a1f !important;
     border-radius: 0.5rem;
-    width: 100%;
-    -webkit-box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18); 
-    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18);
+    width: 100% !important;
+    -webkit-box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18) !important; 
+    box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.18) !important;
 
   ::-webkit-scrollbar {
     background-color: transparent;
@@ -118,10 +115,11 @@ span {
     border-radius: 1rem;
   }
     code {
-      font-family: "Source Code Pro", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-      color: #aaa;
-      font-size: 0.9rem;
+      font-size: 1rem !important;
       line-height: 1.4;
+      span {
+        font-family: "Source Code Pro", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important;
+      }
     }
   }
 `;

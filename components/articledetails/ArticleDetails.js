@@ -5,7 +5,6 @@ import Content from "./content/Content";
 import Author from "./author/Author";
 import SocialIcons from "./socialIcons/SocialIcons";
 import { useRouter } from "next/router";
-
 import * as S from "./styles/styles";
 
 const ArticleDetails = ({ article, host }) => {

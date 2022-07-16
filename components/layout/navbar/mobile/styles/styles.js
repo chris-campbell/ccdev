@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 export const MenuButton = styled(MenuIcon)`
   z-index: 20;
   color: ${(p) => p.theme.colors.white300};
-  font-size: 2.3rem;
+  font-size: 2.3rem !important;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
 `;

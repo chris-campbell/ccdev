@@ -4,7 +4,7 @@ const ModalInput = ({ type, label, placeholder, name }) => {
   return (
     <S.ModalInputContainer>
       <label>{label}</label>
-      <input type={type} name={name} placeholder={placeholder} />
+      <input type={type} name={name} placeholder={placeholder} required />
     </S.ModalInputContainer>
   );
 };

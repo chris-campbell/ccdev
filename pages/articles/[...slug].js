@@ -63,6 +63,7 @@ export async function getServerSideProps({ req, params }) {
           }
           content {
             html
+            raw
           }
           authors {
             name

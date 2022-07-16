@@ -1,23 +1,14 @@
 import emailjs from "@emailjs/browser";
 
-const sendEmail = (e, form) => {
+const sendEmail = async (e, form) => {
   e.preventDefault();
 
-  emailjs
-    .sendForm(
-      process.env.serviceId,
-      process.env.templateId,
-      form.current,
-      process.env.publicKey
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+  return await emailjs.sendForm(
+    process.env.serviceId,
+    process.env.templateId,
+    form.current,
+    process.env.publicKey
+  );
 };
 
 export default sendEmail;
