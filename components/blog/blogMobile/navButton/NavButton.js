@@ -4,10 +4,7 @@ import Link from "next/link";
 
 import styled from "styled-components";
 
-const NavButtonContainer = styled.div`
-  /* display: flex; */
-  /* justify-content: center; */
-`;
+const NavButtonContainer = styled.div``;
 
 const NavBbtn = styled(ArrowForwardIosIcon)`
   font-size: 2.5rem;

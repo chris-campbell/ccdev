@@ -31,7 +31,7 @@ export const MobileNav = styled.ul`
   opacity: ${(p) => (p.open ? "1" : "0")};
   transition: all 1s ease-in-out;
   list-style: none;
-  /* margin-top: 10rem; */
+
   margin-bottom: 1.5rem;
   padding-left: 0 !important;
   display: flex;
