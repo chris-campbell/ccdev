@@ -13,7 +13,6 @@ export const FooterWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   padding-bottom: 4rem;
-  /* border-bottom: 0.5px solid #f2f2f224; */
 
   @media (max-width: 720px) {
     flex-direction: column;

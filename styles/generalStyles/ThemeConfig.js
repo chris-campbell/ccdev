@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+  
   }
 
   html,
@@ -14,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${(p) => p.theme.colors.darkBlue};
       scroll-behavior: smooth;
       height:100%;
+      font-family: ${(p) => p.theme.fonts[1]};
   }
 
   main {
@@ -21,13 +23,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    /* text-transform: uppercase; */
     font-family: ${(p) => p.theme.fonts[0]};
   }
 
   p, span, a, blockquote {
     font-family: ${(p) => p.theme.fonts[1]};
     color: ${(p) => p.theme.fonts[1]};
+     font-weight: 400 !important; 
+    font-style: normal !important;
   }
 
   h1 {
@@ -73,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
-    font-family: ${(p) => p.theme.fonts[1]};
+    font-family: ${(p) => p.theme.fonts[1]} !important;
   }
 
   iframe {

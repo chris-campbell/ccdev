@@ -49,7 +49,7 @@ const Quote = () => {
   return (
     <QuoteContainer>
       <div className="quote-wrapper">
-        <h1>THe OLD CHRISTOPHER IS DeaD, FRom now on, I am...CHRIS!</h1>
+        <h1>The old Christopher is dead, from now on, I am...CHRIS!</h1>
 
         <div className="quote-author">
           <div className="highlight"></div>
