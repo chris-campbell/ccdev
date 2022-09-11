@@ -131,7 +131,7 @@ export const theme = {
     lightGrey: "#e0e0e0",
     egg: "#F2F2F2",
   },
-  fonts: ["'Social Gothic', sans-serif", "Roboto"],
+  fonts: ["SocialGothicBold, sans-serif", "Roboto"],
 };
 
 export default GlobalStyles;

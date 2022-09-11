@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SocialGothicBold';
+    src: url('../../asset//SocialGothic/Social\ Gothic\ Bold.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SocialGothicMed';
+    src: url('../../asset//SocialGothic/Social\ Gothic\ Medium.otf');
+    font-weight: 600;
+    font-style: normal;
+}

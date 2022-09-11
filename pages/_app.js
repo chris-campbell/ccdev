@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles, { theme } from "../styles/generalStyles/ThemeConfig";
 import AppWrapper from "../context/state";
+import "../styles/generalStyles/general.css";
 
 function MyApp({ Component, pageProps }) {
   return (
