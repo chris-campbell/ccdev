@@ -2,7 +2,7 @@ import Modal from "@mui/material/Modal";
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  background-color: ${(p) => p.theme.colors.blue200};
+  background-color: ${(p) => p.theme.colors.blueSky};
   padding: clamp(3rem, 4vw, 8rem);
 `;
 
@@ -13,7 +13,7 @@ export const FooterWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
   padding-bottom: 4rem;
-  border-bottom: 0.5px solid #f2f2f224;
+  /* border-bottom: 0.5px solid #f2f2f224; */
 
   @media (max-width: 720px) {
     flex-direction: column;
@@ -35,7 +35,7 @@ export const FooterNav = styled.div`
     justify-content: flex-start;
   }
   h4 {
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.darkBlue};
     margin-bottom: 1rem;
   }
 
@@ -44,16 +44,16 @@ export const FooterNav = styled.div`
   }
 
   ul > li {
-    color: ${(p) => p.theme.colors.grey200};
+    color: ${(p) => p.theme.colors.darkBlue};
     list-style: none;
     margin-bottom: 0.2rem;
     &:hover {
       transition: color 300ms;
-      color: ${(p) => p.theme.colors.orange300};
+      color: ${(p) => p.theme.colors.orange};
     }
 
     &:active {
-      color: ${(p) => p.theme.colors.blue300};
+      color: ${(p) => p.theme.colors.darkBlue};
     }
   }
 `;
@@ -71,7 +71,7 @@ export const Legal = styled.div`
   max-width: 1200px;
   padding-top: 1rem;
   margin: 0 auto;
-  color: ${(p) => p.theme.colors.grey200};
+  color: ${(p) => p.theme.colors.darkBlue};
 `;
 
 export const ContactModalContainer = styled(Modal)`
@@ -81,7 +81,7 @@ export const ContactModalContainer = styled(Modal)`
 `;
 
 export const ModalContent = styled.div`
-  background-color: ${(p) => p.theme.colors.white300};
+  background-color: ${(p) => p.theme.colors.egg};
   width: 20rem;
   max-width: 20rem;
   height: 20rem;

@@ -5,7 +5,7 @@ export const ProjectIcons = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  color: ${(p) => p.theme.colors.blue100};
+  color: ${(p) => p.theme.colors.royal};
   font-size: 1.5rem;
   justify-content: space-between;
 `;

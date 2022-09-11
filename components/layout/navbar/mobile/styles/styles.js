@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export const MenuButton = styled(MenuIcon)`
   z-index: 20;
-  color: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.egg};
   font-size: 2.3rem !important;
   margin-top: 0.5rem;
   padding-left: 0.5rem;
@@ -18,7 +18,7 @@ export const Drawer = styled.div`
   overflow-y: auto;
   opacity: ${(p) => (p.open ? "1" : "0")};
   height: 100vh;
-  background: ${(p) => p.theme.colors.blue300};
+  background: ${(p) => p.theme.colors.darkBlue};
   min-height: 100vh;
   transition: width 700ms ease-in-out 0s;
   display: flex;
@@ -31,7 +31,6 @@ export const MobileNav = styled.ul`
   opacity: ${(p) => (p.open ? "1" : "0")};
   transition: all 1s ease-in-out;
   list-style: none;
-
   margin-bottom: 1.5rem;
   padding-left: 0 !important;
   display: flex;
@@ -45,7 +44,7 @@ export const MobileNav = styled.ul`
     font-size: 1.3rem;
     white-space: nowrap;
     justify-content: center;
-    font-family: ${(p) => p.theme.fonts.heading};
+    font-family: ${(p) => p.theme.fonts[0]};
     letter-spacing: 0.13rem;
     a {
       text-decoration: none;

@@ -1,20 +1,18 @@
 import React from "react";
-import Hero from "./hero/Hero";
-import UX from "./ux/Ux";
-import WebDevelopmentServices from "./webdevelopmentservices/WebDevelopmentServices";
-import AdvanceSeo from "./advanceseo/AdvanceSeo";
-import FullTime from "./fulltime/FullTime";
+import Quote from "./quote/Quote";
+import Me from "./me/Me";
+import Projects from "./projects/Projects";
+import Fin from "./fin/Fin";
 
-function HomeContainer({ articles }) {
+const HomeContainer = () => {
   return (
     <>
-      <Hero />
-      <UX />
-      <WebDevelopmentServices />
-      <AdvanceSeo />
-      <FullTime />
+      <Quote />
+      <Me />
+      <Projects />
+      <Fin />
     </>
   );
-}
+};
 
 export default HomeContainer;

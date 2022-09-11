@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const AllArticles = styled.div`
   min-height: 100vh;
-  background-color: ${(p) => p.theme.colors.white300};
+  background-color: ${(p) => p.theme.colors.egg};
   padding: clamp(2rem, 9vw, 9rem);
 `;
 

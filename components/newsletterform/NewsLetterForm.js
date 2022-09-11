@@ -5,7 +5,7 @@ import styled from "styled-components";
 const SubscribeHeading = styled.span`
   display: block;
   margin-bottom: 0.5rem;
-  font-family: ${(p) => p.theme.fonts.heading};
+  font-family: ${(p) => p.theme.fonts[0]};
   word-spacing: 0.1rem;
 `;
 
@@ -13,7 +13,7 @@ const SubscribeInput = styled.input`
   width: 100%;
   height: 2.5rem;
   padding-left: 0.5rem;
-  color: ${(p) => p.theme.colors.grey300};
+  color: ${(p) => p.theme.colors.darkGrey};
   border-radius: 0.2rem;
   border: none;
   margin-bottom: 1rem;
@@ -21,17 +21,17 @@ const SubscribeInput = styled.input`
 `;
 
 const SubscribeButton = styled.button`
-  background: ${(p) => p.theme.colors.orange300};
+  background: ${(p) => p.theme.colors.orange};
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.2rem;
-  color: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.egg};
   margin-bottom: 2rem;
 `;
 
 const Sending = styled.div`
   font-family: ${(p) => p.theme.fonts.parapgraph};
-  color: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.egg};
 `;
 
 const NewsLetterFormInfo = styled.div`

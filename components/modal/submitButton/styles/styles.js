@@ -11,12 +11,12 @@ export const SubmitButtonWrapper = styled.button`
   border: none;
   align-items: center;
   gap: 0.5rem;
-  color: ${(p) => p.theme.colors.blue200};
+  color: ${(p) => p.theme.colors.coalBlue};
   font-weight: 600;
   font-size: 1rem;
   border-radius: 0.2rem;
   box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 9%) !important;
-  background-color: ${(p) => p.theme.colors.white300};
+  background-color: ${(p) => p.theme.colors.egg};
 
   &:active {
     background-color: #dedede;

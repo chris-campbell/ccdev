@@ -12,15 +12,15 @@ export const WorkWrapper = styled.div`
   padding: clamp(2.5rem, 10vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 
   h1 {
-    font-family: ${(p) => p.theme.fonts.heading};
-    color: ${(p) => p.theme.colors.white300};
+    font-family: ${(p) => p.theme.fonts[0]};
+    color: ${(p) => p.theme.colors.egg};
     font-size: clamp(2rem, 10vw, 3rem);
     margin-bottom: 1.5rem;
   }
 
   p {
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     font-size: 1rem;
     max-width: 43.25rem;
     line-height: 1.6;

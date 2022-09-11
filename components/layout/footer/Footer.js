@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "./img/logo.svg";
 
 import * as S from "./styles/styles";
 
@@ -16,11 +17,7 @@ const Footer = () => {
           <Link href="/">
             <a>
               <S.Frame>
-                <Image
-                  src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/flat_sub.svg"
-                  width={150}
-                  height={40}
-                />
+                <Image src={Logo} width={50} height={40} />
               </S.Frame>
             </a>
           </Link>

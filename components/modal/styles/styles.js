@@ -8,7 +8,7 @@ export const ContactModalContainer = styled(Modal)`
 `;
 
 export const ModalContent = styled.div`
-  background-color: ${(p) => p.theme.colors.blue100};
+  background-color: ${(p) => p.theme.colors.royal};
   width: 100%;
   max-width: 45rem;
   min-height: 20rem;
@@ -25,7 +25,7 @@ export const ReachOut = styled.div`
   margin-bottom: 2rem;
 
   h2 {
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
   }
 
   .social-outreach {

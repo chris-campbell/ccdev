@@ -10,7 +10,7 @@ export const ContentWrapper = styled.div`
   h5,
   h6 {
     margin-bottom: 2rem;
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
   }
 
   p {
@@ -25,21 +25,21 @@ export const ContentWrapper = styled.div`
 
     li {
       color: #aaa;
-      font-family: ${(p) => p.theme.fonts.paragraph};
+      font-family: ${(p) => p.theme.fonts[1]};
       margin-bottom: 0.7rem;
       list-style: none;
       display: flex;
 
       &::before {
         content: "° ";
-        color: ${(p) => p.theme.colors.orange300};
+        color: ${(p) => p.theme.colors.orange};
         border-radius: 0.5rem;
         margin-right: 1rem;
       }
     }
   }
   a {
-    color: ${(p) => p.theme.colors.blue100};
+    color: ${(p) => p.theme.colors.royal};
   }
 
   img {

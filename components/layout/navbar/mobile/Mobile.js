@@ -51,9 +51,9 @@ const MobileNav = () => {
                     <Link href="/">
                       <a>
                         <Image
-                          src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/sq-logo-2ndplayer.svg"
-                          width={80}
-                          height={100}
+                          src="https://s3.us-east-2.amazonaws.com/2ndplayer.co/logos/horiz-logo-white.png"
+                          width={125}
+                          height={27}
                           alt="Chris Campbell dev logo"
                         />
                       </a>

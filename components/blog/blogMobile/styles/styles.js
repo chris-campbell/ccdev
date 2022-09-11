@@ -5,11 +5,11 @@ export const BlogMobileContainer = styled.div`
 `;
 
 export const CurrentListingContainer = styled.div`
-  border-bottom: 1px solid ${(p) => p.theme.colors.blue200};
+  border-bottom: 1px solid ${(p) => p.theme.colors.coalBlue};
   padding: 3rem 0;
   h2 {
     margin-bottom: 1.2rem;
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     max-width: 30rem;
     font-size: clamp(1.2em, 3vw, 2rem);
     text-transform: uppercase;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectsContainer = styled.section`
   clear: both;
   margin: 0 auto;
-  background-color: ${(p) => p.theme.colors.blue300};
+  background-color: ${(p) => p.theme.colors.darkBlue};
   min-height: 40vh;
 
   .project-inner {
@@ -12,9 +12,9 @@ export const ProjectsContainer = styled.section`
     margin: 0 auto;
 
     h2 {
-      font-family: ${(p) => p.theme.fonts.paragraph};
+      font-family: ${(p) => p.theme.fonts[1]};
       font-size: 1.3rem;
-      color: ${(p) => p.theme.colors.white300};
+      color: ${(p) => p.theme.colors.egg};
       margin: 2rem 0;
     }
   }
@@ -39,7 +39,7 @@ export const ProjectsContainer = styled.section`
     .projects-details {
       position: relative;
       bottom: 1.2rem;
-      background-color: ${(p) => p.theme.colors.blue200};
+      background-color: ${(p) => p.theme.colors.coalBlue};
       border-bottom-left-radius: 0.3rem;
       border-bottom-right-radius: 0.3rem;
     }
@@ -47,7 +47,7 @@ export const ProjectsContainer = styled.section`
     .project-details-wrapper {
       padding: 1rem 0;
       h4 {
-        color: ${(p) => p.theme.colors.white300};
+        color: ${(p) => p.theme.colors.egg};
         font-size: 1.1rem;
         letter-spacing: 0.04rem;
       }

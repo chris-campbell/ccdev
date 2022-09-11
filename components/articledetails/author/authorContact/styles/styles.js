@@ -8,7 +8,7 @@ export const AuthorNameContainer = styled.div`
     flex-direction: column;
   }
   h2 {
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 0.2rem;
     letter-spacing: 1px;
   }

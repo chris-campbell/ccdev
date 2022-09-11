@@ -7,8 +7,8 @@ export const ModalInputContainer = styled.div`
 
   label {
     text-transform: uppercase;
-    font-family: ${(p) => p.theme.fonts.heading};
-    color: ${(p) => p.theme.colors.white300};
+    font-family: ${(p) => p.theme.fonts[0]};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 0.5rem;
   }
 
@@ -16,11 +16,11 @@ export const ModalInputContainer = styled.div`
     background-color: transparent;
     width: 100%;
     border: none;
-    border-bottom: 2px solid ${(p) => p.theme.colors.white300};
+    border-bottom: 2px solid ${(p) => p.theme.colors.egg};
     padding-bottom: 0.7rem;
     outline: none;
-    color: ${(p) => p.theme.colors.white300};
-    font-family: ${(p) => p.theme.fonts.paragraph};
+    color: ${(p) => p.theme.colors.egg};
+    font-family: ${(p) => p.theme.fonts[1]};
     font-size: 1rem;
     &::placeholder {
       color: #86a8db;

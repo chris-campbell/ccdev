@@ -8,11 +8,11 @@ export const IndexButtonContainer = styled.div`
 `;
 
 export const IndexButton = styled.div`
-  border: 2px solid ${(p) => p.theme.colors.white300};
+  border: 2px solid ${(p) => p.theme.colors.egg};
   width: fit-content;
   padding: 0.8rem 1rem;
-  color: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.egg};
   border-radius: 0.2rem;
-  font-family: ${(p) => p.theme.fonts.heading};
+  font-family: ${(p) => p.theme.fonts[0]};
   font-size: 0.8rem;
 `;

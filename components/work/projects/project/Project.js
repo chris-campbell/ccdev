@@ -6,12 +6,12 @@ import { GitHub } from "@mui/icons-material";
 import { ArrowCircleRight } from "@mui/icons-material";
 
 const GitIcon = styled(GitHub)`
-  color: ${(p) => p.theme.colors.blue100};
+  color: ${(p) => p.theme.colors.royal};
   font-size: 1.5rem;
 `;
 
 const LiveLink = styled(ArrowCircleRight)`
-  color: ${(p) => p.theme.colors.blue100};
+  color: ${(p) => p.theme.colors.royal};
   font-size: 1.5rem;
 `;
 

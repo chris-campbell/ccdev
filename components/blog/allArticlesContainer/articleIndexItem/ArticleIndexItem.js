@@ -43,17 +43,17 @@ const ArticleIndexItemContainer = styled.article`
   .article-index-date {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    color: ${(p) => p.theme.colors.grey300};
+    color: ${(p) => p.theme.colors.darkGrey};
   }
 
   .article-index-title {
     margin-bottom: 1rem;
-    color: ${(p) => p.theme.colors.blue200};
+    color: ${(p) => p.theme.colors.coalBlue};
   }
 
   .article-index-excerpt {
     line-height: 1.4;
-    color: ${(p) => p.theme.colors.grey300};
+    color: ${(p) => p.theme.colors.darkGrey};
   }
 `;
 

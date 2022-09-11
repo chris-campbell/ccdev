@@ -12,7 +12,7 @@ export const IconContainer = styled.div`
   }
 
   svg {
-    color: ${(p) => p.theme.colors.orange300};
+    color: ${(p) => p.theme.colors.orange};
     font-size: 1.7rem;
   }
 `;

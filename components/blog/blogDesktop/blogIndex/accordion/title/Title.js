@@ -12,15 +12,15 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 90%;
-  color: ${(p) => p.theme.colors.white300};
-  border-bottom: 1px solid ${(p) => p.theme.colors.blue100};
+  color: ${(p) => p.theme.colors.egg};
+  border-bottom: 1px solid ${(p) => p.theme.colors.royal};
   p {
     font-size: 0.9rem;
     padding: 0.6rem;
     width: 100%;
     &:hover {
       transition: 500ms;
-      background-color: ${(p) => p.theme.colors.blue200};
+      background-color: ${(p) => p.theme.colors.coalBlue};
       border-top-left-radius: 0.2rem;
       border-top-right-radius: 0.2rem;
     }

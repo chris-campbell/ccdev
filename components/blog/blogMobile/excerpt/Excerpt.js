@@ -14,7 +14,7 @@ const ExcerptContainer = styled.p`
   }
 
   a {
-    color: ${(p) => p.theme.colors.orange300};
+    color: ${(p) => p.theme.colors.orange};
     margin-top: 1rem;
     margin-right: 1rem;
     float: right;

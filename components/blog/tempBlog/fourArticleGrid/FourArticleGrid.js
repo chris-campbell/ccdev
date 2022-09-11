@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FourArticleGridContainer = styled.section`
   padding: clamp(2rem, 9vw, 9rem);
-  background-color: ${(p) => p.theme.colors.white300};
+  background-color: ${(p) => p.theme.colors.egg};
 
   .four-article-wrapper {
     display: grid;
@@ -26,9 +26,9 @@ const FourArticleGridContainer = styled.section`
     margin: 0 auto;
 
     a {
-      color: ${(p) => p.theme.colors.orange300};
+      color: ${(p) => p.theme.colors.orange};
       &:hover {
-        color: ${(p) => p.theme.colors.blue100};
+        color: ${(p) => p.theme.colors.royal};
       }
     }
   }

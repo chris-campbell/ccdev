@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const AdvanceSeoContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.blue100};
+  background-color: ${(p) => p.theme.colors.royal};
 `;
 
 const AdvanceSeoWrapper = styled.div`
@@ -20,9 +20,9 @@ const AdvanceSeoWrapper = styled.div`
   }
 
   h3 {
-    font-family: ${(p) => p.theme.fonts.heading};
+    font-family: ${(p) => p.theme.fonts[0]};
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 2rem;
   }
 
@@ -30,7 +30,7 @@ const AdvanceSeoWrapper = styled.div`
     font-size: 1rem;
     line-height: 2.1rem;
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 2rem;
     max-width: 35rem;
   }

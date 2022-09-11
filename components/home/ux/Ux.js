@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const UXContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.white300};
+  background-color: ${(p) => p.theme.colors.egg};
 `;
 
 const UXWrapper = styled.div`
@@ -22,9 +22,9 @@ const UXWrapper = styled.div`
   }
 
   h3 {
-    font-family: ${(p) => p.theme.fonts.heading};
+    font-family: ${(p) => p.theme.fonts[0]};
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    color: ${(p) => p.theme.colors.grey300};
+    color: ${(p) => p.theme.colors.darkGrey};
     margin-bottom: 2rem;
   }
 
@@ -32,7 +32,7 @@ const UXWrapper = styled.div`
     font-size: 1.1rem;
     line-height: 2.1rem;
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    color: ${(p) => p.theme.colors.grey300};
+    color: ${(p) => p.theme.colors.darkGrey};
     margin-bottom: 2rem;
     max-width: 30rem;
 

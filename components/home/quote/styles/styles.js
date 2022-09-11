@@ -16,7 +16,7 @@ export const SocialPanel = styled.div`
   display: flex;
   gap: 0.7rem;
   font-family: ${(p) => p.theme.fonts.parapgraph};
-  color: ${(p) => p.theme.colors.white300};
+  color: ${(p) => p.theme.colors.egg};
   list-style-type: none;
   margin-bottom: 1.5rem;
   li {
@@ -37,13 +37,13 @@ export const FadeBox = styled(motion.div)`
   h1,
   h2,
   h3 {
-    font-family: ${(p) => p.theme.fonts.heading};
-    color: ${(p) => p.theme.colors.white300};
+    font-family: ${(p) => p.theme.fonts[0]};
+    color: ${(p) => p.theme.colors.egg};
   }
 
   h1 {
     font-size: clamp(0.875rem, 5vw, 1rem);
-    color: ${(p) => p.theme.colors.blue100};
+    color: ${(p) => p.theme.colors.royal};
     font-family: ${(p) => p.theme.fonts.parapgraph};
     margin-bottom: 1rem;
     letter-spacing: 0.12rem;
@@ -63,7 +63,7 @@ export const FadeBox = styled(motion.div)`
   p {
     font-size: 1rem;
     font-family: ${(p) => p.theme.fonts.parapgraph};
-    color: ${(p) => p.theme.colors.grey200};
+    color: ${(p) => p.theme.colors.lightGrey};
     max-width: 50rem;
     letter-spacing: 0.04rem;
     line-height: 1.7;

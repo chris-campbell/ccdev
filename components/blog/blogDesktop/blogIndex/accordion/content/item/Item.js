@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 const ItemContainer = styled.li`
   color: ${(props) => (props.selected ? "#ae44a9" : "#fff")};
-  font-family: ${(p) => p.theme.fonts.paragraph};
+  font-family: ${(p) => p.theme.fonts[1]};
   font-size: 0.8rem;
   text-decoration: none;
   list-style: none;
@@ -15,19 +15,19 @@ const ItemContainer = styled.li`
   word-spacing: 0.1rem;
   &:hover {
     box-sizing: border-box;
-    color: ${(p) => p.theme.colors.blue100} !important;
+    color: ${(p) => p.theme.colors.royal} !important;
     transition: 200ms;
     cursor: pointer;
   }
 
   &:active {
-    color: ${(p) => p.theme.colors.orange300} !important;
+    color: ${(p) => p.theme.colors.orange} !important;
   }
   span {
     display: block;
     min-width: 0.3rem;
     min-height: 0.3rem;
-    border: 1px solid ${(p) => p.theme.colors.white300};
+    border: 1px solid ${(p) => p.theme.colors.egg};
     margin-right: 1rem;
     border-radius: 1rem;
   }

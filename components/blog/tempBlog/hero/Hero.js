@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const HeroContainer = styled.section`
-  background-color: ${(p) => p.theme.colors.blue300};
+  background-color: ${(p) => p.theme.colors.darkBlue};
   padding: clamp(2rem, 9vw, 9rem);
 
   .hero-wrapper {
@@ -36,7 +36,7 @@ const HeroContainer = styled.section`
   }
 
   .article-date {
-    color: ${(p) => p.theme.colors.grey200};
+    color: ${(p) => p.theme.colors.lightGrey};
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
@@ -44,12 +44,12 @@ const HeroContainer = styled.section`
   .article-title {
     text-transform: uppercase;
     font-size: clamp(1.9rem, 3vw, 2.9rem);
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 1rem;
   }
 
   .article-excerpt {
-    color: ${(p) => p.theme.colors.grey200};
+    color: ${(p) => p.theme.colors.lightGrey};
     margin-bottom: 1rem;
   }
 
@@ -60,10 +60,10 @@ const HeroContainer = styled.section`
     justify-content: center;
     p {
       &:nth-child(1) {
-        color: ${(p) => p.theme.colors.white300};
+        color: ${(p) => p.theme.colors.egg};
       }
       &:nth-child(2) {
-        color: ${(p) => p.theme.colors.grey200};
+        color: ${(p) => p.theme.colors.lightGrey};
         font-size: 0.8rem;
       }
     }

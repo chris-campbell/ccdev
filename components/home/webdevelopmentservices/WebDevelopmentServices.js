@@ -5,7 +5,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import ArchitectureIcon from "@mui/icons-material/Architecture";
 
 const WebDevServices = styled.section`
-  background-color: ${(p) => p.theme.colors.blue200};
+  background-color: ${(p) => p.theme.colors.coalBlue};
 `;
 
 const WebDevWrapper = styled.div`
@@ -18,9 +18,9 @@ const WebDevWrapper = styled.div`
   padding: clamp(2rem, 7vw, calc(250px - 100px)) clamp(1rem, 10vw, 150px);
 
   h3 {
-    font-family: ${(p) => p.theme.fonts.heading};
+    font-family: ${(p) => p.theme.fonts[0]};
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    color: ${(p) => p.theme.colors.white300};
+    color: ${(p) => p.theme.colors.egg};
     margin-bottom: 3rem;
   }
 `;
@@ -40,7 +40,7 @@ const Service = styled.div`
   h4 {
     display: flex;
     align-items: center;
-    color: ${(p) => p.theme.colors.blue100};
+    color: ${(p) => p.theme.colors.royal};
     font-family: ${(p) => p.theme.fonts.parapgraph};
     font-size: clamp(1rem, 3vw, 2rem);
     margin-bottom: 1rem;
@@ -49,7 +49,7 @@ const Service = styled.div`
     }
   }
   p {
-    color: ${(p) => p.theme.colors.grey200};
+    color: ${(p) => p.theme.colors.lightGrey};
     font-family: ${(p) => p.theme.fonts.parapgraph};
     font-size: 1rem;
     line-height: 2.1rem;
