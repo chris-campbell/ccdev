@@ -36,18 +36,23 @@ const Me = () => {
         <styled.MeContent className="me-content">
           <div className="me-bio">
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumv eirmod temnor invidunt ut labore et dolore accusam et lusto
-              duo dolores et ea rebum. Stet clita kasc auberarer
+              I'm Chris! A father, Web Developer, and lover of anything anime.
+              Proudly born in Brooklyn, NY. I don't have a formal education,
+              however, I have a strong propensity for learning and
+              self-improvement, when deciding to be an engineer several years
+              ago, I completed a 24-week coding Bootcamp and have been
+              self-learning ever since.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumv eirmod temnor invidunt ut labore et dolore accusam et lusto
-              duo dolores et ea rebum. Stet clita kasc auberarer
+              I'm an avid reader, mostly rummaging through techinical
+              documentation and self-help books. Believing firmly that a
+              person's journey is never complete, all while deeply respecting
+              the journeys of others.
             </p>
             <p>
-              Et dolore accusam et lusto duo dolores et ea rebum. Stet clita
-              kasc auberarer
+              Hacking away in a code editor is one of my life passions, and
+              introducing coding to more inner city kids with big dreams like
+              myself is my ultimate goal.
             </p>
           </div>
 
