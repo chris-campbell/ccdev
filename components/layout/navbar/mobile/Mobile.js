@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ContactModal from "../../../modal/ContactModal";
-
+import { useRouter } from "next/router";
 // MUI imports
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
@@ -13,6 +13,8 @@ import * as S from "./styles/styles";
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  const { pathname } = useRouter();
 
   const handleOpen = () => {
     setOpenModal(true);
@@ -59,32 +61,31 @@ const MobileNav = () => {
                       </a>
                     </Link>
                   </li>
-                  <li onClick={() => toggleOpen()}>
-                    <Link href="/articles" passHref={true}>
-                      <a>
-                        <div className="header__icon">Blog</div>
-                      </a>
-                    </Link>
-                  </li>
-                  <li onClick={() => toggleOpen()}>
-                    <Link href="/work" passHref={true}>
-                      <a>
-                        <div className="header__icon">Work</div>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <a onClick={() => handleOpen()}>
-                      <div className="header__icon">Contact</div>
-                    </a>
-                  </li>
-                  <li>
-                    <Link href="/#fulltime" passHref={true}>
-                      <a onClick={() => toggleOpen()}>
-                        <div className="header__icon">Hire</div>
-                      </a>
-                    </Link>
-                  </li>
+                  {pathname === "/" && (
+                    <>
+                      <li onClick={() => toggleOpen()}>
+                        <Link href="#me" passHref={true}>
+                          <a>
+                            <div className="header__icon">Me</div>
+                          </a>
+                        </Link>
+                      </li>
+                      <li onClick={() => toggleOpen()}>
+                        <Link href="#projects" passHref={true}>
+                          <a>
+                            <div className="header__icon">Projects</div>
+                          </a>
+                        </Link>
+                      </li>
+                      <li onClick={() => toggleOpen()}>
+                        <Link href="/articles" passHref={true}>
+                          <a>
+                            <div className="header__icon">Blog</div>
+                          </a>
+                        </Link>
+                      </li>
+                    </>
+                  )}
                 </S.MobileNav>
               </S.Drawer>
             </S.TransparentWall>

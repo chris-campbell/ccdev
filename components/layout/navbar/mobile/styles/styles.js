@@ -36,7 +36,7 @@ export const MobileNav = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: self-end;
-  gap: 1rem;
+  gap: 1.5rem;
 
   li {
     display: flex;
