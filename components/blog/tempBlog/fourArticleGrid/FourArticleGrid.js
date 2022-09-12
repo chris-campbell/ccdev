@@ -26,9 +26,9 @@ const FourArticleGridContainer = styled.section`
     margin: 0 auto;
 
     a {
-      color: ${(p) => p.theme.colors.orange};
+      color: ${(p) => p.theme.colors.darkBlue};
       &:hover {
-        color: ${(p) => p.theme.colors.royal};
+        color: ${(p) => p.theme.colors.blueSky};
       }
     }
   }

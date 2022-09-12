@@ -19,6 +19,7 @@
     "@mui/styles": "^5.2.2",
     "autosize": "^5.0.1",
     "babel-plugin-styled-components": "^2.0.6",
+    "babel-preset-next": "^1.4.0",
     "framer-motion": "^6.2.8",
     "graphql": "^16.3.0",
     "html-entities": "^2.3.2",

@@ -31,21 +31,21 @@ const Footer = () => {
                     <a>Home</a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/work">
                     <a>Work</a>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/articles">
                     <a>Blog</a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <>
                     <a onClick={handleOpen}>Contact</a>
                   </>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>
@@ -66,11 +66,11 @@ const Footer = () => {
                     <a target="_blank">Twitter</a>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="https://www.reddit.com/user/2ndplayerco">
                     <a target="_blank">Reddit</a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div>

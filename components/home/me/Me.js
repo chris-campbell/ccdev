@@ -6,7 +6,7 @@ import * as styled from "./styles/styles";
 
 const Me = () => {
   return (
-    <styled.MeContainer>
+    <styled.MeContainer id="me">
       <div className="me-wrapper">
         <div className="me-intro">
           <h2>

@@ -17,7 +17,6 @@ export const ProjectSectionContainer = styled.section`
       li {
         font-family: ${(p) => p.theme.fonts[0]};
         font-size: clamp(1rem, 3vw, 1.4rem);
-        color: ${(p) => p.theme.colors.egg};
         font-weight: 600;
         margin-bottom: 0.5rem;
       }
@@ -33,9 +32,18 @@ export const ProjectSectionContainer = styled.section`
       max-width: 83%;
     }
 
+    .separator {
+      color: ${(p) => p.theme.colors.lightGrey};
+      padding: 0 0.5rem;
+    }
+
     a {
-      color: ${(p) => p.theme.colors.egg};
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      color: ${(p) => p.theme.colors.lightGrey};
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: ${(p) => p.theme.colors.blueSky};
+      }
     }
   }
 `;

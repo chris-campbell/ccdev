@@ -1,36 +1,72 @@
-import React from "react";
-import * as styled from "./styles/styles";
+import React, { useRef, useState } from "react";
+import * as s from "./styles/styles";
+import styled from "styled-components";
 
-const ProjectSection = () => {
+const ListItems = styled.ul`
+  .active {
+    color: ${(p) => p.theme.colors.blueSky};
+    transition: all 300ms ease-in-out;
+  }
+
+  .inactive {
+    color: #e0e0e02e;
+    font-family: SocialGothicMed !important;
+    font-weight: 600 !important;
+    &:hover {
+      color: #e0e0e07d;
+      transition: all 300ms ease-in-out;
+    }
+  }
+`;
+
+import projects from "../utils/projects";
+
+const ProjectSection = ({ updateIndex }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const linkRef = useRef(null);
+
+  const getData = (e) => {
+    const value = e.currentTarget.getAttribute("data-index");
+    setActiveIndex(parseInt(e.currentTarget.getAttribute("data-index")));
+    updateIndex(value);
+  };
+
   return (
-    <styled.ProjectSectionContainer className="project-section">
+    <s.ProjectSectionContainer>
       <div className="project-list">
-        <ul className="list-items">
-          <li>Hello Dixie Co</li>
-          <li>Laymanns</li>
-          <li>Watch Later</li>
-          <li>Savorys</li>
-        </ul>
+        <ListItems className="list-items">
+          {projects.map((project, i) => {
+            const className = activeIndex === i ? "active" : "inactive";
+
+            return (
+              <li
+                className={className}
+                onClick={(e) => getData(e)}
+                ref={linkRef}
+                key={project.id}
+                data-index={i}
+              >
+                {project.name}
+              </li>
+            );
+          })}
+        </ListItems>
       </div>
 
       <div className="project-details">
-        <p>
-          Blogging application that allows authors to create unique blog post.
-          anc allows the lavmanns communitv to add adtional context to articles
-          fr reduce comnievitv.
-        </p>
+        <p>{projects[activeIndex]?.description}</p>
 
         <div>
           <a href="#" className="code">
             Code
-          </a>{" "}
-          |{" "}
+          </a>
+          <span className="separator">|</span>
           <a href="#" className="live">
             Live
           </a>
         </div>
       </div>
-    </styled.ProjectSectionContainer>
+    </s.ProjectSectionContainer>
   );
 };
 

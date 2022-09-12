@@ -45,10 +45,10 @@ export const FooterNav = styled.div`
   ul > li {
     color: ${(p) => p.theme.colors.darkBlue};
     list-style: none;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     &:hover {
-      transition: color 300ms;
-      color: ${(p) => p.theme.colors.orange};
+      transition: all 300ms;
+      opacity: 0.7;
     }
 
     &:active {
