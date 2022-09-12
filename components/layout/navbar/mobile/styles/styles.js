@@ -35,24 +35,33 @@ export const MobileNav = styled.ul`
   padding-left: 0 !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: self-end;
+  gap: 1rem;
+
   li {
     display: flex;
     align-items: center;
     color: #f2f2f2;
-    font-size: 1.3rem;
+    font-size: 1rem;
     white-space: nowrap;
     justify-content: center;
     font-family: ${(p) => p.theme.fonts[0]};
     letter-spacing: 0.13rem;
+
+    &:first-child {
+      margin-bottom: 2rem;
+    }
     a {
       text-decoration: none;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: ${(p) => p.theme.colors.blueSky};
+      }
     }
     .header__icon {
       display: flex;
       width: 80%;
-      padding: 1.3rem 0;
+
       justify-content: center;
     }
     &:hover {
