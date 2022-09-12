@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Avatar from "./img/avatar.webp";
 import { Twitter, GitHub, LinkedIn } from "@mui/icons-material";
+import Link from "next/link";
 import * as styled from "./styles/styles";
 
 const Me = () => {
@@ -14,9 +15,21 @@ const Me = () => {
             <div className="highlight"></div>
           </h2>
           <div className="me-social">
-            <Twitter />
-            <GitHub />
-            <LinkedIn />
+            <Link href="https://github.com/chris-campbell">
+              <a target="_blank">
+                <GitHub />
+              </a>
+            </Link>
+            <Link href="https://www.linkedin.com/in/chris-c-6a2267109/">
+              <a target="_blank">
+                <LinkedIn />
+              </a>
+            </Link>
+            <Link href="https://twitter.com/2ndplayr">
+              <a target="_blank">
+                <Twitter />
+              </a>
+            </Link>
           </div>
         </div>
 

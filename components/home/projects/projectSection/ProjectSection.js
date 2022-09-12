@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import * as s from "./styles/styles";
+
 import styled from "styled-components";
 
 const ListItems = styled.ul`
@@ -57,11 +58,11 @@ const ProjectSection = ({ updateIndex }) => {
         <p>{projects[activeIndex]?.description}</p>
 
         <div>
-          <a href="#" className="code">
+          <a href={projects[activeIndex].code} target="_blank" className="code">
             Code
           </a>
           <span className="separator">|</span>
-          <a href="#" className="live">
+          <a href={projects[activeIndex].live} target="_blank" className="live">
             Live
           </a>
         </div>
