@@ -15,7 +15,7 @@ export const AuthorNameContainer = styled.div`
 
   span {
     letter-spacing: 0.5px;
-    color: ${(p) => p.theme.colors.grey100};
-    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: ${(p) => p.theme.colors.lightGrey};
+    font-size: 0.8rem;
   }
 `;
