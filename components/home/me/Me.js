@@ -36,18 +36,18 @@ const Me = () => {
         <styled.MeContent className="me-content">
           <div className="me-bio">
             <p>
-              I'm Chris! A father, Web Developer, and lover of anything anime.
-              Proudly born in Brooklyn, NY. I don't have a formal education,
-              however, I have a strong propensity for learning and
+              I&lsquo;m Chris! A father, Web Developer, and lover of anything
+              anime. Proudly born in Brooklyn, NY. I don&lsquo;t have a formal
+              education, however, I have a strong propensity for learning and
               self-improvement, when deciding to be an engineer several years
               ago, I completed a 24-week coding Bootcamp and have been
               self-learning ever since.
             </p>
             <p>
-              I'm an avid reader, mostly rummaging through techinical
+              I&lsquo;m an avid reader, mostly rummaging through techinical
               documentation and self-help books. Believing firmly that a
-              person's journey is never complete, all while deeply respecting
-              the journeys of others.
+              person&lsquo;s journey is never complete, all while deeply
+              respecting the journeys of others.
             </p>
             <p>
               Hacking away in a code editor is one of my life passions, and
@@ -57,7 +57,12 @@ const Me = () => {
           </div>
 
           <div className="me-avatar">
-            <Image src={Avatar} width={580} height={580} />
+            <Image
+              src={Avatar}
+              width={580}
+              height={580}
+              alt="Chris Campbell Avatar"
+            />
           </div>
         </styled.MeContent>
       </div>

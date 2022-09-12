@@ -58,11 +58,21 @@ const ProjectSection = ({ updateIndex }) => {
         <p>{projects[activeIndex]?.description}</p>
 
         <div>
-          <a href={projects[activeIndex].code} target="_blank" className="code">
+          <a
+            href={projects[activeIndex].code}
+            target="_blank"
+            rel="noreferrer"
+            className="code"
+          >
             Code
           </a>
           <span className="separator">|</span>
-          <a href={projects[activeIndex].live} target="_blank" className="live">
+          <a
+            href={projects[activeIndex].live}
+            target="_blank"
+            rel="noreferrer"
+            className="live"
+          >
             Live
           </a>
         </div>
