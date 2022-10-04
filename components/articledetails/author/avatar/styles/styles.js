@@ -6,6 +6,8 @@ export const AvatarContainer = styled.div`
     border-radius: 10rem;
     @media (max-width: 405px) {
       min-width: auto;
+      width: 100px;
+      height: 100px;
     }
   }
 `;

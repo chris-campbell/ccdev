@@ -17,19 +17,19 @@ const projects = [
   },
   {
     id: 3,
-    name: "Laymanns",
+    name: "End Point",
     description:
-      "Index 2 Duis condimentum felis a bibendum interdum. Maecenas mollis, orci sit amet venenatis molestie.",
-    code: "https://github.com/chris-campbell/laymanns",
-    live: "",
+      "Uppoint is a search and notify application. That allows its users to search for other users names and send them an alert un Real-time.",
+    code: "https://github.com/chris-campbell/end-point",
+    live: "https://uppoint-socket.herokuapp.com/",
   },
   {
     id: 4,
     name: "Savorys",
     description:
-      "Index 3 Duis condimentum felis a bibendum interdum. Maecenas mollis, orci sit amet venenatis molestie.",
-    code: "https://github.com/chris-campbell/savorys",
-    live: "",
+      "Savory is a landing page for a THC infused green coffee. In this project I worked on design, development and copy.",
+    code: "https://github.com/chris-campbell/savorys-landing",
+    live: "https://savorys-landing.vercel.app/",
   },
 ];
 
