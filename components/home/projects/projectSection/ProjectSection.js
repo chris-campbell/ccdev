@@ -68,7 +68,7 @@ const ProjectSection = ({ updateIndex }) => {
           >
             Code
           </a>
-          <span className="separator">|</span>
+          <span className="separator">•</span>
           <a
             href={projects[activeIndex].live}
             target="_blank"
