@@ -7,12 +7,14 @@ const ListItems = styled.ul`
   .active {
     color: ${(p) => p.theme.colors.blueSky};
     transition: all 300ms ease-in-out;
+    cursor: pointer;
   }
 
   .inactive {
     color: #e0e0e02e;
     font-family: SocialGothicMed !important;
     font-weight: 600 !important;
+    cursor: pointer;
     &:hover {
       color: #e0e0e07d;
       transition: all 300ms ease-in-out;
