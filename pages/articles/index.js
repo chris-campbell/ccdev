@@ -19,7 +19,14 @@ const Blog = (articles) => {
         justifyContent: "center",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "1rem",
+          textAlign: "center",
+        }}
+      >
         <h1
           style={{
             fontSize: "3rem",
