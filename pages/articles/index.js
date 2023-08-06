@@ -10,39 +10,7 @@ const BlogContainer = dynamic(
 );
 
 const Blog = (articles) => {
-  return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          padding: "1rem",
-          textAlign: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "3rem",
-            color: "#F2F2F2",
-            fontWeight: "600",
-            textTransform: "uppercase",
-          }}
-        >
-          Under Maintenance
-        </h1>
-        <p style={{ textAlign: "center", color: "#F2F2F2" }}>
-          Since Oct 7, 2022
-        </p>
-      </div>
-    </div>
-  );
+
   const { setCurrentArticles } = useContext(AppContext);
 
   useEffect(() => {
