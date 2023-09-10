@@ -1,7 +1,7 @@
-import TempBlog from "./tempBlog/TempBlog";
+import Blog from "./blog/Blog";
 
 const BlogContainer = ({ articles }) => {
-  return <TempBlog articles={articles} />;
+  return <Blog articles={articles} />;
 };
 
 export default BlogContainer;
