@@ -20,7 +20,7 @@ const Blog = (articles) => {
   return (
     <>
       <Head>
-        <title>2ndPlayer | Articles, Tutorial & Tech News </title>
+      <title>2ndPlayer | Tech Job Insights for Aspiring Developers</title>
         <meta
           name="description"
           content="Articles and tutorials that focus on both programming and tech products and news."
