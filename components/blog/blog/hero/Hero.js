@@ -93,6 +93,7 @@ const Hero = ({ article }) => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
+  
   return (
     <HeroContainer>
       <Link href={`/articles/${slug}`} passHref>
