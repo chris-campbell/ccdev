@@ -5,7 +5,7 @@ const Blog = ({ articles }) => {
   return (
     <div>
       <div>
-        {/* <Hero article={articles.articles[0]} /> */}
+        <Hero article={articles.articles[0]} />
         <FourArticleGrid articles={articles.articles} />
       </div>
     </div>

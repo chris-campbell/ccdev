@@ -82,6 +82,8 @@ const HeroContainer = styled.section`
 const Hero = ({ article }) => {
   const [width, setWidth] = useState(window.innerWidth);
 
+  const {slug, coverImage, createdAt, title, excerpt, authors} = article;
+
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);
@@ -93,11 +95,11 @@ const Hero = ({ article }) => {
   }, [width]);
   return (
     <HeroContainer>
-      <Link href={`/articles/${article.slug}`} passHref>
+      <Link href={`/articles/${slug}`} passHref>
         <div className="hero-wrapper">
           <div className="feature-image">
             <Image
-              src={article.coverImage.url}
+              src={coverImage.url}
               width={800}
               height={600}
               layout={width > 988 ? "" : "responsive"}
@@ -106,21 +108,19 @@ const Hero = ({ article }) => {
           </div>
 
           <div className="article-details">
-            <p className="article-date">{formatDate(article.createdAt)}</p>
-            <h1 className="article-title">{article.title}</h1>
-            <p className="article-excerpt">
-             {article.excerpt}
-            </p>
+            <p className="article-date">{formatDate(createdAt)}</p>
+            <h1 className="article-title">{title}</h1>
+            <p className="article-excerpt">{excerpt}</p>
             <div className="author-details">
               <Image
-                src={article.authors[0].avatar.url}
+                src={authors[0].avatar.url}
                 width={55}
                 height={55}
-                alt={console.log(article.authors[0])}
+                alt={authors[0]}
               />
               <div className="author-bio">
-                <p>{article.authors[0].name}</p>
-                <p>React Developer / Copy Writer</p>
+                <p>{authors[0].name}</p>
+                <p>{authors[0].role}</p>
               </div>
             </div>
           </div>
