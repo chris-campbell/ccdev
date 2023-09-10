@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ContactModal from "../../../modal/ContactModal";
 import { useRouter } from "next/router";
 // MUI imports
 import IconButton from "@mui/material/IconButton";
@@ -92,8 +91,6 @@ const MobileNav = () => {
           </div>
         </div>
       </header>
-
-      <ContactModal open={openModal} handleClose={handleClose} />
     </>
   );
 };

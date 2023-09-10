@@ -2,20 +2,19 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
   }
 
   html,
   body {
-      padding: 0;
-      margin: 0;
-      background-color: ${(p) => p.theme.colors.darkBlue};
-      scroll-behavior: smooth;
-      height:100%;
-      font-family: ${(p) => p.theme.fonts[1]};
+    padding: 0;
+    margin: 0;
+    background-color: ${(p) => p.theme.colors.darkBlue};
+    scroll-behavior: smooth;
+    height:100%;
+    font-family: ${(p) => p.theme.fonts[1]};
   }
 
   main {
@@ -29,13 +28,13 @@ const GlobalStyles = createGlobalStyle`
   p, span, a, blockquote {
     font-family: ${(p) => p.theme.fonts[1]};
     color: ${(p) => p.theme.fonts[1]};
-     font-weight: 400 !important; 
+    font-weight: 400 !important; 
     font-style: normal !important;
   }
 
   h1 {
-  font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2rem);
-  line-height: 1.1;
+    font-size: clamp(1.913rem, calc( 12px + 2.475vw ), 2rem);
+    line-height: 1.1;
   }
 
   h2 {
@@ -49,12 +48,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h4 {
-  font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
-  line-height: 1.1;
+    font-size: clamp(1.125rem, calc( 12px + 0.900vw ), 1.350rem);
+    line-height: 1.1;
   }
 
-  li {
+  strong {
+    font-weight: 900;
+    color: white;
+  }
+
+
+  ul li {
     font-family: ${(p) => p.theme.fonts[1]};
+    margin-bottom: 1rem;
   }
 
   p, blockquote {

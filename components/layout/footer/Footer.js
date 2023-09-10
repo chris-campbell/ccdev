@@ -31,21 +31,11 @@ const Footer = () => {
                     <a>Home</a>
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="/work">
-                    <a>Work</a>
-                  </Link>
-                </li> */}
                 <li>
                   <Link href="/articles">
                     <a>Blog</a>
                   </Link>
                 </li>
-                {/* <li>
-                  <>
-                    <a onClick={handleOpen}>Contact</a>
-                  </>
-                </li> */}
               </ul>
             </div>
             <div>
@@ -66,11 +56,6 @@ const Footer = () => {
                     <a target="_blank">Twitter</a>
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="https://www.reddit.com/user/2ndplayerco">
-                    <a target="_blank">Reddit</a>
-                  </Link>
-                </li> */}
               </ul>
             </div>
             <div>
@@ -108,17 +93,6 @@ const Footer = () => {
           <Link href="http://www.ebay.com">Policy</Link>
         </S.Legal>
       </S.FooterContainer>
-
-      <S.ContactModalContainer
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <S.ModalContent>
-          <h2>Reach out!</h2>
-        </S.ModalContent>
-      </S.ContactModalContainer>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ContactModal from "../../../modal/ContactModal";
 import NavLink from "./navLink/NavLink";
 import HireLink from "./hireLink/HireLink";
 import ContactLink from "./contactLink/ContactLink";
@@ -45,8 +44,6 @@ const DesktopNav = () => {
           </nav>
         </S.NavbarWrapper>
       </S.NavbarContainer>
-
-      <ContactModal open={open} handleClose={handleClose} />
     </>
   );
 };

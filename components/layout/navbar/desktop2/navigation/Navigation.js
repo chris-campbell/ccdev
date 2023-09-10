@@ -19,12 +19,8 @@ const Navigation = () => {
             </li>
           </>
         )}
-
         <li>
           <Link href="/articles">Blog</Link>
-        </li>
-        <li>
-          <Link href="#">Contact</Link>
         </li>
       </ul>
     </NavigationContainer>

@@ -73,12 +73,6 @@ export const Legal = styled.div`
   color: ${(p) => p.theme.colors.darkBlue};
 `;
 
-export const ContactModalContainer = styled(Modal)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const ModalContent = styled.div`
   background-color: ${(p) => p.theme.colors.egg};
   width: 20rem;
