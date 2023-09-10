@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.2.2",
     "@mui/styles": "^5.2.2",
+    "@vercel/analytics": "^1.0.2",
     "autosize": "^5.0.1",
     "babel-plugin-styled-components": "^2.0.6",
     "babel-preset-next": "^1.4.0",
