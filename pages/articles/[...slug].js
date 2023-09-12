@@ -15,10 +15,23 @@ function ArticleDetail({ article, host }) {
         <title>2ndPlayer | {metaTitle} </title>
         <meta name="description" content={metaDescription} />
 
-        {console.log(metaImage)}
+        {/* Meta tags for Twitter and WhatsApp (Open Graph) */}
+      
+        <meta name="twitter:title" content="Your Title Here" />
+        <meta name="twitter:description" content="Your description here" />
+        <meta name="twitter:image" content="https://media.graphassets.com/gTfi5j0TOeG587KX8KSk" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yourusername" />
+        <meta name="twitter:creator" content="@creatorusername" />
+        
+        <meta property="og:title" content="Your Title Here" />
+        <meta property="og:description" content="Your description here" />
+        <meta property="og:image" content="https://media.graphassets.com/gTfi5j0TOeG587KX8KSk" />
+        <meta property="og:url" content={`https://${host}${path}`} />
+        <meta property="og:site_name" content="@2ndplayerco" />
+    
 
-        {/* OG Sharing Meta */}
-        <meta property="og:type" content="article" />
+        {/* <meta property="og:type" content="article" />
         <meta property="og:image" content={metaImage ? metaImage.url : ''} />
         <meta property="og:title" content={metaTitle || ''} />
         <meta property="og:url" content={`https://${host}${path}`} />
@@ -30,12 +43,11 @@ function ArticleDetail({ article, host }) {
         <meta property="og:site_name" content="2ndPlayer" />
 
 
-        {/* Twitter Meta */}
-        <meta name="twitter:title" content={metaTitle ? metaTitle : null}/>
-        <meta name="twitter:description" content={metaDescription ? metaDescription : null} />
+        <meta name="twitter:title" content={metaTitle || ""}/>
+        <meta name="twitter:description" content={metaDescription || ""} />
         <meta name="twitter:image:src" content={metaImage ? metaImage.url : null} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@2ndplayerco" />
+        <meta name="twitter:site" content="@2ndplayerco" /> */}
       </Head>
 
       <ArticleDetails article={article} host={host} />
