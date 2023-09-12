@@ -19,15 +19,16 @@ function ArticleDetail({ article, host }) {
 
         {/* OG Sharing Meta */}
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={metaImage ? metaImage.url : null} />
-        <meta property="og:title" content={metaTitle ? metaTitle : null} />
+        <meta property="og:image" content="{metaImage ? metaImage.url : null}" />
+        <meta property="og:title" content="{metaTitle ? metaTitle : null}" />
         <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" itemProp="image" content={metaImage ? metaImage.url : null} />
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="630"/>
-        <meta property="og:image:secure_url" content={metaImage ? metaImage.url : null} />
+        <meta property="og:image" itemProp="image" content="{metaImage ? metaImage.url : null}" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:secure_url" content="{metaImage ? metaImage.url : null}" />
         <meta property="og:site_name" content="2ndPlayer" />
+
 
         {/* Twitter Meta */}
         <meta name="twitter:title" content={metaTitle ? metaTitle : null}/>
