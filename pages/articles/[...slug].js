@@ -30,7 +30,7 @@ function ArticleDetail({ article, host }) {
         <meta property="og:site_name" content="2ndPlayer" />
 
         {/* Twitter Meta */}
-        <meta name="twitter:title" content={metaImage ? metaImage.url : null}/>
+        <meta name="twitter:title" content={metaTitle ? metaTitle : null}/>
         <meta name="twitter:description" content={metaDescription ? metaDescription : null} />
         <meta name="twitter:image:src" content={metaImage ? metaImage.url : null} />
         <meta name="twitter:card" content="summary" />
