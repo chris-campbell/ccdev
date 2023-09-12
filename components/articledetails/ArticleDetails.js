@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import * as S from "./styles/styles";
 
 const ArticleDetails = ({ article, host }) => {
+  console.log(article);
   const { title, content, createdAt, coverImage, authors } = article;
   const path = useRouter().asPath;
   const url = `https://${host}${path}`;
