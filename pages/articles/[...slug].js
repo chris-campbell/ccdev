@@ -5,35 +5,36 @@ import { gql } from "@apollo/client";
 import { useRouter } from "next/router";
 
 function ArticleDetail({ article, host }) {
-  const { coverImage } = article;
-  const { title, description, keyword, image } = article.seo;
-  const { url } = coverImage;
+  const { metaTitle, metaDescription, metaImage} = article;
   const path = useRouter().asPath;
 
   return (
     <>
       <Head>
         {/* Default Meta */}
-        <title>2nd Player | {title} </title>
-        <meta name="keywords" content={keyword.toString()} />
-        <meta name="description" content={description} />
+        <title>2ndPlayer | {metaTitle} </title>
+        <meta name="description" content={metaDescription} />
+
+        {console.log(metaImage)}
 
         {/* OG Sharing Meta */}
         <meta property="og:type" content="article" />
-        <meta property="og:image" content={image.url ? image.url : null} />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content={`https://${host}${path}`} />
+        <meta property="og:image" content={metaImage ? metaImage.url : null} />
+        <meta property="og:title" content={metaTitle ? metaTitle : null} />
+        <meta property="og:url" content={`http://${host}${path}`} />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" itemProp="image" content={url} />
-        <meta property="og:image:secure_url" content={url} />
+        <meta property="og:image" itemProp="image" content={metaImage ? metaImage.url : null} />
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
+        <meta property="og:image:secure_url" content={metaImage ? metaImage.url : null} />
         <meta property="og:site_name" content="2ndPlayer" />
 
         {/* Twitter Meta */}
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image:src" content={`${url}`} />
+        <meta name="twitter:title" content={metaImage ? metaImage.url : null}/>
+        <meta name="twitter:description" content={metaDescription ? metaDescription : null} />
+        <meta name="twitter:image:src" content={metaImage ? metaImage.url : null} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@2ndplayr" />
+        <meta name="twitter:site" content="@2ndplayerco" />
       </Head>
 
       <ArticleDetails article={article} host={host} />
@@ -58,6 +59,12 @@ export async function getServerSideProps({ req, params }) {
           category
           excerpt
           createdAt
+          metaTitle
+          metaDescription
+          metaImage {
+    			  id
+            url
+    			}
           coverImage {
             url
           }
