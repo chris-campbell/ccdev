@@ -13,41 +13,20 @@ function ArticleDetail({ article, host }) {
       <Head>
         {/* Default Meta */}
         <title>2ndPlayer | {metaTitle} </title>
-        <meta name="description" content={metaDescription} />
-
-        {/* Meta tags for Twitter and WhatsApp (Open Graph) */}
       
-        <meta name="twitter:title" content="Your Title Here" />
-        <meta name="twitter:description" content="Your description here" />
-        <meta name="twitter:image" content="https://media.graphassets.com/gTfi5j0TOeG587KX8KSk" />
+        <meta name="twitter:title" content={metaTitle || ""} />
+        <meta name="twitter:description" content={metaDescription || ""} />
+        <meta name="twitter:image" content={metaImage ? metaImage.url : null} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yourusername" />
-        <meta name="twitter:creator" content="@creatorusername" />
+        <meta name="twitter:site" content="@2ndplayerco" />
+        <meta name="twitter:creator" content="@2ndplayerco" />
         
-        <meta property="og:title" content="Your Title Here" />
-        <meta property="og:description" content="Your description here" />
-        <meta property="og:image" content="https://media.graphassets.com/gTfi5j0TOeG587KX8KSk" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content={metaTitle || ''} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImage ? metaImage.url : ''} />
         <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:site_name" content="@2ndplayerco" />
-    
-
-        {/* <meta property="og:type" content="article" />
-        <meta property="og:image" content={metaImage ? metaImage.url : ''} />
-        <meta property="og:title" content={metaTitle || ''} />
-        <meta property="og:url" content={`https://${host}${path}`} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:image" itemProp="image" content={metaImage ? metaImage.url : ''} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:secure_url" content={metaImage ? metaImage.url : ''} />
-        <meta property="og:site_name" content="2ndPlayer" />
-
-
-        <meta name="twitter:title" content={metaTitle || ""}/>
-        <meta name="twitter:description" content={metaDescription || ""} />
-        <meta name="twitter:image:src" content={metaImage ? metaImage.url : null} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@2ndplayerco" /> */}
       </Head>
 
       <ArticleDetails article={article} host={host} />
