@@ -13,6 +13,8 @@ function ArticleDetail({ article, host }) {
       <Head>
         {/* Default Meta */}
         <title>2ndPlayer | {metaTitle} </title>
+        <meta name="description" content={metaDescription || ""} />
+        
         <meta name="twitter:title" content={metaTitle || ""} />
         <meta name="twitter:description" content={metaDescription || ""} />
         <meta name="twitter:image" content={metaImage ? metaImage.url : null} />
