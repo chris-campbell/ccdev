@@ -8,8 +8,6 @@ function ArticleDetail({ article, host }) {
   const { metaTitle, metaDescription, metaImage} = article;
   const path = useRouter().asPath;
 
-
-  console.log(metaTitle || "")
   return (
     <>
       <Head>
@@ -27,8 +25,8 @@ function ArticleDetail({ article, host }) {
         <meta name="twitter:creator" content="@2ndplayerco" />
         
         
-        <meta property="og:title" content="Your Title Here" />
-        <meta property="og:description" content="Your description here" />
+        <meta property="og:title" content={metaTitle || ""} />
+        <meta property="og:description" content={metaDescription || ""} />
         <meta property="og:image" content={metaImage ? metaImage.url : ''} />
         <meta property="og:url" content={`https://${host}${path}`} />
         <meta property="og:site_name" content="@2ndplayerco" />
