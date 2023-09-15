@@ -14,7 +14,7 @@ function ArticleDetail({ article, host }) {
         {/* Default Meta */}
         <title>2ndPlayer | {metaTitle} </title>
         <meta name="description" content={metaDescription || ""} />
-        
+
         <meta name="twitter:title" content={metaTitle || ""} />
         <meta name="twitter:description" content={metaDescription || ""} />
         <meta name="twitter:image" content={metaImage ? metaImage.url : null} />
@@ -43,7 +43,7 @@ export async function getServerSideProps({ req, params }) {
   const { data } = await client.query({
     query: gql`
       query Article($slug: String!) {
-        articles(where: { slug: $slug }) {
+        articles(where: { slug: $slug }, orderBy: createdAt_DESC) {
           id
           title
           slug
@@ -93,6 +93,7 @@ export async function getServerSideProps({ req, params }) {
   });
 
   const { articles } = data;
+  
   const article = articles[0];
 
   return {

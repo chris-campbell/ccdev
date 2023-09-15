@@ -9,6 +9,9 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <ul>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
         {pathname === "/" && (
           <>
             <li>
