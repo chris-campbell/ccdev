@@ -89,8 +89,8 @@ const Footer = () => {
           </S.FooterNav>
         </S.FooterWrapper>
         <S.Legal>
-          <Link href="http://www.ebay.com">Terms of Service</Link>
-          <Link href="http://www.ebay.com">Policy</Link>
+          <Link href="/legal/tos">Terms of Service</Link>
+          <Link href="/legal/privacy">Policy</Link>
         </S.Legal>
       </S.FooterContainer>
     </>

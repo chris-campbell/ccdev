@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import DesktopNav from "./desktop2/DesktopNav";
 import MobileNav from "./mobile/Mobile";
+import Desktop from "./desktop2/Desktop";
 
 function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -15,7 +15,8 @@ function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
-  return width < 580 ? <MobileNav /> : <DesktopNav />;
+
+  return width < 580 ? <MobileNav /> : <Desktop />;
 }
 
 export default Navbar;

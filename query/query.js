@@ -14,6 +14,8 @@ export const fetchAllArticles = async (limit = 50) => {
           excerpt
           createdAt
           tags
+          metaTitle
+          metaDescription
           coverImage {
             url
           }
